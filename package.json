@@ -1,0 +1,21 @@
+{
+  "name": "jessep",
+  "version": "0.0.0",
+  "description": "Jesse Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/j-paterson/site.git"
+  },
+  "author": "Jesse Paterson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-paterson/site/issues"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
