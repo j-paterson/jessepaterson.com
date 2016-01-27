@@ -1,9 +1,16 @@
 var express = require('express');
 var app = express();
+var router = express.Router();
 var path = require('path')
+var path = __dirname + '/views/'
 
-app.get('/', function(req, res) {
-	res.sendFile(path.join(__dirname + '/root.html'));
+router.use(function (req,res,next) {
+  console.log("/" + req.method);
+  next();
+});
+
+router.get("/",function(req,res){
+  res.sendFile(path + "root.html");
 });
 
 app.listen(8765, function () {
