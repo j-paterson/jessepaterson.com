@@ -13,6 +13,12 @@ router.get("/",function(req,res){
   res.sendFile(path + "root.html");
 });
 
+app.use("/",router);
+
+app.use("*",function(req,res){
+  res.sendFile(path + "404.html");
+});
+
 app.listen(8765, function () {
   console.log('Server listening on port 8765');
 });
