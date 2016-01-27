@@ -23,44 +23,44 @@
 
 # Registers:
 ""1	LINE	0
-	// respond with "hello world" when a GET request is made to the homepage
+	  res.sendFile(root.html);
 "2	LINE	0
-	sys = require("sys"),
+	// respond with "hello world" when a GET request is made to the homepage
 "3	LINE	0
-	my_http = require("http"),
+	sys = require("sys"),
 "4	LINE	0
-	path = require("path"),
+	my_http = require("http"),
 "5	LINE	0
-	url = require("url"),
+	path = require("path"),
 "6	LINE	0
-	filesys = require("fs");
+	url = require("url"),
 "7	LINE	0
-	var express = require('express');
+	filesys = require("fs");
 "8	LINE	0
-	var app = express();
+	var express = require('express');
 "9	LINE	0
-	
+	var app = express();
 "-	CHAR	0
 	e
 
 # File marks:
-'0  10  0  ~/server.js
-'1  2  0  ~/root.html
-'2  5  20  ~/server.js
-'3  9  0  ~/root.html
-'4  1  15  ~/server.js
-'5  1  34  ~/server.js
-'6  1  0  ~/server.js
-'7  1  14  ~/server.js
-'8  1  0  ~/server.js
-'9  1  0  ~/package.json
+'0  6  12  ~/server.js
+'1  6  2  ~/server.js
+'2  11  0  ~/server.js
+'3  2  0  ~/root.html
+'4  9  0  ~/root.html
+'5  1  15  ~/server.js
+'6  1  34  ~/server.js
+'7  1  0  ~/server.js
+'8  1  14  ~/server.js
+'9  1  0  ~/server.js
 
 # Jumplist (newest first):
--'  10  0  ~/server.js
+-'  6  12  ~/server.js
 -'  1  0  ~/server.js
+-'  11  0  ~/server.js
 -'  2  0  ~/root.html
 -'  1  0  ~/root.html
--'  5  20  ~/server.js
 -'  9  0  ~/root.html
 -'  12  0  ~/root.html
 -'  1  0  ~/package.json
@@ -156,9 +156,9 @@
 # History of marks within files (newest to oldest):
 
 > ~/server.js
-	"	10	0
-	^	10	3
-	.	4	0
+	"	6	12
+	^	6	13
+	.	6	13
 	+	1	131
 	+	1	67
 	+	1	0
@@ -180,11 +180,14 @@
 	+	1	0
 	+	2	0
 	+	6	3
-	+	5	21
-	+	10	0
-	+	8	14
-	+	9	20
-	+	4	0
+	+	6	21
+	+	11	0
+	+	9	14
+	+	10	20
+	+	5	0
+	+	6	0
+	+	3	24
+	+	6	13
 
 > ~/root.html
 	"	2	0

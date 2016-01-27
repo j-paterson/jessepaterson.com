@@ -1,8 +1,9 @@
 var express = require('express');
 var app = express();
+var path = require('path')
 
 app.get('/', function(req, res) {
-  res.send('root.html');
+	res.sendFile(path.join(__dirname + '/root.html'));
 });
 
 app.listen(8765, function () {
