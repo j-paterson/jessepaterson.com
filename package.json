@@ -4,7 +4,7 @@
   "description": "Jesse Server",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,6 @@
     "url": "https://github.com/j-paterson/site/issues"
   },
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "latest"
   }
 }
