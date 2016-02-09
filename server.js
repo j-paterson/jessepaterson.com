@@ -12,10 +12,6 @@ router.get("/",function(req,res){
   res.sendFile(path + "index.html");
 });
 
-router.get("/template",function(req,res){
-  res.sendFile(path + "root.html");
-});
-
 app.use("/",router);
 
 app.use("*",function(req,res){
