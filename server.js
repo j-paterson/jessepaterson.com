@@ -9,7 +9,7 @@ router.use(function (req,res,next) {
 });
 
 router.get("/",function(req,res){
-  res.sendFile(path + "root.html");
+  res.sendFile(path + "index.html");
 });
 
 router.get("/template",function(req,res){
