@@ -14,6 +14,18 @@ router.get("/",function(req,res){
   res.sendFile(path + "root.html");
 });
 
+router.get("/projects",function(req,res){
+  res.sendFile(path + "root.html");
+});
+
+router.get("/contact",function(req,res){
+  res.sendFile(path + "root.html");
+});
+
+router.get("/resume",function(req,res){
+  res.sendFile(path + "root.html");
+});
+
 app.use("/",router);
 
 app.use("*",function(req,res){
