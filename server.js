@@ -16,7 +16,7 @@ router.get("/",function(req,res){
 });
 
 router.get("/projects",function(req,res){
-  res.sendFile(path + "root.html");
+  res.sendFile(path + "project_1.html");
 });
 
 router.get("/contact",function(req,res){
