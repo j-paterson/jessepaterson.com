@@ -19,6 +19,9 @@ footer {
   margin-bottom: 10px;
 }
 
+.navbar-brand {
+  padding: -10px;
+}
 
 .nav > li {
   display: inline-block;
