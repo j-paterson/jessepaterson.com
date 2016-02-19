@@ -20,7 +20,7 @@ footer {
 }
 
 .navbar-brand {
-  padding: -10px;
+  top: -10px;
 }
 
 .nav > li {
