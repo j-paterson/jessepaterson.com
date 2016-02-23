@@ -16,6 +16,8 @@ h1{
 
 .bio{
   text-align: center;
+  width: 50%;
+  margin: auto;
 }
 
 .portfolio-item {
