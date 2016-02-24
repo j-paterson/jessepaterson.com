@@ -10,12 +10,11 @@ body {
   position: relative; 
   max-width: 100%;
   width: 750px; 
-  height: 505px; 
   padding: 10px; 
   box-shadow: 0 0 20px rgba(0,0,0,0.4); 
 }
 #margin {
-  margin: 0.05%; /* 4:3 aspect ratio */
+  margin: 0.05%; 
 }
 #slideshow > img{
   position: absolute;
