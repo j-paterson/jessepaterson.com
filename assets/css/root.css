@@ -9,8 +9,9 @@ body {
 #slideshow { 
     margin: 50px auto; 
     position: relative; 
+    max-width: 100%;
     width: 750px; 
-    height: 500px; 
+    height: 505px; 
     padding: 10px; 
     box-shadow: 0 0 20px rgba(0,0,0,0.4); 
 }
@@ -21,7 +22,7 @@ h1{
 
 .name{
   text-align: center;
-  font-size:4.5em;
+  font-size: 4.5em;
 }
 
 .bio{
