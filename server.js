@@ -19,7 +19,7 @@ router.get("/projects",function(req,res){
   res.sendFile(path + "project_1.html");
 });
 
-router.get("/kickgrass",function(req,res){
+router.get("/projects/kickgrass",function(req,res){
   res.sendFile(path + "kickgrass.html");
 });
 
