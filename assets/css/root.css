@@ -15,7 +15,7 @@ body {
   box-shadow: 0 0 20px rgba(0,0,0,0.4); 
 }
 #margin {
-  margin: 10%; /* 4:3 aspect ratio */
+  margin: 0.05%; /* 4:3 aspect ratio */
 }
 #slideshow > img{
   position: absolute;
