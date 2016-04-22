@@ -1,76 +1,85 @@
 html,
 body {
-  
-}
-body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+  border-top: 2px solid #fa8591;
+  font-family: 'Cantarell', sans-serif;
 }
 
-#slideshow { 
-  position: relative; 
-  max-width: 100%;
-  width: 750px; 
-  padding: 10px; 
-  box-shadow: 0 0 20px rgba(0,0,0,0.4); 
-}
-#margin {
-  margin: 0.05%; 
-}
-#slideshow > img{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+#sidebar {
+  margin-top:20px;
+  vertical-align: top;
+  padding: 18px 0 0 6.5%;
+  margin-right: -1px;
+  border-right: 1px solid #44575a;
 }
 
-h1{
-  font-size: 32px;
+#sidebar.affix {
+  position:fixed;
+  height:50%;
+  width:20%;
 }
 
 .name{
   text-align: center;
-  font-size: 4.5em;
+  font-size: 1.5em;
+  font-weight:400;
 }
 
 .bio{
   text-align: center;
-  width: 50%;
+  width: 90%;
   margin: auto;
-  font-size:1.5em;
+  font-size:1em;
 }
 
-.portfolio-item {
-    margin-bottom: 25px;
+.logo_container{
+  margin-top:20px;
 }
 
-footer {
-    margin: 50px 0;
+.logo {
+  display:inline-block;
+  margin:auto;
 }
 
-.brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
+nav ul li{
+  padding-top:5px;
+  padding-bottom:5px;
+  list-style-type:none;
 }
 
-.navbar-brand {
-  
+nav ul li a:link, a:hover, a:active, a:visited{
+  text-decoration:none;
+  color:#44575a;
+  font-size:1em;
+  font-weight:300;
 }
 
-.nav > li {
+nav ul li:first-child{
+  margin-left: 30px;
+  padding-left:0px;
+}
+
+nav ul li:nth-child(1n+2){
+  border-left: 2px solid #fa8591;
+  padding-left:5px;
+  margin-left:45px;
+}
+
+#content_container{
   display: inline-block;
-}
-.nav > li + li {
-  margin-left: 20px;
-}
-
-.nav{
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
+  width: 80%;
+  height: 100%;
+  margin-left:20%;
 }
 
+#banner_image{
+  border-bottom: 5px solid #418088;
+}
+
+#sections{
+  font-size:1.2em;
+  margin-left:2.5%;
+  margin-right:2.5%;
+}
+#sections h2{
+  font-weight:700;
+}
