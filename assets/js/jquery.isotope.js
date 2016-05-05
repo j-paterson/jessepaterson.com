@@ -1,11 +1,10 @@
 var $grid = $('.grid').isotope({
-	// options
 	getSortData: {
 		number:'.number parseInt'
 	},
 	sortBy: 'number',
 	itemSelector: '.grid-item',
-	layoutMode: 'fitRows',
+	layoutMode: 'fitRows'
 });
 
 var filterValue ='*';
@@ -58,10 +57,10 @@ $('div#projects div.grid-item').click(function(){
 				.toggleClass('col-md-12 col-sm-12')
 				.toggleClass('col-md-3 col-sm-6');
 			var num = $(element).children('.number').text();
-			if(num==='3'){
+			if(num==='5'){
 				$(element).children('.number').text("4");
 			} else {
-				$(element).children('.number').text("3");
+				$(element).children('.number').text("5");
 			}
 		}
     }));

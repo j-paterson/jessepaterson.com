@@ -21,7 +21,9 @@ body a{
 html,
 body a:hover{
   font-weight: bold;
-  color: #FA8591;
+  color: 
+
+#eed1b7;
 }
 
 /* Sidebar Area
@@ -84,7 +86,9 @@ nav ul li:first-child{
 }
 
 nav ul li:nth-child(1n+2){
-  border-left: 2px solid #fa8591;
+  border-left: 2px solid 
+
+#eed1b7;
   padding-left:5px;
   margin-left:45px;
 }
@@ -108,7 +112,9 @@ nav ul li:nth-child(1n+2){
   background-color:#418088;
   border-bottom: 2px solid #418088;
 }
-html, body { border-top: 2px solid #fa8591; }
+html, body { border-top: 2px solid 
+
+#eed1b7; }
 
 /* Grid Item Background
 =========================================== */
@@ -218,5 +224,7 @@ div .opened{
 =========================================== */
 .contact{
   height:400px;
-  background-color:#FA8591;
+  background-color:
+
+#eed1b7;
 }
