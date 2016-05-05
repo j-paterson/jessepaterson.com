@@ -1,13 +1,35 @@
+
+/*General
+=========================================*/
+
 html,
 body {
-  border-top: 2px solid #fa8591;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+li, h1, h2{
   font-family: 'Cantarell', sans-serif;
 }
 
+html,
+body a{
+  font-weight: bold;
+  color: #842823;
+}
+
+html,
+body a:hover{
+  font-weight: bold;
+  color: #FA8591;
+}
+
+/* Sidebar Area
+=========================================*/
 #sidebar {
   margin-top:20px;
   vertical-align: top;
-  padding: 18px 0 0 6.5%;
+  padding: 18px 0 0 4%;
   margin-right: -1px;
   border-right: 1px solid #44575a;
 }
@@ -40,7 +62,10 @@ body {
   margin:auto;
 }
 
+/* Nav Area
+=========================================*/
 nav ul li{
+  cursor: pointer;
   padding-top:5px;
   padding-bottom:5px;
   list-style-type:none;
@@ -55,7 +80,7 @@ nav ul li a:link, a:hover, a:active, a:visited{
 
 nav ul li:first-child{
   margin-left: 30px;
-  padding-left:0px;
+  padding-left:0;
 }
 
 nav ul li:nth-child(1n+2){
@@ -64,22 +89,134 @@ nav ul li:nth-child(1n+2){
   margin-left:45px;
 }
 
+.border_selected{
+  border-left: 2px solid #842823 !important;
+}
+
+/*General Content Area
+=========================================*/
 #content_container{
   display: inline-block;
   width: 80%;
-  height: 100%;
   margin-left:20%;
 }
 
-#banner_image{
-  border-bottom: 5px solid #418088;
+/*Borders Area
+=========================================*/
+#banner_image{ 
+  padding:0px !important;
+  background-color:#418088;
+  border-bottom: 2px solid #418088;
+}
+html, body { border-top: 2px solid #fa8591; }
+
+/* Grid Item Background
+=========================================== */
+.grid-item-image{
+  position:relative;
+  max-width:100%;
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+  padding:0 !important;
+}
+/* Grid Items
+=========================================== */
+.number{
+  display:none;
 }
 
-#sections{
-  font-size:1.2em;
-  margin-left:2.5%;
-  margin-right:2.5%;
+.grid-item-content{
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width:100%;
+  padding:5px;
+  color:white;
 }
-#sections h2{
-  font-weight:700;
+
+.grid-item-content h2{
+  margin-top:20%;
+  text-align:center;
+}
+
+.grid-item-text{
+  padding:8%;
+  padding-top:2%;
+  color:#faf9f9;
+}
+.grid-item-teaser{
+  color:#faf9f9;
+  text-align:center;
+}
+.grid-item-description{
+  display:none;
+  color:#faf9f9;
+}
+.grid-item-skills{
+  display:none;
+  color:#faf9f9;
+  margin-top: 2%;
+}
+
+/* Grid Projects
+=========================================== */
+#projects{
+  margin-left:5px;
+  margin-right:5px;
+}
+
+#projects .grid-item{ 
+  cursor: pointer;
+  padding:5px;
+  background-clip: content-box;
+  background-color:black;
+  position:relative;
+  z-index:1;
+}
+
+.width2 { width: 50%; }
+.width3 { width: 75%; }
+.width4 { width:100%; }
+
+/* Grid Projects Expansion
+=========================================== */
+.opened .grid-item{
+  position:relative;
+  z-index:2;
+}
+
+div .opened{
+  background-color:#418088 !important;
+}
+
+.opened .grid-item-content h2{
+  margin-top:5%;
+}
+.opened .grid-item-content{
+  position: relative;
+  max-width:100%;
+  margin:0;
+  padding:0;
+  color:white;
+}
+.opened .grid-item-image{
+  clip:auto;
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+.opened .grid-item-teaser{
+  display:none;
+}
+.opened .grid-item-description{
+  display:inline-block;
+}
+.opened .grid-item-skills{
+  display:inline-block;
+}
+
+/* Contact
+=========================================== */
+.contact{
+  height:400px;
+  background-color:#FA8591;
 }
