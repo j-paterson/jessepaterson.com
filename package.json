@@ -16,6 +16,7 @@
     "url": "https://github.com/j-paterson/site/issues"
   },
   "dependencies": {
-    "express": "latest"
+    "express": "latest",
+    "xoauth2": "^1.1.0"
   }
 }
