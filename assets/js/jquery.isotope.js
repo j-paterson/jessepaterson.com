@@ -59,7 +59,7 @@ $('div#projects div.grid-item').click(function(){
 			var num = $(element).children('.number').text();
 			if(num==='5'){
 				$(element).children('.number').text("4");
-			} else {
+			} else if(num==='4'){
 				$(element).children('.number').text("5");
 			}
 		}
