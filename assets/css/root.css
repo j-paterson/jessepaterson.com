@@ -187,7 +187,7 @@ html, body { border-top: 2px solid
   display:none;
   color:#faf9f9;
 }
-.grid-item-skills{
+.grid-item-details{
   display:none;
   color:#faf9f9;
   margin-top: 2%;
@@ -249,7 +249,7 @@ div .opened{
 .opened .grid-item-description{
   display:inline-block;
 }
-.opened .grid-item-skills{
+.opened .grid-item-details{
   display:inline-block;
 }
 
