@@ -72,3 +72,7 @@ $('div#projects div.grid-item').click(function(){
     }));
 });
 
+//Menu Button
+$('.menu-btn').click(function(){
+	$('.responsive-menu').toggleClass('expand');
+});
