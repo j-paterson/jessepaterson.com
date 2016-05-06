@@ -134,13 +134,11 @@ body a:hover{
 /*Borders Area
 =========================================*/
 #banner_image{ 
-  padding:0px !important;
+  padding:0 !important;
   background-color:#418088;
   border-bottom: 2px solid #418088;
 }
-html, body { border-top: 2px solid 
-
-#eed1b7; }
+html, body { border-top: 2px solid #eed1b7; }
 
 /* Grid Item Background
 =========================================== */
@@ -198,6 +196,7 @@ html, body { border-top: 2px solid
 #projects{
   margin-left:5px;
   margin-right:5px;
+  display:inline-block;
 }
 
 #projects .grid-item{ 
@@ -255,10 +254,6 @@ div .opened{
 
 /* Contact
 =========================================== */
-.email-form{
-  margin-top:5%;
-}
-
 .info{
   margin-top:10%;
   margin-bottom:10%;
@@ -281,36 +276,13 @@ div .opened{
 .contact{
   padding:5%;
   height:auto !important;
-  height:800px;
+  min-height: 250px;
   background-color:#eed1b7;
-}
-
-.contact-title{
-  text-align: center;
-  margin-top:0;
-  padding-top:0;
-  margin-bottom:2%;
-}
-
-.full-form{
-  width: 100%;
-  padding:1%;
-  margin-bottom:2%;
-}
-
-#reload-button{
-  background-color: #418088; /* Green */
-  border: none;
-  color: white;
-  padding: 10px 16px;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
-  font-size: 16px;
 }
 
-#send-button{
-  background-color: #418088; /* Green */
+#button{
+  background-color: #418088;
   border: none;
   color: white;
   margin-top:10px;
@@ -320,4 +292,12 @@ div .opened{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.four-title{
+  text-align: center;
+  margin-top:0;
+  padding-top:0;
+  margin-bottom:2%;
+  color:#842823;
 }

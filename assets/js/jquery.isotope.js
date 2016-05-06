@@ -7,6 +7,12 @@ var $grid = $('.grid').isotope({
 	layoutMode: 'fitRows'
 });
 
+$(window).load(function(){
+    // All images, css style sheets and external resources are loaded!
+    // Do ya thing!..
+    $grid.isotope('reLayout');
+});
+
 var filterValue ='*';
 
 $('#isotope-filter li').on( 'click', function() {
@@ -66,6 +72,3 @@ $('div#projects div.grid-item').click(function(){
     }));
 });
 
-$grid.imagesLoaded().progress( function() {
-  $grid.isotope('layout');
-});
