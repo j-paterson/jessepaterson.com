@@ -246,6 +246,15 @@ html, body { border-top: 2px solid #eed1b7; }
 .width3 { width: 75%; }
 .width4 { width:100%; }
 
+/* lazy class and the added height/width of 1000/2000 
+on each of the grid-item-images ensures that isotope and bootstrap
+give the images enoughspace -- preventing overlap when images are loading */
+
+img.lazy {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Grid Projects Expansion
 =========================================== */
 .opened .grid-item{
@@ -314,6 +323,9 @@ div .opened{
   background-color:#eed1b7;
   display: inline-block;
 }
+
+/* This button is almost exclusively for the 404 page, but 
+could be used elsewhere later.*/
 
 #button{
   background-color: #418088;
