@@ -1,18 +1,16 @@
-$(document).ready(function() {
-	var $grid = $('.grid').isotope({
-		getSortData: {
-			number:'.number parseInt'
-		},
-		sortBy: 'number',
-		itemSelector: '.grid-item',
-		layoutMode: 'fitRows'
-	});
+var $grid = $('.grid').isotope({
+	getSortData: {
+		number:'.number parseInt'
+	},
+	sortBy: 'number',
+	itemSelector: '.grid-item',
+	layoutMode: 'fitRows'
 });
 
 $(window).load(function(){
-    // All images, css style sheets and external resources are loaded!
-    // Do ya thing!..
-    $grid.isotope('reLayout');
+	$(document).ready(function() {
+    	$grid.isotope('reLayout');
+    });
 });
 
 var filterValue ='*';
