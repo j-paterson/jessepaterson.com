@@ -1,10 +1,12 @@
-var $grid = $('.grid').isotope({
-	getSortData: {
-		number:'.number parseInt'
-	},
-	sortBy: 'number',
-	itemSelector: '.grid-item',
-	layoutMode: 'fitRows'
+$(document).ready(function() {
+	var $grid = $('.grid').isotope({
+		getSortData: {
+			number:'.number parseInt'
+		},
+		sortBy: 'number',
+		itemSelector: '.grid-item',
+		layoutMode: 'fitRows'
+	});
 });
 
 $(window).load(function(){
