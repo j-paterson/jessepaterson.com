@@ -41,7 +41,7 @@ body a:hover{
   #sidebar {
     margin-top:20px;
     vertical-align: top;
-    padding: 18px 0 0 4%;
+    padding: 18px 0 0 0%;
     margin-right: -1px;
     border-right: 1px solid #44575a;
   }
@@ -111,6 +111,10 @@ body a:hover{
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 768px) {
+  nav {
+    padding-right:5%;
+  }
+
   .mobile-nav{
     display:none;
   }
@@ -135,11 +139,9 @@ body a:hover{
   }
 
   nav ul li:nth-child(1n+2){
-    border-left: 2px solid 
-
-  #eed1b7;
-    padding-left:5px;
-    margin-left:45px;
+    border-left: 2px solid #eed1b7;
+    padding-left:3%;
+    margin-left:25%;
   }
 
   .border_selected{
@@ -223,6 +225,9 @@ html, body { border-top: 2px solid #eed1b7; }
   display:none;
   color:#faf9f9;
   margin-top: 2%;
+}
+.grid-item-title{
+  font-size:160%;
 }
 
 /* Grid Projects
@@ -338,12 +343,4 @@ could be used elsewhere later.*/
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-}
-
-.four-title{
-  text-align: center;
-  margin-top:0;
-  padding-top:0;
-  margin-bottom:2%;
-  color:#842823;
 }

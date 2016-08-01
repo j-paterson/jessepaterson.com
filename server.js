@@ -16,11 +16,11 @@ router.get("/",function(req,res){
 });
 
 router.get("/projects",function(req,res){
-  res.sendFile(path + "project_1.html");
+  res.sendFile(path + "projects.html");
 });
 
-router.get("/projects/kickgrass",function(req,res){
-  res.sendFile(path + "kickgrass.html");
+router.get("/projects/mirror",function(req,res){
+  res.sendFile(path + "mirror.html");
 });
 
 router.get("/contact",function(req,res){
