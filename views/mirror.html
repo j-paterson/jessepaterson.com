@@ -26,17 +26,31 @@
 
 <body>
     
-    <div id='weather'></div>
+    <div id='weather'>
+        <div class="container clearfix">
+            <p class="location"></p>
+            <p class="temperature"></p>
+            <div class="climate_bg"></div>
+            <div class="info_bg">
+                <img class="dropicon" src="../assets/images/mirror/Droplet.svg">
+                <p class="humidity"></p>
+                <img class="windicon" src="../assets/images/mirror/Wind.svg">
+                <div class="windspeed"></div>
+            </div>
+        </div>
+    </div>
     
-    <!-- jQuery -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/weather.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../assets/js/bootstrap.min.js"></script>
+    
     <p id='greeting'>
         TEST GREETING: YOU LOOK GREAT TODAY!
     </p>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js">
+    </script>
+    <script src="../assets/js/weather.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>

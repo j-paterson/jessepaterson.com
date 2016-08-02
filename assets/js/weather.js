@@ -1,22 +1,36 @@
-$(document).ready(function() {
-  getWeather(); //Get the initial weather.
-  setInterval(getWeather, 600000); //Update the weather every 10 minutes.
+if("geolocation" in navigator) {
+	navigator.geolocation.getCurrentPosition(function(position){
+		loadWeather(position.coords.latitude + ',' + position.coords.longitude);
+	});
+} else {
+	loadWeather("Berkeley, CA", "");
+}
+
+$(document).ready(function (){
+	setInterval(getWeather, 10000);
 });
 
-function getWeather() {
-  $.simpleWeather({
-    location: 'Berkeley, CA',
-    unit: 'f',
-    success: function(weather) {
-      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-      html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.alt.temp+'&deg;C</li></ul>';
-  
-      $("#weather").html(html);
-    },
-    error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
-    }
-  });
+function loadWeather(location, woeid) {
+	$.simpleWeather({
+		location: location,
+		woeid: woeid,
+		unit: 'f',
+		success: function(weather) {
+			city = weather.city;
+			temp = weather.temp+'&deg;';
+			wcode = '<img class="weathericon" src="../assets/images/mirror/weathericons/'+ weather.code +'.svg">';
+			wind = '<p>'+weather.wind.speed + '</p><p>' + weather.units.speed + '</p>';
+			humidity = weather.humidity + ' %';
+
+			$(".location").text(city);
+			$(".temperature").html(temp);
+			$(".climate_bg").html(wcode);
+			$(".windspeed").html(wind);
+			$(".humidity").text(humidity);
+		},
+
+		error: function(error) {
+			$(".error").html('<p>' + error + '</p>');
+		}
+	});
 }
