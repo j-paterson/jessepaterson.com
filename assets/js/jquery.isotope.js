@@ -88,4 +88,5 @@ $('.menu-btn').click(function(){
 function center() {
     $('html,body').animate({
 		scrollTop: $(this).offset().top - ( $(window).height() - $(this).outerHeight(true) ) / 2}, 200);
+    console.log("activated");
 }
