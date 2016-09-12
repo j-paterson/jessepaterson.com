@@ -5,7 +5,7 @@ $(window).load(function(){
 		},
 		sortBy: 'number',
 		itemSelector: '.grid-item',
-		layoutMode: 'fitRows'
+		layoutMode: 'fitRows',
 		filter: ':not(.noshow)'
 	});
 });
