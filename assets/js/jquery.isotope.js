@@ -7,6 +7,7 @@ $(window).load(function(){
 		itemSelector: '.grid-item',
 		layoutMode: 'fitRows'
 	});
+	$grid.isotope({ filter: ':not(.blog)' });
 });
 
 var $grid = $('.grid').isotope({
