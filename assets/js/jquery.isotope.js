@@ -83,10 +83,3 @@ $('div#projects div.grid-item').click(function(){
 $('.menu-btn').click(function(){
 	$('.responsive-menu').toggleClass('expand');
 });
-
-//blog center on scroll
-function center() {
-    $('html,body').animate({
-		scrollTop: $(this).offset().top - ( $(window).height() - $(this).outerHeight(true) ) / 2}, 200);
-    console.log("activated");
-}
