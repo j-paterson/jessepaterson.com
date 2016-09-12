@@ -6,8 +6,8 @@ $(window).load(function(){
 		sortBy: 'number',
 		itemSelector: '.grid-item',
 		layoutMode: 'fitRows'
+		filter: ':not(.noshow)'
 	});
-	$grid.isotope({ filter: ':not(.blog)' });
 });
 
 var $grid = $('.grid').isotope({
