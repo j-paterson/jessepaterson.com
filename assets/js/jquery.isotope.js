@@ -5,8 +5,8 @@ $(window).load(function(){
 		},
 		sortBy: 'number',
 		itemSelector: '.grid-item',
-		layoutMode: 'fitRows',
-		filter: ':not(.noshow)'
+		filter: ':not(.noshow)',
+		layoutMode: 'fitRows'
 	});
 });
 
@@ -16,6 +16,7 @@ var $grid = $('.grid').isotope({
 	},
 	sortBy: 'number',
 	itemSelector: '.grid-item',
+	filter: ':not(.noshow)',
 	layoutMode: 'fitRows'
 });
 
