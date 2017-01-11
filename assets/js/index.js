@@ -29,10 +29,21 @@ function scrollTo(hash) {
 }
 
 $(document).ready(function() {
-    $("#clicker").click(function () {
-        $(".overlay").fadeIn();
-    });
     $(".exit").click(function(){
         $(".overlay").fadeOut();
     });
 });
+
+/* Loading Modal Elements */
+
+$(window).on('load', function() {
+    loadPage();
+});
+
+$(window).bind('hashchange', loadPage);
+
+function loadPage(){
+    // Update  variables on page load
+    page = window.location.hash.toLowerCase();
+    $(page + '.overlay').fadeIn();
+}

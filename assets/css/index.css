@@ -85,6 +85,12 @@
     cursor: pointer;
 }
 
+a .project-square {
+    text-decoration: none;
+}
+
+}
+
 @media (min-device-width : 481px){
     /* Tablets */
     .project-square {
