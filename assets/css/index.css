@@ -132,8 +132,15 @@
     background-color: #FAF9F9;
 }
 
+
 #about-content {
-    margin: 3em 20% 0 20%;
+    margin: 3em 10% 0 10%;
+}
+
+@media (min-width : 1025px) {
+    #about-content {
+        margin: 3em 20% 0 20%;
+    }
 }
 
 /* Skills section */
