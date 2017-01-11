@@ -6,7 +6,7 @@
     z-index: 10; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: white;
+    background-color: #111;
     border-right: 1px solid #44575a;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
@@ -30,6 +30,10 @@
 #navlinks {
     padding-top:5em;
     display:none;
+}
+
+#navlink {
+    text-transform: uppercase;
 }
 
 /* close button for menu */
@@ -109,10 +113,13 @@
     }
 
     .project-content .title{
-        font-size: 2em;
+        font-size: 2em;   
     }
 }
 
+.project-content .title{
+    text-transform: uppercase;
+}
 
 .project-content{
     position:absolute;

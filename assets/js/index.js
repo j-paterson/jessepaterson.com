@@ -20,5 +20,5 @@ function closeNav() {
 }
 
 function expand(clicked){
-    clicked.style.width=""
+    clicked.style.width = "100%";
 }
