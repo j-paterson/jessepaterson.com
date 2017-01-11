@@ -45,5 +45,7 @@ $(window).bind('hashchange', loadPage);
 function loadPage(){
     // Update  variables on page load
     page = window.location.hash.toLowerCase();
-    $(page + '.overlay').fadeIn();
+    if(page!=""){
+        $(page + '.overlay').fadeIn();
+    }
 }
