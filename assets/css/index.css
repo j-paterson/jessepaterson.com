@@ -32,8 +32,9 @@
     display:none;
 }
 
-#navlink {
+.navlink {
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 /* close button for menu */
@@ -81,6 +82,7 @@
     padding-bottom: 100%;
     margin:1.66%;
     overflow:hidden;
+    cursor: pointer;
 }
 
 @media (min-device-width : 481px){
@@ -158,10 +160,30 @@
     position:fixed; 
     display:none;
 }
-.full{
-    width: 100%; 
+
+.overlay {
     height: 100%;
-    position: absolute;
+    width: 100%;
+    position: fixed;
     top: 0;
+    bottom: 0;
     left: 0;
+    right: 0;
+    margin: auto;
+    background: white;
+    z-index: 10;
+    display:none;
 }
+
+.overlay .exit{
+    z-index: 12;
+    cursor: pointer;
+}
+
+.overlay .exit img{
+    position:fixed;
+    top: 0;
+    right: 0;
+    width:3em;
+}
+

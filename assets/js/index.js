@@ -22,18 +22,17 @@ function closeNav() {
     });
 }
 
-function expand(clicked){
-    $(clicked).addClass('full');
-    $(clicked).attr('onClick')="javascript: collapse();";
-}
-
-function collapse(clicked){
-    $(clicked).removeClass('full');
-    $(clicked).setAttribute( "onClick", "javascript: expand();");
-}
-
 function scrollTo(hash) {
     $(document.body).animate({
     'scrollTop':   $(hash).offset().top
     }, 500);
 }
+
+$(document).ready(function() {
+    $("#clicker").click(function () {
+        $(".overlay").fadeIn();
+    });
+    $(".exit").click(function(){
+        $(".overlay").fadeOut();
+    });
+});
