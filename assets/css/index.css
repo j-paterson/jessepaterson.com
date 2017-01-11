@@ -1,19 +1,56 @@
 /* Globals */
 
+.section-title{
+    margin:2em;
+    text-transform: uppercase;
+}
 
+.section-line{
+    width: 70px;
+    height: 1px;
+    position: relative;
+    margin: 20px auto 19px;
+    border-top: 1px solid #d0d0d0;
+}
 
+#main {
+    margin-left: 5em;
+}
+
+.img-center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered{
+    text-align: center;
+}
+
+.title{
+    margin:0.5em;
+    font-size: 2em;
+    font-weight:200;
+}
+.sub-title{
+    margin:0.5em;
+    font-size: 1.5em;
+    font-weight:200;
+}
 
 
 /* The Side Navigation Menu  Section*/
 .sidebar {
     height: 150%; /* 100% Full-height */
-    width: 5em; /* 0 width - change this with JavaScript */
+    width: 5em; /* 0 width - changed with js */
     position: fixed; /* Stay in place */
     z-index: 10; /* Stay on top */
     top: 0;
     left: 0;
     background-color: #111;
     border-right: 1px solid #44575a;
+    cursor: pointer;
+    cursor: hand;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
@@ -65,10 +102,7 @@
     .sidebar a {font-size: 18px;}
 }
 
-/* Main content section */
-#main {
-    margin-left: 5em;
-}
+/* About section */
 
 #about {
     padding:0.5em;
@@ -77,8 +111,13 @@
     background-color: #FAF9F9;
 }
 
+/* Skills section */
+.skill-icon{
+    width:70%;
+}
 
 /* Projects section */
+
     /* Phones */
 .project-square {
     background-color: #FAF9F9;
@@ -141,24 +180,6 @@
 .project-content{
     padding: 2em;
     margin-left:50%;
-}
-
-
-/* Useful Addional Classes */
-.img-center{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.centered{
-    text-align: center;
-}
-
-.title{
-    margin:0.5em;
-    font-size: 2em;
-    font-weight:200;
 }
 
 .dimmer {

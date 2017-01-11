@@ -45,7 +45,7 @@
 
 <!-- Navigation -->
 <nav id="sidenav" class="sidebar" onClick="openNav()">
-    <a href="javascript:void(0)" id="navbtn" onClick="openNav()">
+    <a id="navbtn" onClick="openNav()">
         <div id="logo">
             <img src="../assets/images/logos/logo_red.svg"></img>
         </div>
@@ -55,6 +55,7 @@
     </a>
     <div id="navlinks">
         <a class="navlink" onClick="scrollTo('#about')">About</a>
+        <a class="navlink" onClick="scrollTo('#skills')">Skills</a>
         <a class="navlink" onClick="scrollTo('#experience')">Experience</a>
         <a class="navlink" onClick="scrollTo('#projects')">Projects</a>
         <a class="navlink" onClick="scrollTo('#blog')">Blog</a>
@@ -73,11 +74,96 @@
             <div>
                 <p class="centered title">Jesse Paterson</p>
                 <p class="centered">Developer / Designer</p>
+            </div>
+            <div>
+                <p>
+            <div>
+        </div>
 
+        <div id="skills">
+            <div class="section-title">
+                <p class='centered title'>Skills</p>
+            </div>
+            <div class= "section-line"></div>
+            <div class="container">
+                <div class="col-md-3">
+                    <div class='row'>
+                        <p class="centered sub-title">Front-End</p>
+                    </div>
+                    <div class='row'>
+                        <img class='img-center skill-icon' src="../assets/images/skills/HTML5_CSS_JavaScript.png"></img>
+                    </div>
+                    <div class='row'>
+                        <img class='img-center skill-icon' src="../assets/images/skills/responsive_web_design.png"></img>
+                    </div>
+                    <div class='row'>
+                        <img class='img-center skill-icon' style="width:30%; margin-top:1em;" src="../assets/images/skills/ux.png"></img>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class='row'>
+                        <p class="centered sub-title">Back-End</p>
+                    </div>
+                    <div class='row'>
+                        <img class='img-center skill-icon' src="../assets/images/skills/nodejs.png"></img>
+                    </div>
+                    <div class='row'>
+                        <img class='img-center skill-icon' src="../assets/images/skills/logo-drupal.png"></img>
+                    </div>
+                    <div class='row'>
+                        <img class='img-center skill-icon' src="../assets/images/skills/rails.png"></img>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class='row'>
+                        <p class="centered sub-title">Languages</p>
+                    </div>
+                    <div class='row'>
+                        <img class='img-center skill-icon' style="padding-top:1em;" src="../assets/images/skills/python.png"></img>
+                    </div>
+                    <div class='row'>
+                        <img class='img-center skill-icon' style="width:50%" src="../assets/images/skills/java-logo.png"></img>
+                    </div>
+                    <div class='row'>
+                        <div style='margin-left:3em;'>
+                            <img class='skill-icon' style="width:35%" src="../assets/images/skills/c-logo.png"></img>
+                            <img class='skill-icon' style="width:30%" src="../assets/images/skills/csharp.png"></img>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class='row'>
+                        <p class="centered sub-title">Software</p>
+
+                        <div class='row'>
+                            <div style='margin-left:3em;'>
+                                <img class='skill-icon' style="width:30%" src="../assets/images/skills/ps.png"></img>
+                                <img class='skill-icon' style="width:30%" src="../assets/images/skills/ai.png"></img>
+                                <img class='skill-icon' style="width:30%" src="../assets/images/skills/ae.png"></img>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <img class='img-center skill-icon' style="width:50%;" src="../assets/images/skills/unity-logo.png"></img>
+                        </div>
+                        <div class='row'>
+                            <img class='img-center skill-icon' style="margin-top:1em; margin-bottom:1em;" src="../assets/images/skills/maya-logo.png"></img>
+                        </div>
+                        <div class='row'>
+                            <img class='img-center skill-icon' src="../assets/images/skills/SolidWorks.png"></img>
+                        </div>
+                        <div class='row'>
+                            <img class='img-center skill-icon' style="margin-top:-1em;" src="../assets/images/skills/sketch-logo.png"></img>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="projects">
+            <div class="section-title">
+                <p class='centered title'>Projects</p>
+            </div>
+            <div class= "section-line"></div>
             <a href="#nature">
                 <div class="project-square">
                     <div class="project-teaser">
@@ -122,6 +208,20 @@
                 SIXT33N
             </div>
 
+            <a href="#vxpc">
+                <div class="project-square">
+                    <div class="project-teaser">
+                        <p class="centered title">VXPC</p>
+                    </div>
+                </div>
+            </a>
+            <div class="overlay" id="vxpc">
+                <div class="exit">
+                    <a href="#!"><img src="../assets/images/logos/X_red.svg"></a>
+                </div>
+                VXPC
+            </div>
+
             <a href="#WALL-E">
                 <div class="project-square">
                     <div class="project-teaser">
@@ -163,26 +263,20 @@
                 </div>
                 Cart
             </div> -->
-
-            <a href="#vxpc">
-                <div class="project-square">
-                    <div class="project-teaser">
-                        <p class="centered title">VXPC</p>
-                    </div>
-                </div>
-            </a>
-            <div class="overlay" id="vxpc">
-                <div class="exit">
-                    <a href="#!"><img src="../assets/images/logos/X_red.svg"></a>
-                </div>
-                Branchscape
-            </div>
         </div>
 
         <div id="blog">
 
         </div>
     </div>
+
+    <div id="footer" class="container">
+        <p class="centered">Developed and Designed by Jesse Paterson</p>
+        <p class="centered">©2016-2017 All Rights Reserved.</p>
+
+        </div>
+    </div>
+
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
