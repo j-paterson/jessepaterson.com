@@ -19,6 +19,10 @@ router.get("/projects",function(req,res){
   res.sendFile(path + "projects.html");
 });
 
+router.get("/index",function(req,res){
+  res.sendFile(path + "index.html");
+});
+
 router.get("/projects/mirror",function(req,res){
   res.sendFile(path + "mirror.html");
 });
