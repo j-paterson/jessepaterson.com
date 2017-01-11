@@ -37,6 +37,9 @@ $(document).ready(function() {
         $(".overlay").fadeOut();
         $("#dimmer").fadeOut('fast');
     });
+    $('.navlink').click(function(){
+        closeNav();
+    });
 });
 
 /* Loading Modal Elements */
