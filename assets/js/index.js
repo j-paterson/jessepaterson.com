@@ -31,6 +31,11 @@ function scrollTo(hash) {
 $(document).ready(function() {
     $(".exit").click(function(){
         $(".overlay").fadeOut();
+        $("#dimmer").fadeOut('fast');
+    });
+    $("#dimmer").click(function(){
+        $(".overlay").fadeOut();
+        $("#dimmer").fadeOut('fast');
     });
 });
 
@@ -46,6 +51,9 @@ function loadPage(){
     // Update  variables on page load
     page = window.location.hash.toLowerCase();
     if(page!=""){
-        $(page + '.overlay').fadeIn();
+        if(page!="#!"){
+            $('#dimmer').fadeIn();
+            $(page + '.overlay').fadeIn();
+        }
     }
 }

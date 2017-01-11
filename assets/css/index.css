@@ -1,3 +1,9 @@
+/* Globals */
+
+
+
+
+
 /* The Side Navigation Menu  Section*/
 .sidebar {
     height: 150%; /* 100% Full-height */
@@ -85,12 +91,6 @@
     cursor: pointer;
 }
 
-a .project-square {
-    text-decoration: none;
-}
-
-}
-
 @media (min-device-width : 481px){
     /* Tablets */
     .project-square {
@@ -127,6 +127,8 @@ a .project-square {
 
 .project-content .title{
     text-transform: uppercase;
+    text-decoration: none;
+    color: black;
 }
 
 .project-content{
@@ -168,13 +170,12 @@ a .project-square {
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
+    margin-left: 5em;
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom:25;
+    left:25;
+    top:25;
+    right:25;
     margin: auto;
     background: white;
     z-index: 10;
@@ -182,14 +183,14 @@ a .project-square {
 }
 
 .overlay .exit{
-    z-index: 12;
+    z-index: 11;
     cursor: pointer;
 }
 
 .overlay .exit img{
     position:fixed;
-    top: 0;
-    right: 0;
+    top: 25;
+    right: 25;
     width:3em;
 }
 
