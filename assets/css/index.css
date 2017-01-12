@@ -287,7 +287,6 @@
     margin:1em;
     text-decoration:none;
     color:#333;
-    text-align:center;
 }
 
 .project-details div:hover, .offcanvas div:focus {
@@ -318,6 +317,12 @@
     background: white;
     z-index: 10;
     display:none;
+    overflow:auto;
+}
+
+.modal-open {
+    overflow: hidden;
+    position: fixed;
 }
 
 .overlay .exit img{
@@ -332,7 +337,6 @@
 .videoWrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
     height: 0;
 }
 .videoWrapper iframe {
@@ -345,4 +349,5 @@
 
 #footer{
     background-color: #FAF9F9;
+    display:inline-block;
 }

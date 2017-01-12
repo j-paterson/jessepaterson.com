@@ -32,20 +32,22 @@ function scrollTo(hash) {
 
 $(document).ready(function() {
     $(".exit").click(function(){
-        var iframe = $('.project-content').find('iframe');
+        var iframe = $('.current').find('iframe');
+        $('.current').removeClass('current');
         var src = $(iframe).attr('src');      
         $(iframe).attr('src', '').attr('src', src);
         $(".overlay").fadeOut();
         $("#dimmer").fadeOut('fast');
-        enableScroll();
+        //enableScroll();
     });
     $("#dimmer").click(function(){
-        var iframe = $('.project-content').find('iframe');
+        var iframe = $('.current').find('iframe');
+        $('.current').removeClass('current');
         var src = $(iframe).attr('src');      
         $(iframe).attr('src', '').attr('src', src);
         $(".overlay").fadeOut();
         $("#dimmer").fadeOut('fast');
-        enableScroll();
+        //enableScroll();
     });
     $('.navlink').click(function(){
         closeNav();
@@ -63,11 +65,13 @@ $(window).bind('hashchange', loadPage);
 function loadPage(){
     // Update  variables on page load
     page = window.location.hash.toLowerCase();
-    if(page!=""){
+    id=page.replace("#", "");
+    if(page!==""){
         if(page!="#!"){
             $('#dimmer').fadeIn();
             $(page + '.overlay').fadeIn();
-            disableScroll();
+            $(page + '.overlay').addClass('current');
+            //disableScroll();
         }
     }
 }
@@ -76,10 +80,10 @@ function loadPage(){
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
 function preventDefault(e) {
-  e = e || window.event;
-  if (e.preventDefault)
-      e.preventDefault();
-  e.returnValue = false;  
+    e = e || window.event;
+    if (e.preventDefault)
+        e.preventDefault();
+    e.returnValue = false;
 }
 
 function preventDefaultForScrollKeys(e) {
@@ -101,8 +105,17 @@ function disableScroll() {
 function enableScroll() {
     if (window.removeEventListener)
         window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.onmousewheel = document.onmousewheel = null; 
-    window.onwheel = null; 
-    window.ontouchmove = null;  
-    document.onkeydown = null;  
+    window.onmousewheel = document.onmousewheel = null;
+    window.onwheel = null;
+    window.ontouchmove = null;
+    document.onkeydown = null;
 }
+
+$(".overlay").on("show", function () {
+  $("body").addClass("modal-open");
+}).on("hidden", function () {
+  $("body").removeClass("modal-open");
+});
+
+
+
