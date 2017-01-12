@@ -30,19 +30,13 @@
   width:40%;
 }
 
-.overlay-img-center{
+/*.overlay-img-center{
     height:100%;
     white-space: nowrap;
 }
-
+*/
 .overlay-img-center img{
-    vertical-align: middle;
-}
-
-.helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+    margin:3em;
 }
 
 .overflow-prevention {
@@ -350,4 +344,6 @@
 #footer{
     background-color: #FAF9F9;
     display:inline-block;
+    text-align:center;
+    width:100%;
 }
