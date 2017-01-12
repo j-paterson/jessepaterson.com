@@ -91,19 +91,25 @@
                 <div class="exit">
                     <a href="#!"><img src="../assets/images/logos/X_red.svg"></a>
                 </div>
-                <div class='col-md-4 overlay-text'>
-                    <p class="centered title">
-                        Rock Climbing
-                    </p>
-                    <p>
-                        Climbing is one of my favorite things to do when I take a break from working. I really enjoy how  a difficult climb can push me to my limits leaving me exhausted, but with a major feeling of acomplishment. These pictures are from a trip to Castle Rock with the Cal Climbing Club. 
-                    </p>
-                </div>
-                <div class='col-md-4 overlay-img-center overflow-prevention'>
-                    <img src="../assets/images/about/rock.jpg"></img>
-                </div>
-                <div class='col-md-4 overlay-img-center overflow-prevention'>
-                    <img src="../assets/images/about/rock2.jpg"></img>
+                <div class='container'>
+                    <div class="row">
+                        <div class='col-sm-12 overlay-text'>
+                            <p class="centered title">
+                                Rock Climbing
+                            </p>
+                            <p>
+                                Climbing is one of my favorite things to do when I take a break from working. I really enjoy how  a difficult climb can push me to my limits leaving me exhausted, but with a major feeling of acomplishment. These pictures are from a trip to Castle Rock with the Cal Climbing Club. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                        <div style="width:40%; display:inline-block; padding:3%;">
+                            <img class="img-center" src="../assets/images/about/rock.jpg"></img>
+                        </div>
+                        <div style="width:40%; display:inline-block; padding:3%;">
+                            <img class="img-center" src="../assets/images/about/rock2.jpg"></img>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -330,6 +336,27 @@
                 <div class="project-square">
                     <div class="project-teaser">
                         <p class="centered title">WALL-E</p>
+                        <div class='project-details'>
+                            <div>
+                                <p>A remote controlled telepresence tank which remotely syncs an onboard camera to an Oculus through a Node.js Server.</p>
+                            </div>
+                            <div>
+                                <b class="highlight">Skills</b>
+                                <br>
+                                C#, Node.js, Oculus SDK, Unity, Raspberry Pi &amp; Arduino 
+                            </div>
+                            <div>
+                                <b class="highlight">Time</b>
+                                <br>
+                                36 hrs
+                            </div>
+                            <div>
+                                <b class="highlight">Client</b>
+                                <br>
+                                Treehacks, Self<br>
+                                (2015)
+                            </div>
+                        </div>
                     </div>
                 </div>
             </a>
@@ -339,40 +366,26 @@
                 </div>
                 <div class='project-content'>
                     <div class='col-md-8 overlay-img-center'>
-                        <img class="img-center" src="../assets/images/nature/nature.png"></img>
+                        <iframe style="margin:1em; margin-top:4em;" width="854" height="480" src="https://www.youtube.com/embed/pxcl_ItSd_E?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class='col-md-4 overlay-text'>
                         <p class="centered title">
                             WALL-E
                         </p>
-                        <div class="grid-item-teaser">
-                                A remote controlled telepresence tank which remotely syncs an onboard camera to an Oculus through a Node.js Server.
-                            </div>
-                            <div class="grid-item-description">
-                                A VR telepresence tank controlled remotely through a Node.js server.
-                                We used a Raspberry Pi and Arduino on board to remotely connect an Oculus to a camera that rotates in sync with the user's head. Started at Treehacks, it has since been repurposed to become <a href='http://www.adawarp.com'>Adawarp</a> and was funded by <a href='https://rothenbergventures.com/'>Rothenburg Ventures</a>
-                            </div>
-                            <!-- <video class='grid-item-image col-md-12 lazy' width="2000" controls>
-                              <source src="assets/images/Wall-E/we.mp4" type="video/mp4">
-                              <img class='grid-item-image col-md-12 lazy' width="2000" height="1000" src="assets/images/Wall-E/Wall-E.jpg"></img>
-                            </video> -->
-                            <div class='grid-item-details'>
-                                <div class="grid-item-skills col-sm-4 col-md-4">
-                                    Skills
-                                    <br>
-                                    Arduino, C#, Node.js, Oculus, Unity, Raspberry Pi
-                                </div>
-                                <div class="grid-item-time col-sm-4 col-md-4">
-                                    Time
-                                    <br>
-                                    36 hrs
-                                </div>
-                                <div class="grid-item-client col-sm-4 col-md-4">
-                                    Client
-                                    <br>
-                                    Treehacks, Self
-                                </div>
-                            </div>
+                        <div class="grid-item-description">
+                            <p>
+                                I met Tatsuki for the first time at Treehacks. We were both on the waitlist and sitting outside the hackathon building. I noticed that he had an Oculus with him and struck up a conversation about why he brought it. We ended up getting a few extra hacker lanyards and working on this project together.
+                            </p>
+                            <p>
+                                Using legos, motors, and a few onboard microprocessors, we set up a VR telepresence tank that was controlled remotely through a Node.js server. All video footage and commands were passed through this server and through a Unity application to connect with the Oculus headset. I set up the Node.js server and wrote a few C# scripts to make the connection.
+                            </p>
+                            <p>
+                                We used a Raspberry Pi and Arduino on board to remotely connect an Oculus to a camera that rotates in sync with the user's head with four degrees of freedom (forward/backward, left/right, yaw and pitch). Movement of the tank was controlled using an x-box controller through the same Node.js server.
+                            </p>
+                            <p>
+                                We later presented this project at the Bay Area Makerfaire. It has since been repurposed to become <a href='http://adawarp.com/'>Adawarp</a> and Tatsuki is continuing to work on it back in Japan. We've become good friends and still visit each other.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -415,15 +428,9 @@
             </div> -->
         </div>
 
-        <div id="blog">
-
-        </div>
-
-        <div id="footer" class="container">
+        <div id="footer" class='col-md-12'>
             <p class="centered">Developed and Designed by Jesse Paterson</p>
             <p class="centered">©2016-2017 All Rights Reserved.</p>
-
-            </div>
         </div>
     </div>
 
