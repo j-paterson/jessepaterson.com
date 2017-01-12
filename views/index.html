@@ -61,8 +61,7 @@
         <a class="navlink" onClick="scrollTo('#skills')">Skills</a>
         <a class="navlink" onClick="scrollTo('#experience')">Experience</a>
         <a class="navlink" onClick="scrollTo('#projects')">Projects</a>
-        <a class="navlink" onClick="scrollTo('#blog')">Blog</a>
-        <a class="navlink" onClick="scrollTo('#contact')">Contact</a>
+        <a class="navlink" href="https://blog.jessepaterson.com">Blog</a>
     </div>
 </nav>
 
@@ -85,7 +84,7 @@
             <div id='about-content'>
                 <p class="centered title">Hello! My name is Jesse Paterson.</p>
                 <p>
-                    I'm a developer and designer in the Bay Area currently pursuing a degree in Computer Science at UC Berkeley. When I'm not wrapping my head around computer vision algorithms or building websites, I like to <a href="http://azura.wikia.com/wiki/Azura_Wikia">build worlds</a>, <a href="https://vr.berkeley.edu/">create art with Virtual Reality</a> and <a href="#rock">climb big rocks</a>. I value persistence, integrity and quality.
+                    I'm a developer and designer in the Bay Area currently pursuing a degree in Computer Science at UC Berkeley. I enjoy learning new skills and working with a group to create large scale projects. When I'm not wrapping my head around computer vision algorithms or building websites, I like to <a href="http://azura.wikia.com/wiki/Azura_Wikia">build worlds</a>, <a href="https://vr.berkeley.edu/">create art with Virtual Reality</a> and <a href="#rock">climb big rocks</a>. I value persistence, integrity and quality.
                 </p>
             </div>
             <div class="overlay" id="rock">
@@ -100,10 +99,10 @@
                         Climbing is one of my favorite things to do when I take a break from working. I really enjoy how  a difficult climb can push me to my limits leaving me exhausted, but with a major feeling of acomplishment. These pictures are from a trip to Castle Rock with the Cal Climbing Club. 
                     </p>
                 </div>
-                <div class='col-md-4 overlay-img-center'>
+                <div class='col-md-4 overlay-img-center overflow-prevention'>
                     <img src="../assets/images/about/rock.jpg"></img>
                 </div>
-                <div class='col-md-4 overlay-img-center'>
+                <div class='col-md-4 overlay-img-center overflow-prevention'>
                     <img src="../assets/images/about/rock2.jpg"></img>
                 </div>
             </div>
@@ -197,7 +196,10 @@
                 <p class="centered title"></p>
                 <div class="experience-content">
                     <div class='row job-container'>
-                        <div class='col-md-8'>
+                        <div class='col-sm-12 col-md-4'>
+                            <img class="img-center job-img" src="../assets/images/experience/cnr.png"></img>
+                        </div>
+                        <div class='col-sm-12 col-md-8'>
                             <p class="title"> Web Developer</p>
                             <p class="sub-title">College of Natural Resources</p>    
                             <div class='job-content'>
@@ -207,23 +209,20 @@
                                 </p>
                             </div>
                         </div>
-                        <div class='col-md-4'>
-                            <img class="img-center job-img" src="../assets/images/experience/cnr.png"></img>
-                        </div>
                     </div>
                     <div class='row job-container'>
+                        <div class='col-md-4'>
+                            <img class="img-center job-img img-reduction" src="../assets/images/experience/ucbseal.png"></img>
+                        </div>
                         <div class='col-md-8'>
                             <p class="title">Design Researcher</p>
                             <p class="sub-title">Center for Augmented Cognition</p>    
                             <div class='job-content'>
                                 <p><b>Spring 2016 - Spring 2017</b></p>
                                 <p>
-                                    In this position, I worked on the <a href="http://www.isaacs.io/">ISAACS</a> project. Essentially, the goal of this project was to create an Augmented Reality interface for controlling drones. In Spring 2016, I led my team in conducting a user research study in which I ran several interviews with members of the UAV club. After identifying the areas in which an Augmented Reality interface would be useful for drone users, I designed a framework on which to develop the interface. I later joined the Simultaneous Location and Mapping team to work on implementation for the drone computer vision algorithms. During this time, I also became the developer for the <a href="http://augcog.berkeley.edu/">Augmented Cognition</a>  site.
+                                    Through my involvement with <a href="https://vr.berkeley.edu">VR@Berkeley</a>, I joined a team working on the <a href="http://www.isaacs.io/">ISAACS</a> graduate research project. Essentially, the goal of this project was to create an Augmented Reality interface for controlling drones. In Spring 2016, I led my team in conducting a user research study in which I ran several interviews with members of the UAV club. After identifying the areas in which an Augmented Reality interface would be useful for drone users, I designed a framework on which to develop the interface. I later joined the Simultaneous Location and Mapping team to work on implementation for the drone computer vision algorithms. During this time, I also became the developer for the <a href="http://augcog.berkeley.edu/">Augmented Cognition</a>  site.
                                 </p>
                             </div>
-                        </div>
-                        <div class='col-md-4'>
-                            <img class="img-center job-img img-reduction" src="../assets/images/experience/ucbseal.png"></img>
                         </div>
                     </div>
                 </div>
@@ -247,7 +246,14 @@
                     <a href="#!"><img src="../assets/images/logos/X_red.svg"></a>
                 </div>
                 <div class='project-content'>
-                    nature.berkeley.edu
+                    <div class='col-md-8 overlay-img-center'>
+                        <a href="https://nature.berkeley.edu"><img class="img-center" src="../assets/images/nature/nature.png"></img></a>
+                    </div>
+                    <div class='col-md-4 overlay-text'>
+                        <p class="centered title">
+                            Nature Site
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -262,7 +268,16 @@
                 <div class="exit">
                     <a href="#!"><img src="../assets/images/logos/X_red.svg"></a>
                 </div>
-                ISAACS
+                <div class='project-content'>
+                    <div class='col-md-8 overlay-img-center overflow-prevention'>
+                        <a href="https://issacs.io"><img class="img-center" src="../assets/images/Drone/Isaacs.jpg "></img></a>
+                    </div>
+                    <div class='col-md-4 overlay-text'>
+                        <p class="centered title">
+                            ISAACS
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <a href="#SIXT33N">
@@ -276,7 +291,16 @@
                 <div class="exit">
                     <a href="#!"><img src="../assets/images/logos/X_red.svg"></a>
                 </div>
-                SIXT33N
+                <div class='project-content'>
+                    <div class='col-md-8 overlay-img-center'>
+                        <a href="https://nature.berkeley.edu"><img class="img-center" src="../assets/images/nature/nature.png"></img></a>
+                    </div>
+                    <div class='col-md-4 overlay-text'>
+                        <p class="centered title">
+                            SIXT33N
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <a href="#vxpc">
@@ -290,7 +314,16 @@
                 <div class="exit">
                     <a href="#!"><img src="../assets/images/logos/X_red.svg"></a>
                 </div>
-                VXPC
+                <div class='project-content'>
+                    <div class='col-md-8 overlay-img-center'>
+                        <a href="https://nature.berkeley.edu"><img class="img-center" src="../assets/images/nature/nature.png"></img></a>
+                    </div>
+                    <div class='col-md-4 overlay-text'>
+                        <p class="centered title">
+                            VXPC
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <a href="#WALL-E">
@@ -304,7 +337,44 @@
                 <div class="exit">
                     <a href="#!"><img src="../assets/images/logos/X_red.svg"></a>
                 </div>
-                WALL-E
+                <div class='project-content'>
+                    <div class='col-md-8 overlay-img-center'>
+                        <img class="img-center" src="../assets/images/nature/nature.png"></img>
+                    </div>
+                    <div class='col-md-4 overlay-text'>
+                        <p class="centered title">
+                            WALL-E
+                        </p>
+                        <div class="grid-item-teaser">
+                                A remote controlled telepresence tank which remotely syncs an onboard camera to an Oculus through a Node.js Server.
+                            </div>
+                            <div class="grid-item-description">
+                                A VR telepresence tank controlled remotely through a Node.js server.
+                                We used a Raspberry Pi and Arduino on board to remotely connect an Oculus to a camera that rotates in sync with the user's head. Started at Treehacks, it has since been repurposed to become <a href='http://www.adawarp.com'>Adawarp</a> and was funded by <a href='https://rothenbergventures.com/'>Rothenburg Ventures</a>
+                            </div>
+                            <!-- <video class='grid-item-image col-md-12 lazy' width="2000" controls>
+                              <source src="assets/images/Wall-E/we.mp4" type="video/mp4">
+                              <img class='grid-item-image col-md-12 lazy' width="2000" height="1000" src="assets/images/Wall-E/Wall-E.jpg"></img>
+                            </video> -->
+                            <div class='grid-item-details'>
+                                <div class="grid-item-skills col-sm-4 col-md-4">
+                                    Skills
+                                    <br>
+                                    Arduino, C#, Node.js, Oculus, Unity, Raspberry Pi
+                                </div>
+                                <div class="grid-item-time col-sm-4 col-md-4">
+                                    Time
+                                    <br>
+                                    36 hrs
+                                </div>
+                                <div class="grid-item-client col-sm-4 col-md-4">
+                                    Client
+                                    <br>
+                                    Treehacks, Self
+                                </div>
+                            </div>
+                    </div>
+                </div>
             </div>
 
             <a href="#treachery">
@@ -318,7 +388,16 @@
                 <div class="exit">
                     <a href="#!"><img src="../assets/images/logos/X_red.svg"></a>
                 </div>
-                Treachery of Animation
+                <div class='project-content'>
+                    <div class='col-md-8 videoWrapper'>
+                        <iframe id="video-iframe" width="854" height="480" src="https://www.youtube.com/embed/0WMlBwnX5Mc?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class='col-md-4 overlay-text'>
+                        <p class="centered title">
+                            Treachery of Animation
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- <a href="#cart">

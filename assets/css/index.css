@@ -30,7 +30,11 @@
     display: block;
     margin:auto;
     padding-top:4em;
+}
+
+.overflow-prevention img{
     height:90%;
+    width:80%
 }
 
 .overlay-text{
@@ -250,7 +254,7 @@
 }
 
 .project-content{
-    padding: 2em;
+    padding: 0.5em;
 }
 
 .dimmer {
@@ -279,16 +283,25 @@
     display:none;
 }
 
-.overlay .exit{
-    z-index: 20;
-    cursor: pointer;
-    padding:1.5em;
-}
-
 .overlay .exit img{
+    cursor: pointer;
+    z-index: 20;
     position:fixed;
     top: 25;
     right: 25;
     width:3em;
 }
 
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

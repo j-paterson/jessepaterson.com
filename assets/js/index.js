@@ -32,12 +32,20 @@ function scrollTo(hash) {
 
 $(document).ready(function() {
     $(".exit").click(function(){
+        var iframe = $('.project-content').find('iframe');
+        var src = $(iframe).attr('src');      
+        $(iframe).attr('src', '').attr('src', src);
         $(".overlay").fadeOut();
         $("#dimmer").fadeOut('fast');
+        enableScroll();
     });
     $("#dimmer").click(function(){
+        var iframe = $('.project-content').find('iframe');
+        var src = $(iframe).attr('src');      
+        $(iframe).attr('src', '').attr('src', src);
         $(".overlay").fadeOut();
         $("#dimmer").fadeOut('fast');
+        enableScroll();
     });
     $('.navlink').click(function(){
         closeNav();
@@ -59,6 +67,7 @@ function loadPage(){
         if(page!="#!"){
             $('#dimmer').fadeIn();
             $(page + '.overlay').fadeIn();
+            disableScroll();
         }
     }
 }
