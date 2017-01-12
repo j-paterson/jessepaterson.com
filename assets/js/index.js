@@ -38,7 +38,7 @@ $(document).ready(function() {
         $(iframe).attr('src', '').attr('src', src);
         $(".overlay").fadeOut();
         $("#dimmer").fadeOut('fast');
-        //enableScroll();
+        $("body").removeClass("noscroll");
     });
     $("#dimmer").click(function(){
         var iframe = $('.current').find('iframe');
@@ -47,7 +47,7 @@ $(document).ready(function() {
         $(iframe).attr('src', '').attr('src', src);
         $(".overlay").fadeOut();
         $("#dimmer").fadeOut('fast');
-        //enableScroll();
+        $("body").removeClass("noscroll");
     });
     $('.navlink').click(function(){
         closeNav();
@@ -71,51 +71,10 @@ function loadPage(){
             $('#dimmer').fadeIn();
             $(page + '.overlay').fadeIn();
             $(page + '.overlay').addClass('current');
-            //disableScroll();
+            $("body").addClass("noscroll");
         }
     }
 }
-
-/* Code to prevent scrolling during popups */
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-function preventDefault(e) {
-    e = e || window.event;
-    if (e.preventDefault)
-        e.preventDefault();
-    e.returnValue = false;
-}
-
-function preventDefaultForScrollKeys(e) {
-    if (keys[e.keyCode]) {
-        preventDefault(e);
-        return false;
-    }
-}
-
-function disableScroll() {
-  if (window.addEventListener) // older FF
-      window.addEventListener('DOMMouseScroll', preventDefault, false);
-  window.onwheel = preventDefault; // modern standard
-  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-  window.ontouchmove  = preventDefault; // mobile
-  document.onkeydown  = preventDefaultForScrollKeys;
-}
-
-function enableScroll() {
-    if (window.removeEventListener)
-        window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.onmousewheel = document.onmousewheel = null;
-    window.onwheel = null;
-    window.ontouchmove = null;
-    document.onkeydown = null;
-}
-
-$(".overlay").on("show", function () {
-  $("body").addClass("modal-open");
-}).on("hidden", function () {
-  $("body").removeClass("modal-open");
-});
 
 
 
