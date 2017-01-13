@@ -3,6 +3,8 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <!-- The above 3 meta tags *must* come first in the head-->
 
     <!-- Bootstrap -->
@@ -16,8 +18,6 @@
 
     <!-- Favicon -->
     <div id='favicon'>
-        <meta name="description" content="">
-        <meta name="author" content="">
         <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-touch-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/apple-touch-icon-72x72.png">
@@ -34,10 +34,7 @@
         <link rel="icon" type="image/png" href="../assets/favicons/favicon-16x16.png" sizes="16x16">
         <link rel="manifest" href="../assets/favicons/manifest.json">
         <link rel="mask-icon" href="../assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="shortcut icon" href="../assets/favicons/favicon.ico">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="msapplication-TileImage" content="../assets/favicons/mstile-144x144.png">
-        <meta name="msapplication-config" content="../assets/favicons/browserconfig.xml">
+        <link rel="shortcut icon" href="favicon.ico">
         <meta name="theme-color" content="#ffffff">
     </div>
 
@@ -45,23 +42,23 @@
 
 <!-- Navigation -->
 <nav id="sidenav" class="sidebar" onClick="openNav()">
-    <a id="navbtn" onClick="openNav()">
+    <a id="navbtn">
         <div id="logo">
-            <img src="../assets/images/logos/logo_red.svg"></img>
+            <img href="#about" onClick="scrollTo('#about')" src="../assets/images/logos/logo_red.svg"></img>
         </div>
         <div id="X">
-            <img src="../assets/images/logos/X_red.svg"></img>
+            <img onClick="closeNav()" src="../assets/images/logos/X_red.svg"></img>
         </div>
         <i class="fa fa-bars" id="bars" aria-hidden="true"></i>
-        
     </a>
 
     <div id="navlinks">
-        <a class="navlink" onClick="scrollTo('#about')">About</a>
-        <a class="navlink" onClick="scrollTo('#skills')">Skills</a>
-        <a class="navlink" onClick="scrollTo('#experience')">Experience</a>
-        <a class="navlink" onClick="scrollTo('#projects')">Projects</a>
+        <a class="navlink" href="#about" onClick="scrollTo('#about')">About</a>
+        <a class="navlink" href="#skills" onClick="scrollTo('#skills')">Skills</a>
+        <a class="navlink" href="#experience" onClick="scrollTo('#experience')">Experience</a>
+        <a class="navlink" href="#projects" onClick="scrollTo('#projects')">Projects</a>
         <a class="navlink" href="https://blog.jessepaterson.com">Blog</a>
+        <a class="navlink" href="../assets/documents/jp_resume.pdf">Resume</a>
     </div>
 </nav>
 
@@ -82,15 +79,15 @@
             </div>
             <div class= "section-line"></div> -->
             <div id='about-content'>
-                <div class='social-links'>
-                    <a href="https://github.com/j-paterson"><i class="fa fa-github" aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com/in/jesse-paterson-89897972"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="../assets/documents/jp_resume.pdf"><i class="fa fa-id-card-o" aria-hidden="true"></i></a>
-                </div>
                 <p class="centered title">Hello! My name is Jesse Paterson.</p>
                 <p>
                     I'm a developer and designer in the Bay Area currently pursuing a degree in Computer Science at UC Berkeley. I like to understand things deeply and work on large scale projects. When I'm not wrapping my head around computer vision algorithms or building websites, I enjoy <a href="http://azura.wikia.com/wiki/Azura_Wikia">building worlds</a>, <a href="https://vr.berkeley.edu/">creating art with Virtual Reality</a> and <a href="#rock">climbing big rocks</a>. I value persistence, integrity and quality.
                 </p>
+                <div class='social-links'>
+                    <a href="https://github.com/j-paterson"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/jesse-paterson-89897972"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/hilariouslyuninteresting/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
             </div>
             <div class="overlay" id="rock">
                 <div class="exit">
@@ -297,7 +294,7 @@
                                 The goal of this project was to create an Augmented Reality interface for controlling drones through the Microsoft Hololens. There were many teams working on different aspects of the project, from system controls to interaction design. As project priorities shifted, I switched teams to work on what I felt were the most critical parts of the project.
                             </p>
                             <p>
-                                On the design team, I conducted a user research study in which I ran several interviews with members of the UAV club. I  used the data gathered to identify several areas in which an Augmented Reality interface would be useful for drone users. Based on these applications and taking into account latency limitations, I designed a framework on which to develop the interface. The framework included a bounding box which the drone would stay in, the ability to set camera angle and a path through nodes that could be moved through 3d space and angled similar to a Bézier curve.
+                                On the design team, I conducted a user research study in which I ran several interviews with members of the UAV club. I  used the data gathered to identify several areas in which an Augmented Reality interface would be useful for drone users. Based on these applications and taking into account latency limitations, I designed a framework on which to develop the interface. The framework included a bounding box which the drone would stay in, the ability to set camera angle and a path through nodes that could be moved through 3d space and angled similar to a Bézier curve. As a culmination of my experience and research on this project, I wrote a <a href="https://blog.jessepaterson.com/augmented-reality-interface-design/">blog post on Augmented Reality UI/UX</a>.
                             <p> 
                                 I later joined the Simultaneous Location and Mapping team to work on implementation for the drone computer vision algorithms. On this team, I learned how to setup and adjust the Robotic Operating System (ROS) that we use as a server for communication between the drone and a computer. This system will make it possible for us to use our interface for multiple drones at the same time.
                             </p>

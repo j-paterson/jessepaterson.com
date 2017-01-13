@@ -1,3 +1,7 @@
+$("#sidenav #navbtn #logo").click(function(e) {
+   e.stopPropagation();
+});
+
 function openNav() {
     document.getElementById("sidenav").style.width = "200px";
 	$("#navlinks").fadeIn("slow");
@@ -5,7 +9,7 @@ function openNav() {
     document.getElementById("bars").style.display = "none";
     $("#X").fadeIn("slow");
     document.getElementById("navbtn").style.left = "125px";
-    document.getElementById("navbtn").setAttribute( "onClick", "javascript: closeNav();");
+    //document.getElementById("navbtn").setAttribute( "onClick", "javascript: closeNav();");
     document.getElementById("sidenav").removeAttribute( "onClick");
     $("#dimmer").fadeIn("slow");
 }
@@ -14,7 +18,7 @@ function closeNav() {
     document.getElementById("sidenav").style.width = "5em";
     document.getElementById("main").style.marginLeft= "5em";
     document.getElementById("navbtn").style.left = "0px";
-    document.getElementById("navbtn").setAttribute( "onClick", "javascript: openNav();");
+    //document.getElementById("navbtn").setAttribute( "onClick", "javascript: openNav();");
     $("#logo").fadeIn("slow");
     $("#bars").fadeIn("slow");
     document.getElementById("X").style.display = "none";
@@ -67,7 +71,7 @@ function loadPage(){
     page = window.location.hash.toLowerCase();
     id=page.replace("#", "");
     if(page!==""){
-        if(page!="#!"){
+        if(page!="#!" && page!="#about" && page!="#skills" && page!="#experience" && page!="#projects"){
             $('#dimmer').fadeIn();
             $(page + '.overlay').fadeIn();
             $(page + '.overlay').addClass('current');
