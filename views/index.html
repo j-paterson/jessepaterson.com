@@ -82,6 +82,11 @@
             </div>
             <div class= "section-line"></div> -->
             <div id='about-content'>
+                <div class='social-links'>
+                    <a href="https://github.com/j-paterson"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/jesse-paterson-89897972"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="../assets/documents/jp_resume.pdf"><i class="fa fa-id-card-o" aria-hidden="true"></i></a>
+                </div>
                 <p class="centered title">Hello! My name is Jesse Paterson.</p>
                 <p>
                     I'm a developer and designer in the Bay Area currently pursuing a degree in Computer Science at UC Berkeley. I am a tinkerer and a maker. I like to understand things deeply and work on large scale projects. When I'm not wrapping my head around computer vision algorithms or building websites, I like to <a href="http://azura.wikia.com/wiki/Azura_Wikia">build worlds</a>, <a href="https://vr.berkeley.edu/">create art with Virtual Reality</a> and <a href="#rock">climb big rocks</a>. I value persistence, integrity and quality.
@@ -280,8 +285,8 @@
                     <a href="#!"><img src="../assets/images/logos/X_red.svg"></a>
                 </div>
                 <div class='project-content'>
-                    <div class='col-md-8 overlay-img-center overflow-prevention'>
-                        <a href="https://issacs.io"><img class="img-center" src="../assets/images/Drone/Isaacs.jpg "></img></a>
+                    <div class='col-md-8 overlay-img-center'>
+                        <a href="https://issacs.io"><img class="img-center" src="../assets/images/Drone/isaacsteam.jpg "></img></a>
                     </div>
                     <div class='col-md-4 overlay-text'>
                         <p class="centered title">
@@ -289,6 +294,12 @@
                         </p>
                         <div class="project-description">
                             <p>
+                                The goal of this project was to create an Augmented Reality interface for controlling drones through the Microsoft Hololens. There were many teams working on different aspects of the project, from system controls to interaction design. As project priorities shifted, I switched teams to work on what I felt were the most critical parts of the project.
+                            </p>
+                            <p>
+                                On the design team, I conducted a user research study in which I ran several interviews with members of the UAV club. I  used the data gathered to identify several areas in which an Augmented Reality interface would be useful for drone users. Based on these applications and taking into account latency limitations, I designed a framework on which to develop the interface. The framework included a bounding box which the drone would stay in, the ability to set camera angle and a path through nodes that could be moved through 3d space and angled similar to a Bézier curve.
+                            <p> 
+                                I later joined the Simultaneous Location and Mapping team to work on implementation for the drone computer vision algorithms. On this team, I learned how to setup and adjust the Robotic Operating System (ROS) that we use as a server for communication between the drone and a computer. This system will make it possible for us to use our interface for multiple drones at the same time.
                             </p>
                         </div>
                     </div>
@@ -332,6 +343,16 @@
                         </p>
                         <div class="project-description">
                             <p>
+                                This was the final project for my Designing Information Devices and Systems (EE16B) class at UC Berkeley. The goal of the project was to construct a car that would respond to 4 voice commands:  forward, left, right, and slow (the video shows a test of these basic controls).
+                            </p>
+                            <p>
+                                My partner and I built the circuit board from the ground up, using a Launchpad microcontroller to run the C code that we developed. The code analyzed incoming signals from the microphone and used Principal Component Analysis in conjunction with a high pass filter to detect and categorize voice commands.
+                            </p>
+                            <p>
+                                One challenge that I encountered in this project was imperfect engineering in the parts we were given. The frame for the car caused the vehicle to curve when equal power was applied to both motors. We adjusted for this by continuously taking in the difference in distance traveled by each wheel and adjusting the input to the motors to maintain a straight course.
+                            </p>
+                            <p>
+                                <a href="https://docs.google.com/document/d/1pbHqG-NaMbtg998hlRmfHgxjNHaWe0nvdeM8RTi0WwY/edit?usp=sharing"> Full Report </a>
                             </p>
                         </div>
                     </div>
@@ -367,12 +388,23 @@
                 </div>
                 <div class='project-content'>
                     <div class='col-md-8 overlay-img-center'>
-                        <a href="https://nature.berkeley.edu"><img class="img-center" src="../assets/images/nature/nature.png"></img></a>
+                        <a href="https://vxpc.io"><img class="img-center" src="../assets/images/vxpc/VXPC.jpg"></img></a>
                     </div>
                     <div class='col-md-4 overlay-text'>
                         <p class="centered title">
                             VXPC
                         </p>
+                        <div class="project-description">
+                            <p>
+                                As the Virtual Reality at Berkeley Events Manager, I handled logistics and all web/print based design for our club's first Virtual Experience Convention. I worked alongside our Industrial Relations and Marketing teams to coordinate the event.
+                            </p>
+                            <p>
+                                The goal of the Virtual Experience Convention was to connect industry leaders to young enthusiasts and entrepreneurs. We provided attendees with an opportunity to experience the latest VR/AR products, hear from industry leaders, and network with like-minded individuals. 
+                            </p>
+                            <p>
+                                Logistics continued to change and shift right up until the morning of the event, which made for an exhilerating but difficult experience. I filled many roles throughout the day to keep the event rolling smoothly and direct our volunteers. Over 200 people attended the event and we were able to obtain several sponsorships. Judging by the feedback we received, it was great success!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -410,8 +442,16 @@
                     </div>
                     <div class='col-md-4 overlay-text'>
                         <p class="centered title">
-                            Nature Site
+                            Nature Website
                         </p>
+                        <div class="project-description">
+                            <p>
+                                I have worked on a number of aspects of this website since I joined the CNR Web Team. 
+                            </p>
+                            <p>
+                                Originally, my assignments consisted of moving and redesigning massive quantities of content and users from an older site to this one. I gradually learned the ins and outs of the drupal system and handled requests for content changes. A lot of running this website has been identifying what aspects can be automated to reduce work by hand. I learned to create modular pages that self populate with pieces of content from around the site to create comprehensive compilations that require no manual updating. I also learned to carefully run batch processes to adjust design on a large number of content items at once.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -504,6 +544,17 @@
                         <p class="centered title">
                             Treachery of Animation
                         </p>
+                        <div class="project-description">
+                            <p>
+                                This animation project was done for the UC Berkeley 3D Modeling and Animation class. Our goal was to follow the <a href="https://docs.google.com/presentation/d/16dAV1d5gqnWyYIijCpZ4bFVC49bRImPjhEtz-8dOXvE/edit#slide=id.g16b4431faa_0_35">storyboard</a> created by our director. I was the work manager for our group.
+                            </p>
+                            <p>
+                                The work went smoothly at first, but as the semester continued, several group members began to miss class and work deadlines. The rest of the group became discouraged by our lack of progress. Towards the end of the semester, I called together most of our group members for several large work sessions in which we managed to catch up. I became much closer to the other group members through these work sessions. At this point, the tide began to turn and there was a feeling that we would manage to complete the project.
+                            </p>
+                            <p>
+                                On the night before the animation showings, I spent the night in the lab compiling and rendering all of the group member work and completing all post production editing. In the middle of the night, the rendering servers broke down. I didn't want to see all the work put in by my group members go to waste, so I went through and screen recorded each scene into 'playblasts' through Maya. One hour before the showing, the rendering servers came back online and I rushed to replace all my playblasts with rendered versions. The finished product is a bit rough, but I'm proud that we managed to complete it.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -512,6 +563,22 @@
                 <div class="project-square">
                     <div class="project-teaser">
                         <p class="centered title">Cart</p>
+                        <div class='project-details'>
+                            <div>
+                                
+                            </div>
+                            <div>
+                                <b class="highlight">Skills</b>
+                                <br>
+                                
+                            </div>
+                            <div>
+                                <b class="highlight">Client</b>
+                                <br>
+                                Self<br>
+                                (2015)
+                            </div>
+                        </div>
                     </div>
                 </div>
             </a>
@@ -519,7 +586,13 @@
                 <div class="exit">
                     <a href="#!"><img src="../assets/images/logos/X_red.svg"></a>
                 </div>
-                Cart
+                <p class="centered title">
+                    Cart
+                </p>
+                <div class="project-description">
+                    <p>
+                    </p>
+                </div>
             </div> -->
         </div>
         <div id="footer">
