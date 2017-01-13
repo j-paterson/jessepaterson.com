@@ -12,27 +12,19 @@ router.use(function (req,res,next) {
 });
 
 router.get("/",function(req,res){
-  res.sendFile(path + "root.html");
+  res.sendFile(path + "index.html");
 });
 
 router.get("/projects",function(req,res){
   res.sendFile(path + "projects.html");
 });
 
-router.get("/index",function(req,res){
-  res.sendFile(path + "index.html");
+router.get("/old",function(req,res){
+  res.sendFile(path + "root.html");
 });
 
 router.get("/projects/mirror",function(req,res){
   res.sendFile(path + "mirror.html");
-});
-
-router.get("/contact",function(req,res){
-  res.sendFile(path + "root.html");
-});
-
-router.get("/resume",function(req,res){
-  res.sendFile(path + "root.html");
 });
 
 app.use("/",router);
