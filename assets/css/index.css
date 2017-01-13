@@ -360,7 +360,8 @@ p{
 }
 
 .overlay-img-center img{
-    margin:0.5em 0.5em 0.5em 0em;
+    margin:0.5em 0.5em 0.5em 0;
+    max-height:100%;
 }
 
 .overlay-text{
@@ -392,9 +393,17 @@ p{
         padding: 1em 0 1em 0;
         height:70%;
     }
+
+    .overlay-img-center img{
+        max-height:50%;
+        max-width:50%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
 }
 
-@media (min-width : 1025px){
+@media (min-width : 991px){
     .videoWrapper{
         padding-bottom: 56.25%; /* 16:9 */
     }
@@ -406,6 +415,10 @@ p{
     .overlay-text{
         padding: 2em 0 2em 0;
         height:100%;
+    }
+    .overlay-img-center img{
+        max-height:100%;
+        max-width:100%;
     }
 }
 
