@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+	body {
+	padding: 100px;
+	width: 1000px;
+	margin: auto;
+	text-align: left;
+	font-weight: 300;
+	font-family: 'Open Sans', sans-serif;
+	color: #121212;
+	}
+	h1, h2, h3, h4 {
+	font-family: 'Source Sans Pro', sans-serif;
+	}
+
+	b{
+	border-bottom:1px solid;
+	}
+
+	.section{
+	width:100%;
+	margin:2%;
+	display:inline-block;
+	border-bottom:1px solid;
+	padding-bottom:5%
+	}
+</style>
+<title>VMask</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+	<div>
+		<!-- Title, Summary and Team Members
+	Provide us a descriptive title, 2-3 sentences that summarize your project, and list your two team members. -->
+		<h1 align="middle">Point Cloud to Mesh - Virtual Mask</h1>
+		<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2017</h1>
+		<h2 align="middle">Jesse Paterson & Bryce Schmidtchen</h2>
+	</div>
+
+	<div class="section">
+		<!-- Problem Description
+		Here you should provide the context for your idea. Describe the problem that you are trying to solve, why it is important, where it is challenging.
+    Give us a general idea on how you are going to solve it. -->
+    <h4>Summary:</h4>
+    <p>
+      This project aims to make virtual masks that will mirror the faces of users in real life.
+      We will begin with a point cloud of a face generated from a Kinect. We will convert this point
+      cloud to a mesh using Poisson Surface Reconstruction. The mesh will then be synced with the location of a VR user's
+      face and mirrored back to them so that they can see the results. This project will also enable us to be able to collect the
+      point cloud data of any object or location and virtualize it.
+    </p>
+
+    <h4>Problem Description</h4>
+
+    <p>
+			Creating an appropriate virtual avatar for a user has long been a challenge for Virtual Reality.
+      For the purposes of instantly recognizing others in a virtual setting, it is useful to have an
+      avatar that looks similar to users in real life. Moreover, the ability to take real scenes' point cloud data and
+      reconstruct them easily in virtual reality is a problem which could provide interesting abilities to many domains
+      when solved in an accessible way, such as enabling architects to virtually stand in a room that's on the other side
+      of the world or scanning famous locations for people to explore. This project is largely challenging due to the
+      sequence of integrations that must come together to create the entire pipeline from point cloud data collection to
+      virtual reality visualization. Technically, the most challenging part will be getting the our Poisson surface reconstruction
+      algorithm to function and much of the other sections of the project will be integrating systems with the input and output of this algortihm. 
+		</p>
+
+    <div align="middle">
+      <table style="width=100%">
+        <tr>
+          <td>
+            <img src="../assets/images/vmask/head.jpg" align="middle" width="300px"/>
+          </td>
+          <br>
+          <td>
+            <img src="../assets/images/vmask/vr.jpg" align="middle" width="300px"/>
+          </td>
+          <br>
+          <td>
+            <img src="../assets/images/vmask/elephant.jpg" align="middle" width="300px"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+	</div>
+
+	<div class="section">
+		<h3>Goals and Deliverables</h3>
+		<!-- Goals and Deliverables
+		This is the most important part of your proposal. You should carefully think through what you are trying to accomplish, what results you are going for, and why you think you can accomplish those goals. For example:
+		Since this is a graphics class you will likely define the kind of images you will create (e.g. including a photo of a new lighting effect you will simulate).
+		If you are working on an interactive system, describe what demo you will create.
+		Define how you will measure the quality / performance of your system (e.g. graphs showing speedup, or quantifying accuracy). It may not be possible to define precise target metrics at this time, but we encourage you to try.
+		What questions do you plan to answer with your analysis?
+		You should break this section into two parts: (1) what you plan to deliver, and (2) what you hope to deliver. In (1), describe what you believe you must accomplish to have a successful project and achieve the grade you expect (i.e. your baseline plan - planning for some unexpected problems would make sense). In (2), describe what you hope to achieve if things go well and you get ahead of schedule (your aspirational plan). -->
+
+    <p>
+      At the very least, we plan to have a beautiful point cloud to mesh solution that will allow us to render point clouds using the Poisson surface reconstruction. From this implementation, we will be able to render surface meshes from point cloud datasets sourced from online. This will be done through an OpenGL rasterizer. The demo would include the demonstration of the rendering of the original point cloud and then the surface mesh after being run through the reconstruction algorithm. We would run this on many different shapes and display these renders in order to demonstrate the integrity of our implementation. The metrics that would determine the success of this minimum viable project would be how well our implementation processes the point cloud data and outputs a mesh.
+    </p>
+    <br>
+    <p>
+      In our ideal case, we hope to have developed an entire point cloud to VR visualization solution. This will allow us to scan and collect the point cloud of a human’s face or any other object in reality, input this data into our implementation of the Poisson surface reconstruction, and then visualize the constructed mesh into a virtual reality environment through the HTC Vive. The resulting demonstration that would result from this outcome of the project would be a real-time VR application which rendered the meshes that were reconstructed from the point clouds using our construction algorithm and collected point cloud data. The quality of this system will be again defined largely by how well our surface reconstruction implementation processes the point cloud data and outputs a mesh. Additionally, the success of the project will also depend and be defined by how well the point cloud to mesh reconstruction algorithm is implemented with both ends of the pipeline, including the kinect point cloud data collection as well as the OpenGL renderer / VR integration.
+    </p>
+
+	</div>
+
+	<div class="section">
+	<h3>Schedule</h3>
+		<!-- Schedule
+		In this section you should organize and plan the tasks and subtasks that your team will execute. Since presentations are ~4 weeks from the due-date of the proposal, you should include a set of tasks for every week. -->
+		<h4>1st Week (April 9th - April 15th)</h4>
+		<p>
+			We will start on the center of the project, working to acheive a functional point-cloud to mesh algorithm using the Poisson Surface Reconstruction. This phase of the project will involve additional research and comparison to existing solutions.
+		</p>
+		<h4>2nd Week (April 16th - April 22)</h4>
+		<p>
+			In the second week, we will aim to finish our reconstruction algorithm and begin testing using pre-made point clouds.
+		</p>
+		<h4>3rd Week</h4>
+		<p>
+			We will start collecting Kinect data on faces using ICP and testing our algorithm on a real world model. During this time period, we will continue to polish our reconstruction algorithm as we begin to see messier results. Using real world data will provide its own challenges, but will have more rewarding results.
+		</p>
+		<h4>4th Week</h4>
+		<p>
+			We will start integrating our project into VR using OpenVR. We will use an OpenGL renderer to create a mirror and mask experience.
+		</p>
+	</div>
+
+	<div class="section">
+		<h3>Resources</h3>
+    <p>
+      This project will be completed on Windows PCs and our virtual reality visualization will be done using the
+      HTC Vive VR HMD. Furthermore, we plan to utilize the Microsoft Kinect sensor to collect our point cloud data that will be then reconstructed into a mesh.
+      The Poisson algorithm that we plan to implement for the point cloud reconstruction is based on <a href="http://hhoppe.com/poissonrecon.pdf">this</a> paper on Poisson Surface Reconstruction.
+    </p>
+    <br>
+    <p>
+      In order to ensure that our point cloud reconstructs to a proper mesh, we may have to implement
+      Iterative Closest Point ourselves so that we can minimize the difference between two point clouds that
+      we collect. If we are unable to implement this ourselves, we may use a C++ library such as <a href="http://www.cvlibs.net/software/libicp/">this</a> to
+      assist us with the merging of point clouds. Furthermore, we will need to integrate our OpenGL renderer with the HTC Vive. This will be done with the OpenVR API
+      which enable this to be done. There are some resources online that detail what need to be done in order to achieve this integration such as <a href="http://casual-effects.blogspot.com/2016/03/opengl-sample-codeand-openvr-sample-code.html">this</a>  one. We
+      plan to accomplish this ourselves but may look to these resources for guidance.
+    </p>
+
+
+		<!-- Resources
+		List what resources, e.g. books, papers and/or online resources that are references for your project. List the computing platform, hardware and software resources that you will use for your project. You have a wide latitude here to use what you have access to, but be aware that you will have to support and trouble-shoot on your platform yourselves. If you are starting from an existing piece of code or system, describe and provide a pointer to it here. -->
+
+
+	</div>
+</body>

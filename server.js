@@ -19,6 +19,10 @@ router.get("/projects",function(req,res){
   res.sendFile(path + "projects.html");
 });
 
+router.get("/projects/vmask",function(req,res){
+  res.sendFile(path + "vmask.html");
+});
+
 router.get("/old",function(req,res){
   res.sendFile(path + "root.html");
 });

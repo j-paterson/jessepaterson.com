@@ -150,6 +150,8 @@ p{
     text-transform: uppercase;
     cursor: pointer;
     font-family: 'Helvetica';
+    webkit-transition: color .35s ease;
+    transition: color .35s ease;
 }
 
 #bars{
