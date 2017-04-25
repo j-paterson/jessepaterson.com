@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+	body {
+		padding: 100px;
+		width: 1000px;
+		margin: auto;
+		text-align: left;
+		font-weight: 300;
+		font-family: 'Open Sans', sans-serif;
+		color: #121212;
+	}
+	p{
+		font-size:0.85em;
+	}
+	h1, h2, h3, h4 {
+		font-family: 'Source Sans Pro', sans-serif;
+	}
+
+	h4 {
+		color:#777;
+	}
+
+	.subheading{
+		border-bottom:1px solid;
+	}
+
+	b{
+		font-weight: 800;
+	}
+
+	ul, ol{
+		list-style-type: none;
+	}
+
+	.section{
+		width:100%;
+		display:inline-block;
+		border-top:1px solid;
+		border-color:#e4e4e4;
+		padding-bottom:5%
+	}
+	code{
+		padding: 2px 4px;
+	    font-size: 90%;
+	    color: #c7254e;
+	    background-color: #f9f2f4;
+	    border-radius: 4px;
+	}
+	.completed{
+		background-color:#d4ffca;
+		width:50%;
+	}
+	.uncompleted{
+		background-color:#ffd3d2;
+		width:50%;
+	}
+</style>
+<title>VMask</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+	<div>
+		<!-- Title, Summary and Team Members
+	Provide us a descriptive title, 2-3 sentences that summarize your project, and list your two team members. -->
+		<h1>V-MASK MILESTONE</h1>
+		<h4>CS 184: Computer Graphics and Imaging, Spring 2017</h4>
+		<h4>Jesse Paterson & Bryce Schmidtchen</h4>
+	</div>
+	<!-- You should briefly summarize what you have accomplished, preliminary results, reflect on progress relative to your plan, and update your work plan as appropriate. -->
+	<div class="section">
+			
+	    <h2 style="margin-bottom:0px;">Progress</h2>
+	    <h4 style="margin-top:0px;">High Level Overview</h4>
+	    <p>
+	    	Completed:
+	    	<ol>
+	    		<div class="completed">
+		    		<li>Determining Vertex Normals</li>
+					<li>PLY to TXT and Format Standard</li>
+					<li>Octree Creation</li>
+					<ol>
+						<li>Octree Structure</li>
+						<li>Assigning Base Functions</li>
+					</ol>	
+				</div>
+			</ol>	
+			<p>Next Steps:</p>
+			<ol>
+				<div class="uncompleted">
+					<li>Vector/Gradient Field Definition</li>
+					<li>Apply Poisson Solution to Obtain Indicator Function</li>
+					<li>Marching Cubes Algorithm (Extracting Isosurface)</li>
+					<li>Export Mesh to Virtual Reality Compatible Format</li>
+				</div>
+	    	</ol>
+	    </p>
+
+	    <div align="middle">
+	      <table style="width=100%">
+	        <tr>
+	          <td>
+	            <img src="../assets/images/vmask/head.jpg" align="middle" width="300px"/>
+	          </td>
+	          <br>
+	          <td>
+	            <img src="../assets/images/vmask/vr.jpg" align="middle" width="300px"/>
+	          </td>
+	          <br>
+	          <td>
+	            <img src="../assets/images/vmask/elephant.jpg" align="middle" width="300px"/>
+	          </td>
+	        </tr>
+	      </table>
+	    </div>
+	</div>
+
+	<div class="section">
+		<h2 style="margin-bottom:0px;">Preliminary Results</h2>
+		<h4 style="margin-top:0px;">Approach Breakdown</h4>
+		<p>
+			A large amount of our work in this section of the project has been focused on expanding our understanding of the problem and the overall steps and structure needed to achieve our end goal of creating a watertight mesh. We believe that without a proper mental model and understanding of the full nuance and edge cases of the problem, implementation errors and revisions are certain.
+		</p>	
+	    <p>
+			<ul style="list-style-type: none;">
+	    		<li><h3>Determining Vertex Normals</h3></li>
+	    		<p>
+					The first possible way to evaluate the normals is to use the .ply format (which usually contains faces in its data) and parse the files to generate the oriented vertices vectors. This can be accomplished using one of the <a href="http://www.cc.gatech.edu/projects/large_models/">Georgia Tech PLY tools</a>. We are currently using this as an interim solution until we transition to Kinect collected data. 
+					</p>
+					<p>
+					The second approach assumes that we don’t have face data (as is the case with Kinect collected data). This approach is more in-depth and involves finding the tangential planes for approximating the local surface. To achieve this, the centroid of every vertex must be computed (as the average of all k-nearest neighbors). The corresponding normal is then computed using the eigenvector of each vertex. Next we must construct a Riemannian graph which defines the edges to the k-nearest neighbors of each vertex. We use the “minimum spanning tree” algorithm from Kruskal on this Riemannian graph to weight the normals results to different lengths. (<a href="http://vr.tu-freiberg.de/">http://vr.tu-freiberg.de/</a>)
+					</p>
+				<li><h3>PLY to TXT and Format Standard</h3></li>
+				<p>
+					In this step, we parse and format the vertex and normal data in the .ply files to be stored in a .txt file which can be scanned to create our list of points and normals (Or just a list of points in the case of Kinect Data which will be parsed to generate our normals).
+				</p>	
+				<li><h3>Octree Creation</h3></li>
+				<ul style="list-style-type: none;">
+					<li><h4 class="subheading">Octree Structure</h4></li>
+					<p>An octree divides space recursively into 8 cubes.</p>
+					<code>If a cube contains a point and is not at max depth, divide the cube again.</code>
+					<p>
+						Each time a node creates 8 child nodes, the points within the parent node are divided into up to 8 spatial sets and passed down to the child nodes. At our final depth D, the leaf nodes of this tree will contain the final lists of the points within them. In this way we will fulfill the "the property that every point sample falls into a leaf node at depth D." (<a href="http://hhoppe.com/poissonrecon.pdf">http://hhoppe.com/poissonrecon.pdf</a>) Each of these point samples will hold both a position and associated normal.
+					</p>
+					<p>
+						Because the Vector/Gradient field is defined using the 8 closest neighboring nodes to each vertex, we must also consider speed of traversing this tree, and what data we must preserve in the construction to accelerate the identification of neighboring nodes.
+					</p>	
+					<li><h4 class="subheading">Assigning Base Functions</h4></li>
+					<p>
+						Each node of the Octree must have a function Fo assigned to it such that "the vector field V can be precisely and efficiently represented as the linear sum of the Fo." (<a href="http://hhoppe.com/poissonrecon.pdf">http://hhoppe.com/poissonrecon.pdf</a>) Essentially, the vector field will be made of a combination of these base functions shifted and scaled down according to the size of the node in the octree it corresponds to (number of points it contains).
+
+					</p>	
+						<img src="../assets/images/vmask/vector_field.png" align="middle" width="300px" class=""/>
+					<p>
+						These functions are defined as the n-th convolution of a box filter with itself, where n=3 in order to create a piecewise quadratic approximation to a Gaussian. This convolution is centered about the node o and stretched by the size of o.
+					</p>	
+					<img src="../assets/images/vmask/box_filter_convolution.png" align="middle" width="400px" class=""/><br>
+					<img src="../assets/images/vmask/function_stretch.png" align="middle" width="200px" class=""/>
+					<p>
+						(Due to the central limit theorem, if you convolve a box filter with itself n times, as n goes to infinity the result approaches a Gaussian.)
+					</p>	
+				</ul>	
+	    	</ul>
+	    </p>
+	    <iframe src="https://docs.google.com/presentation/d/1EUxfp6DpjG-ei0nFVn-HNNlZMai-pKUHWIKIPBZ4Njs/embed?start=false&loop=false&delayms=3000" frameborder="0" style="margin:auto;" width="100%" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+	</div>
+
+	<div class="section">
+	<h2>Revised Schedule</h2>
+		<!-- Schedule
+		In this section you should organize and plan the tasks and subtasks that your team will execute. Since presentations are ~4 weeks from the due-date of the proposal, you should include a set of tasks for every week. -->
+		<h4>3rd Week (April 23rd - April 29th)</h4>
+		<p>
+			<ul style="list-style-type: none;">
+				<li><b>Tuesday/Wednesday (25/26)</b> : Vector/Gradient Field Definition</li>
+				<li><b>Thursday/Friday (27/28)</b> : Apply Poisson Solution to Obtain Indicator Function</li>
+				<li><b>Saturday (29)</b> : Marching Cubes Algorithm (Extracting Isosurface)</li>
+			</ul>
+		</p>
+		<h4>4th Week (April 30th - May 3th)</h4>
+		<p>
+			<ul style="list-style-type: none;">
+				<li><b>Sunday (30)</b> : Export Mesh to Virtual Reality Compatible Format</li>
+				<li><b>Monday (1)</b> : Buffer Day</li>
+				<li><b>Tuesday (2)</b> : Buffer Day</li>
+			</ul>
+		</p>
+		<h4>Presentation (May 3rd)</h4>
+	</div>
+	<div class="section">
+		<h2>Additional Resources</h2>
+		<!-- Schedule
+		In this section you should organize and plan the tasks and subtasks that your team will execute. Since presentations are ~4 weeks from the due-date of the proposal, you should include a set of tasks for every week. -->
+		
+		<a href="http://w3.impa.br/~diego/software/rply/"><h4>PLY reading / writing library</h4>
+		
+
+		<a href="http://hhoppe.com/poissonrecon.pdf"><h4>Poisson Paper</h4> 
+
+		<a href="http://graphics.stanford.edu/data/3Dscanrep/"><h4>Library of Point Cloud Datasets</h4> 
+
+		<a href="http://casual-effects.blogspot.com/2016/03/opengl-sample-codeand-openvr-sample-code.html"><h4>OpenVR / OpenGL integration</h4> 
+
+		<a href="http://doc.cgal.org/latest/Poisson_surface_reconstruction_3/"><h4>CGAL Library Poisson Reconstruction Implementation</h4> 
+
+		<a href="https://github.com/mkazhdan/PoissonRecon#LINKS"><h4>Best Online Poisson Reconstruction Implementation</h4> 
+
+		<a href="http://www.cs.jhu.edu/~misha/MyPapers/ToG13.pdf"><h4>MESHLAB Poisson Reconstruction paper</h4> 
+
+		<a href="http://vr.tu-freiberg.de/scivi/?page_id=365"><h4>Short Poisson Explanation</h4> 
+
+		<h4>On PLY format</h4> 
+		<p>	
+			<a href="http://www.cc.gatech.edu/projects/large_models/">
+		</p>
+
+		<h4>Isosurface from Octree extraction paper</h4> 
+		<p>	
+			<a href="http://www.cs.jhu.edu/~misha/MyPapers/SGP07a.pdf">
+		</p>
+
+		<h4>VCG Normal Identification W/O Face Data</h4> 
+		<p>	
+		<a href="https://github.com/kylemcdonald/ofxVCGLib/blob/master/vcglib/vcg/space/normal_extrapolation.h">
+		</p>
+
+		<h4>3rd Poisson Paper</h4> 
+		<p>	
+			<a href="http://www.cs.jhu.edu/~misha/MyPapers/ToG13.pdf">
+		</p>
+
+		<h4>Original Marching Cubes Paper</h4> 
+		<p>	
+			<a href="http://delivery.acm.org/10.1145/40000/37422/p163-lorensen.pdf?ip=136.152.142.37&id=37422&acc=ACTIVE%20SERVICE&key=CA367851C7E3CE77%2E3158474DDFAA3F10%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=927690480&CFTOKEN=23767044&__acm__=1493002632_9c19f4c050513be7ed6e70647219714f "> 
+		</p>
+
+		<h4>An Implementation of the Marching Cubes Algorithm</h4> 
+		<p>	
+		 <a href="http://www.cs.carleton.edu/cs_comps/0405/shape/marching_cubes.html ">
+		</p>
+
+		<h4>Polygonising a scalar field</h4> 
+		<p>	
+		Also known as: "3D Contouring", "Marching Cubes", "Surface Reconstruction"<br>
+		<a href="http://paulbourke.net/geometry/polygonise/">
+		</p>
+
+		<h4>Creating Octrees</h4> 
+		<p>	
+		 <a href="https://www.gamedev.net/resources/_/technical/game-programming/introduction-to-octrees-r3529">
+		</p>
+
+		<h4>Octree Overview</h4> 
+		<p>	
+		 <a href="https://www.cg.tuwien.ac.at/studentwork/VisFoSe98/eder/octree.htm ">
+		</p>
+
+		<h4>Using PCL to calculate vertex normals from the provided vertex data</h4> 
+		<p>	
+			<a href="http://pointclouds.org/documentation/tutorials/normal_estimation.php">
+		</p>
+
+		<h4>PCL OctTree nearest Neighbor</h4> 
+		<p>	
+			<a href="http://pointclouds.org/documentation/tutorials/octree.php">
+		</p>
+
+		<h4>QuadTree nearest Neighbor</h4> 
+		<p>	
+		<a href="http://www.cs.cmu.edu/afs/cs/academic/class/15456-s10/ClassNotes/nn.pdf">
+		</p>
+	</div>
+</body>
