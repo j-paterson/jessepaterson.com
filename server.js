@@ -23,7 +23,7 @@ router.get("/projects/vmask",function(req,res){
   res.sendFile(path + "vmask.html");
 });
 
-router.get("/projects/vmask/milestone",function(req,res){
+router.get("/projects/vmask_milestone",function(req,res){
   res.sendFile(path + "vmask_milestone.html");
 });
 
