@@ -19,12 +19,16 @@ router.get("/projects",function(req,res){
   res.sendFile(path + "projects.html");
 });
 
-router.get("/projects/vmask",function(req,res){
-  res.sendFile(path + "vmask.html");
+router.get("/projects/vmask/proposal",function(req,res){
+  res.sendFile(path + "vmask_proposal.html");
 });
 
 router.get("/projects/vmask_milestone",function(req,res){
   res.sendFile(path + "vmask_milestone.html");
+});
+
+router.get("/projects/vmask_final",function(req,res){
+  res.sendFile(path + "vmask_final.html");
 });
 
 router.get("/old",function(req,res){
