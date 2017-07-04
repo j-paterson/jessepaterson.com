@@ -1,0 +1,201 @@
+/* Sitewide CSS */
+svg{
+  width: 100%;
+  height: auto;
+}
+
+#root, body, html{
+  font-family: "Cerebri Sans", Avenir, Helvetica, Segoe UI, sans-serif;
+	line-height: 1.15;
+	max-height: 100vh;
+	background-color: #282727;
+	color: #aeaeae;
+}
+
+body {
+  margin: 0px;
+  padding: 0;
+}
+
+a{
+	color:#94ACB0;
+}
+
+a:hover{
+	color:#7b8e94;
+}
+
+.main{
+	float:left;
+	width:100%;
+	margin-top:5em;
+}
+
+.content{
+	margin: 3em 5% 3em 5%;
+}
+
+
+.title{
+	color: #B99458
+}
+
+/* Home Page CSS */
+
+.home{
+	margin:0 15% 0 15%;
+}
+
+.intro{
+  text-align:center;
+  width:100%;
+  float:left;
+}
+
+.portrait{
+  width:100%;
+  float:right;
+}
+
+@media screen and (min-width: 640px){
+  .intro{
+    text-align:left;
+    width:40%;
+    margin-top:10em;
+  }
+
+  .portrait{
+    margin:6em 0 3em 10%;
+    width:50%;
+    float:right;
+  }
+}
+
+.iam{
+	color:#7b8e94;
+}
+
+.main-title{
+	color: #B99458
+}
+
+/* Header CSS */
+.header{
+  position: fixed;
+  z-index:1;
+  background-color: #282727;
+  opacity:0.8;
+  width: 100%;
+}
+.header img{
+  max-height:1.5rem;
+  margin:1.75rem;
+  float:left;
+}
+.header ul{
+  list-style: none;
+  display: block;
+  float: right;
+  /*width:calc(100% - 1.5rem - 1.75rem - 1.75rem - 2rem - 2rem);*/
+}
+.header ul li{
+  float: left;
+}
+.header ul li a{
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  text-decoration-line:none;
+  color:#94ACB0;
+  display: none;
+  float: left;
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+.header ul li a:hover{
+  color:#7b8e94;
+}
+
+.header ul li a.active{
+    color: #B99458 !important;
+    visibility: visible;
+    display: block;
+}
+
+@media screen and (min-width: 640px){
+  .header ul li a{
+    display: block;
+    visibility: visible;
+  }
+}
+
+/* Projects CSS */
+
+.goBack a{
+	text-decoration-line:none;
+}
+
+ul.projects-grid{
+	margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+	list-style: none;
+}
+
+li.project{
+	display: block;
+	text-align: center;
+	overflow:hidden;
+	margin:1em 0 1em 0;
+}
+
+@media screen and (min-width: 640px) {
+  ul.projects-grid{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  li.project{
+    width: 50%;
+		margin: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  li.project {
+    width: calc(100% / 3);
+		margin:0;
+  }
+}
+
+li.project div.title{
+	width:100%;
+  height:100%;
+	font-size: 1.1em;
+	text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+
+	background: rgb(25, 25, 25); /* Fall-back for browsers that don't
+                                    support rgba */
+  background: rgba(25, 25, 25, .8);
+	transition: 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+li.project div.title:hover{
+	background: rgba(25, 25, 25, 0.5);
+	transition: 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+li.project img{
+	position: relative;
+	max-width: 100%;
+	display: flex;
+  justify-content: center;
+}
