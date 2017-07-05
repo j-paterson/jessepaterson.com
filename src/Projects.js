@@ -55,6 +55,15 @@ const isaacs_content =
 	    drone and a computer. This system will make it possible for us to use our interface for
 	    multiple drones at the same time.
 	  </p>
+    <p>
+      https://hololens.reality.news/news/uc-berkeley-team-commands-drone-fleet-with-hololens-0176671/
+    </p>
+    <p>
+      http://engineering.berkeley.edu/magazine/fall-2016/seeing-believing
+    </p>
+    <p>
+      http://citris-uc.org/meet-the-award-recipients-of-the-first-microsoft-hololens-academic-research-grants/
+    </p>
 	</div>
 </div>
 ;
@@ -82,8 +91,7 @@ const treachery_content =
 	<div class="project-description">
 	  <p>
 	      This animation project was done for the UC Berkeley 3D Modeling and Animation class.
-	      Our goal was to follow the <a href="https://docs.google.com/presentation/d/16dAV1d5gqnWyYIijCpZ4bFVC49bRImPjhEtz-8dOXvE/edit#slide=id.g16b4431faa_0_35">storyboard</a>
-	      created by our director. I was the work manager for our group.
+	      Our goal was to follow the <a href="https://docs.google.com/presentation/d/16dAV1d5gqnWyYIijCpZ4bFVC49bRImPjhEtz-8dOXvE/edit#slide=id.g16b4431faa_0_35">storyboard</a> created by our director. I was the work manager for our group.
 	  </p>
 	  <p>
 	      The work went smoothly at first, but as the semester continued, several group members
@@ -352,44 +360,18 @@ const mesh_reconstruction_content =
   </div>
 </div>
 ;
-// const project_content =
-// <div class="project-content">
-//   <div class='project-details'>
-//     <div>
-//       <i></i>
-//     </div>
-//     <div>
-//       <p>
-//         <b class="highlight">Skills:</b>
-//
-//       </p>
-//     </div>
-//     <div>
-//       <p>
-//         <b class="highlight">Client: </b>
-//
-//     </p>
-//     </div>
-//   </div>
-//   <div class="project-description">
-//     <p>
-//
-//     </p>
-//   </div>
-// </div>
-// ;
 
 const ProjectAPI = {
   projects: [
-    { url: "isaacs", title: "ISAACS", body: isaacs_content, image:'/images/isaacs/isaacsteam.jpg' },
-    { url: "treachery", title: "Treachery of Animation", body: treachery_content, image:'/images/walle/walle.jpg' },
-    { url: "sixt33n", title: "SIXT33N", body: sixt33n_content, image:'/images/walle/walle.jpg' },
-    { url: "vxpc", title: "Virtual Experience Convention", body: vxpc_content, image:'/images/vxpc/vxpc.jpg' },
-    { url: "nature", title: "Nature", body: nature_content, image:'/images/nature/nature.png' },
+    { url: "isaacs", title: "ISAACS", body: isaacs_content, image:'/images/isaacs/AR2.png' },
+    { url: "treachery", title: "Treachery of Animation", body: treachery_content, image:'/images/treachery/animation_square.png' },
+    { url: "sixt33n", title: "SIXT33N", body: sixt33n_content, image:'/images/sixt33n/sixt33n.jpg' },
+    { url: "vxpc", title: "Virtual Experience Convention", body: vxpc_content, image:'/images/vxpc/vxpc_logo.jpg' },
+    { url: "nature", title: "Nature", body: nature_content, image:'/images/nature/nature_square.jpg' },
     { url: "wall-e", title: "Wall-E", body: walle_content, image:'/images/walle/walle.jpg' },
-    { url: "this-site", title: "Personal Site", body: this_site_content, image:'/images/walle/walle.jpg' },
-    { url: "graphics", title: "Graphics", body: graphics_content, image:'/images/graphics/graphics.jpg' },
-    { url: "mesh-reconstruction", title: "Mesh Reconstruction", body: mesh_reconstruction_content, image:'/images/vmask/hand_mesh_shaded.png' },
+    { url: "this-site", title: "Personal Site", body: this_site_content, image:'/images/this_site/this_site.jpg' },
+    { url: "graphics", title: "Graphics", body: graphics_content, image:'/images/pathtracer_website/images/banana_square.png' },
+    { url: "mesh-reconstruction", title: "Mesh Reconstruction", body: mesh_reconstruction_content, image:'/images/vmask/hand_mesh_square.png' },
   ],
   all: function() { return this.projects},
   get: function(url) {

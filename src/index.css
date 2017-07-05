@@ -7,6 +7,7 @@ svg{
 #root, body, html{
   font-family: "Cerebri Sans", Avenir, Helvetica, Segoe UI, sans-serif;
 	line-height: 1.15;
+  font-size: 18px;
 	max-height: 100vh;
 	background-color: #282727;
 	color: #aeaeae;
@@ -32,7 +33,7 @@ a:hover{
 }
 
 .content{
-	margin: 3em 5% 3em 5%;
+	margin: 0 5% 0 5%;
 }
 
 
@@ -43,30 +44,29 @@ a:hover{
 /* Home Page CSS */
 
 .home{
-	margin:0 15% 0 15%;
 }
 
 .intro{
   text-align:center;
-  width:100%;
-  float:left;
 }
 
 .portrait{
-  width:100%;
-  float:right;
+  width:60%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 @media screen and (min-width: 640px){
   .intro{
+    margin:8em 0 10% 20%;
     text-align:left;
-    width:40%;
-    margin-top:10em;
+    width:30%;
+    float:left;
   }
 
   .portrait{
-    margin:6em 0 3em 10%;
-    width:50%;
+    margin:8em 10% 0 10%;
+    width:30%;
     float:right;
   }
 }
@@ -76,7 +76,8 @@ a:hover{
 }
 
 .main-title{
-	color: #B99458
+	color: #B99458;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 /* Header CSS */
@@ -96,6 +97,7 @@ a:hover{
   list-style: none;
   display: block;
   float: right;
+  padding:0;
   /*width:calc(100% - 1.5rem - 1.75rem - 1.75rem - 2rem - 2rem);*/
 }
 .header ul li{
@@ -126,9 +128,118 @@ a:hover{
     display: block;
     visibility: visible;
   }
+  .c-hamburger{
+    display:none;
+  }
+}
+
+.c-hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  float:right;
+  margin: 1.75rem;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+}
+
+.c-hamburger:focus {
+  outline: none;
+}
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.05rem;
+  right: 0.05rem;
+  height: 0.2rem;
+  background: #7b8e94;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #7b8e94;
+  content: "";
+}
+
+.c-hamburger span::before {
+  top: -0.5rem;
+}
+
+.c-hamburger span::after {
+  bottom: -0.5rem;
+}
+
+.c-hamburger--htx {
+  background-color: #282727;
+}
+
+.c-hamburger--htx span {
+  transition: background 0s 0.3s;
+}
+.c-hamburger--htx span,
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s, 0.3s;
+  transition-delay: 0s, 0.3s, 0s;
+}
+
+.c-hamburger--htx span::before {
+  transition-property: top, transform;
+}
+
+.c-hamburger--htx span::after {
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.c-hamburger--htx.is-active {
+  background-color: #282727;
+}
+
+.c-hamburger--htx.is-active span {
+  background: none;
+}
+
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+ul.is-active li{
+  width:100%;
+}
+
+ul.is-active li a {
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  display: block;
+  float:right;
 }
 
 /* Projects CSS */
+.project-item{
+  margin-top:2em;
+}
 
 .goBack a{
 	text-decoration-line:none;
@@ -146,6 +257,7 @@ li.project{
 	text-align: center;
 	overflow:hidden;
 	margin:1em 0 1em 0;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 640px) {
