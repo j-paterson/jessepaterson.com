@@ -449,6 +449,7 @@ class Projects extends Component {
   renderSpinner() {
     if (!this.state.loading) {
       // Render nothing if not loading
+      document.querySelector(".projects-grid").classList.remove("invisible");
       return null;
     }
     return (
@@ -492,7 +493,7 @@ class Projects extends Component {
 			<div className="page projects">
         <div className="gallery" ref="gallery">
           {this.renderSpinner()}
-  				<TransitionGroup component="ul" className="projects-grid">
+  				<TransitionGroup component="ul" className="projects-grid invisible">
   					{this.state.projects.map((p, i) => {
   						const style = {
   							opacity: this.state.animations[i],

@@ -367,3 +367,7 @@ li.project img{
     transform: rotate(360deg);
   }
 }
+
+.invisible{
+  visibility: none;
+}
