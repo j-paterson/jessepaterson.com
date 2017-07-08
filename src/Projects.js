@@ -424,17 +424,53 @@ class Project extends Component {
 	}
 }
 
+function imagesLoaded(parentNode) {
+  const imgElements = parentNode.querySelectorAll('img');
+  for (const img of imgElements) {
+    if (!img.complete) {
+      return false;
+    }
+  }
+  return true;
+}
+
 class Projects extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+      loading: true,
 			projects: [],
-			animations: []
+			animations: [],
 		};
 	}
 	componentDidMount() {
-		this._renderProjects(ProjectAPI.all());
+    this._renderProjects(ProjectAPI.all());
 	}
+  renderSpinner() {
+    if (!this.state.loading) {
+      // Render nothing if not loading
+      return null;
+    }
+    return (
+      <div className="loader" />
+    );
+  }
+  renderImage(imageUrl) {
+    return (
+      <div>
+        <img src={imageUrl}
+            onLoad={this.handleStateChange.bind(this)}
+            onError={this.handleStateChange.bind(this)}/>
+      </div>
+    );
+  }
+  handleStateChange() {
+    // In React 0.13 use: 'this.refs.gallery.getDOMNode()'
+    const galleryElement = this.refs.gallery;
+    this.setState({
+      loading: !imagesLoaded(galleryElement),
+    });
+  }
 	_renderProjects(projects) {
 		this.setState(
 			{
@@ -454,29 +490,33 @@ class Projects extends Component {
 	render() {
 		return (
 			<div className="page projects">
-				<TransitionGroup component="ul" className="projects-grid">
-					{this.state.projects.map((p, i) => {
-						const style = {
-							opacity: this.state.animations[i],
-							transform: Animated.template`
-								translate3d(0,${this.state.animations[i].interpolate({
-								inputRange: [0, 1],
-								outputRange: ["12px", "0px"]
-							})},0)
-							`
-						};
-						return (
-							<li key={i} className="project">
-								<Animated.div style={style}>
-									<Link to={`/projects/${p.url}`}>
-                    <img src={p.image}></img>
-                    <div className="title">{p.title}</div>
-                  </Link>
-								</Animated.div>
-							</li>
-						);
-					})}
-				</TransitionGroup>
+        <div className="gallery" ref="gallery">
+          {this.renderSpinner()}
+  				<TransitionGroup component="ul" className="projects-grid">
+  					{this.state.projects.map((p, i) => {
+  						const style = {
+  							opacity: this.state.animations[i],
+  							transform: Animated.template`
+  								translate3d(0,${this.state.animations[i].interpolate({
+  								inputRange: [0, 1],
+  								outputRange: ["12px", "0px"]
+  							})},0)
+  							`
+  						};
+  						return (
+  							<li key={i} className="project">
+  								<Animated.div style={style}>
+  									<Link to={`/projects/${p.url}`}>
+                      {/* <img src={p.image}></img> */}
+                      {this.renderImage(p.image)}
+                      <div className="title">{p.title}</div>
+                    </Link>
+  								</Animated.div>
+  							</li>
+  						);
+  					})}
+  				</TransitionGroup>
+        </div>
 			</div>
 		);
 	}
