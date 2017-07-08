@@ -431,6 +431,7 @@ function imagesLoaded(parentNode) {
       return false;
     }
   }
+  document.querySelector(".projects-grid").classList.remove("invisible");
   return true;
 }
 
@@ -449,7 +450,6 @@ class Projects extends Component {
   renderSpinner() {
     if (!this.state.loading) {
       // Render nothing if not loading
-      document.querySelector(".projects-grid").classList.remove("invisible");
       return null;
     }
     return (
