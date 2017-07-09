@@ -431,7 +431,7 @@ function imagesLoaded(parentNode) {
       return false;
     }
   }
-  var projectelements = document.querySelector(".projects-grid").getElementsByClassName('LI')
+  var projectelements = document.querySelector(".projects-grid").getElementsByClassName('project')
   for(var i = 0; i < projectelements.length; i++){
     projectelements[i].classList.add("visible");
     projectelements[i].classList.remove("invisible");
