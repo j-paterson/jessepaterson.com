@@ -509,7 +509,7 @@ class Projects extends Component {
   							`
   						};
   						return (
-  							<li key={i} className="project">
+  							<li key={i} className="project invisible">
   								<Animated.div style={style}>
   									<Link to={`/projects/${p.url}`}>
                       {/* <img src={p.image}></img> */}
