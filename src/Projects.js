@@ -424,10 +424,6 @@ class Project extends Component {
 	}
 }
 
-function fadeIn(obj) {
-    obj.fadeIn(100000);
-}
-
 function imagesLoaded(parentNode) {
   const imgElements = parentNode.querySelectorAll('img');
   for (const img of imgElements) {
@@ -435,11 +431,11 @@ function imagesLoaded(parentNode) {
       return false;
     }
   }
-  // var projectelements = document.querySelector(".projects-grid").getElementsByClassName('project')
-  // for(var i = 0; i < projectelements.length; i++){
-  //   projectelements[i].classList.add("visible");
-  //   projectelements[i].classList.remove("invisible");
-  // }
+  var projectelements = document.querySelector(".projects-grid").getElementsByClassName('project')
+  for(var i = 0; i < projectelements.length; i++){
+    projectelements[i].classList.add("visible");
+    projectelements[i].classList.remove("invisible");
+  }
   return true;
 }
 
@@ -468,7 +464,6 @@ class Projects extends Component {
     return (
       <div>
         <img src={imageUrl}
-            onLoad="fadeIn(this)"
             onLoad={this.handleStateChange.bind(this)}
             onError={this.handleStateChange.bind(this)}/>
       </div>
