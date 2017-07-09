@@ -255,6 +255,10 @@ a:hover{
   margin-top:2em;
 }
 
+.goBack{
+  font-size:2em;
+}
+
 .goBack a{
 	text-decoration-line:none;
 }
