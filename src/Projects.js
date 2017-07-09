@@ -424,6 +424,10 @@ class Project extends Component {
 	}
 }
 
+function fadeIn(obj) {
+    obj.fadeIn(1000);
+}
+
 function imagesLoaded(parentNode) {
   const imgElements = parentNode.querySelectorAll('img');
   for (const img of imgElements) {
@@ -464,6 +468,7 @@ class Projects extends Component {
     return (
       <div>
         <img src={imageUrl}
+            onLoad="fadeIn(this)"
             onLoad={this.handleStateChange.bind(this)}
             onError={this.handleStateChange.bind(this)}/>
       </div>
