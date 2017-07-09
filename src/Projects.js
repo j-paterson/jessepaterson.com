@@ -431,8 +431,10 @@ function imagesLoaded(parentNode) {
       return false;
     }
   }
-  document.querySelector(".projects-grid").classList.add("visible");
-  document.querySelector(".projects-grid").classList.remove("invisible");
+  var projectelements = document.querySelector(".projects-grid").getElementsByClassName('LI')
+  for(var i = 0; i < projectelements.length; i++){
+  projectelements[i].classList.add("visible");
+  projectelements[i].classList.remove("invisible");
   return true;
 }
 
@@ -494,7 +496,7 @@ class Projects extends Component {
 			<div className="page projects">
         <div className="gallery" ref="gallery">
           {this.renderSpinner()}
-  				<TransitionGroup component="ul" className="projects-grid invisible">
+  				<TransitionGroup component="ul" className="projects-grid">
   					{this.state.projects.map((p, i) => {
   						const style = {
   							opacity: this.state.animations[i],
@@ -506,7 +508,7 @@ class Projects extends Component {
   							`
   						};
   						return (
-  							<li key={i} className="project">
+  							<li key={i} className="project invisible">
   								<Animated.div style={style}>
   									<Link to={`/projects/${p.url}`}>
                       {/* <img src={p.image}></img> */}

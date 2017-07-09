@@ -371,7 +371,7 @@ li.project img{
 .invisible{
   visibility:hidden;
   opacity:0;
-  transition:opacity 0.5s linear;
+  transition:opacity 10s linear;
 }
 .visible{
   visibility:visible;
