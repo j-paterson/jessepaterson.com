@@ -528,7 +528,7 @@ class Projects extends Component {
 }
 
 const ProjectsRouter = () => (
-  <Switch>
+  <Switch onUpdate={() => window.scrollTo(0, 0)}>
     <Route exact path='/projects' component={Projects}/>
     <Route path='/projects/:url' component={Project}/>
   </Switch>
