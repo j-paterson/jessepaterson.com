@@ -433,8 +433,9 @@ function imagesLoaded(parentNode) {
   }
   var projectelements = document.querySelector(".projects-grid").getElementsByClassName('LI')
   for(var i = 0; i < projectelements.length; i++){
-  projectelements[i].classList.add("visible");
-  projectelements[i].classList.remove("invisible");
+    projectelements[i].classList.add("visible");
+    projectelements[i].classList.remove("invisible");
+  }
   return true;
 }
 
