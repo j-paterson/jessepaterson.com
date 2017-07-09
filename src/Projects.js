@@ -431,11 +431,11 @@ function imagesLoaded(parentNode) {
       return false;
     }
   }
-  var projectelements = document.querySelector(".projects-grid").getElementsByClassName('project')
-  for(var i = 0; i < projectelements.length; i++){
-    projectelements[i].classList.add("visible");
-    projectelements[i].classList.remove("invisible");
-  }
+  // var projectelements = document.querySelector(".projects-grid").getElementsByClassName('project')
+  // for(var i = 0; i < projectelements.length; i++){
+  //   // projectelements[i].classList.add("visible");
+  //   // projectelements[i].classList.remove("invisible");
+  // }
   return true;
 }
 
@@ -509,7 +509,7 @@ class Projects extends Component {
   							`
   						};
   						return (
-  							<li key={i} className="project invisible">
+  							<li key={i} className="project">
   								<Animated.div style={style}>
   									<Link to={`/projects/${p.url}`}>
                       {/* <img src={p.image}></img> */}
