@@ -369,5 +369,11 @@ li.project img{
 }
 
 .invisible{
-  visibility: hidden;
+  visibility:hidden;
+  opacity:0;
+  transition:opacity 0.5s linear;
+}
+.visible{
+  visibility:visible;
+  opacity:1;
 }
