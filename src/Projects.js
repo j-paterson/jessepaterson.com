@@ -431,6 +431,7 @@ function imagesLoaded(parentNode) {
       return false;
     }
   }
+  document.querySelector(".projects-grid").classList.add("visible");
   document.querySelector(".projects-grid").classList.remove("invisible");
   return true;
 }
