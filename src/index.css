@@ -1,5 +1,5 @@
 /* Sitewide CSS */
-img{
+img, iframe{
   max-width:80vw;
 }
 
