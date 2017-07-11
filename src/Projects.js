@@ -630,6 +630,7 @@ class Project extends Component {
 		};
 	}
 	componentDidMount() {
+    window.scrollTo(0, 0)
 		setTimeout(() => Animated.spring(this.state.animate, { toValue: 1 }).start(), 250);
 	}
 	componentWillReceiveProps(nextProps) {
