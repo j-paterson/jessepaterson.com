@@ -34,6 +34,8 @@ export default class Header extends Component {
 	        <li><NavLink to="/about" activeClassName="active">About</NavLink></li>
 	        <li><NavLink to="/projects" activeClassName="active">Projects</NavLink></li>
 	        <li><NavLink to="/experience" activeClassName="active">Experience</NavLink></li>
+          <li><a href="https://blog.jessepaterson.com">Blog</a></li>
+          <li><a>Resume</a></li>
 	      </ul>
         <button className="c-hamburger c-hamburger--htx">
           <span>toggle menu</span>

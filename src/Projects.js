@@ -329,7 +329,7 @@ const graphics_content =
   </div>
   <div className="project-description">
     <p>
-
+      <h3>Coming Soon!</h3>
     </p>
   </div>
 </div>

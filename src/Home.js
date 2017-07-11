@@ -20,6 +20,11 @@ class HomeComponent extends Component {
         <div className="intro">
           <p className="iam">I am</p>
           <h1 className="centered main-title">Jesse Paterson</h1>
+          <div className='social-links'>
+              <a href="https://github.com/j-paterson"><i className="fa fa-github" aria-hidden="true"/></a>
+              <a href="https://www.linkedin.com/in/jesse-paterson-89897972"><i className="fa fa-linkedin" aria-hidden="true"/></a>
+              <a href="https://www.instagram.com/hilariouslyuninteresting/"><i className="fa fa-instagram" aria-hidden="true"/></a>
+          </div>
         </div>
         <div className="portrait">
           <svg version="1.1" width="320" height="320" viewBox="0 0 320 320" fill="none" stroke="#94ACB0" stroke-linecap="round"
