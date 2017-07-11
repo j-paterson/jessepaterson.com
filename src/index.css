@@ -80,174 +80,12 @@ a:hover{
   font-family: 'Roboto', sans-serif !important;
 }
 
-/* Header CSS */
-.header{
-  position: fixed;
-  z-index:1;
-  background-color: #282727;
-  opacity:0.8;
-  width: 100%;
-}
-.header img{
-  max-height:1.5rem;
-  margin:1.75rem;
-  float:left;
-}
-.header ul{
-  list-style: none;
-  display: block;
-  float: left;
-  padding:0;
-  width:calc(100% - 1.5rem - 1.75rem - 1.75rem - 1.75rem - 1.75rem - 1.5rem);
-}
-.header ul li{
-  float: right;
-  text-align:center;
-  width:100%;
-}
-.header ul li a{
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-  text-decoration-line:none;
-  color:#94ACB0;
-  display: none;
-  text-align:center;
-  margin: 1rem 2rem 1rem 2rem;
-}
+/* About CSS*/
 
-.header ul li a:hover{
-  color:#7b8e94;
-}
-
-.header ul li a.active{
-    color: #B99458 !important;
-    visibility: visible;
-    display: block;
-}
-
-.c-hamburger {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  float:right;
-  margin: 1.75rem;
-  padding: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0;
-  text-indent: -9999px;
-  appearance: none;
-  box-shadow: none;
-  border-radius: none;
-  border: none;
-  cursor: pointer;
-}
-
-.c-hamburger:focus {
-  outline: none;
-}
-
-.c-hamburger span {
-  display: block;
-  position: absolute;
-  top: 0.75rem;
-  left: 0.05rem;
-  right: 0.05rem;
-  height: 0.2rem;
-  background: #7b8e94;
-}
-
-.c-hamburger span::before,
-.c-hamburger span::after {
-  position: absolute;
-  display: block;
-  left: 0;
-  width: 100%;
-  height: 0.2rem;
-  background-color: #7b8e94;
-  content: "";
-}
-
-.c-hamburger span::before {
-  top: -0.5rem;
-}
-
-.c-hamburger span::after {
-  bottom: -0.5rem;
-}
-
-.c-hamburger--htx {
-  background-color: #282727;
-}
-
-.c-hamburger--htx span {
-  transition: background 0s 0.3s;
-}
-.c-hamburger--htx span,
-.c-hamburger--htx span::before,
-.c-hamburger--htx span::after {
-  transition-duration: 0.3s, 0.3s, 0.3s;
-  transition-delay: 0s, 0.3s, 0s;
-}
-
-.c-hamburger--htx span::before {
-  transition-property: top, transform;
-}
-
-.c-hamburger--htx span::after {
-  transition-property: bottom, transform;
-}
-
-/* active state, i.e. menu open */
-.c-hamburger--htx.is-active {
-  background-color: #282727;
-}
-
-.c-hamburger--htx.is-active span {
-  background: none;
-}
-
-.c-hamburger--htx.is-active span::before {
-  top: 0;
-  transform: rotate(45deg);
-}
-
-.c-hamburger--htx.is-active span::after {
-  bottom: 0;
-  transform: rotate(-45deg);
-}
-
-.header ul.is-active li{
-  float:right;
-}
-
-.header ul li{
-  transition-property: display;
-}
-
-.header ul.is-active li a {
-  transition-duration: 0.3s;
-  transition-delay: 0s;
-  display: block;
-}
-
-@media screen and (min-width: 640px) {
-  .header ul{
-    float:right;
-    width:auto
-  }
-  .header ul li{
-    text-align:left;
-    width: auto;
-    float:left;
-  }
-  .header ul li a{
-    display: block;
-    visibility: visible;
-  }
-  .c-hamburger{
-    display:none;
-  }
+.about{
+  margin:10%;
+  padding:2%;
+  background-color:rgb(43, 42, 42);
 }
 
 /* Projects CSS */
@@ -416,4 +254,174 @@ li.project img{
 .invert{
  -webkit-filter: invert(1);
  filter: invert(1);
+}
+
+/* Header CSS */
+.header{
+  position: fixed;
+  z-index:1;
+  background-color: #282727;
+  opacity:0.8;
+  width: 100%;
+}
+.header img{
+  max-height:1.5rem;
+  margin:1.75rem;
+  float:left;
+}
+.header ul{
+  list-style: none;
+  display: block;
+  float: left;
+  padding:0;
+  width:calc(100% - 1.5rem - 1.75rem - 1.75rem - 1.75rem - 1.75rem - 1.5rem);
+}
+.header ul li{
+  float: right;
+  text-align:center;
+  width:100%;
+}
+.header ul li a{
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  text-decoration-line:none;
+  color:#94ACB0;
+  display: none;
+  text-align:center;
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+.header ul li a:hover{
+  color:#7b8e94;
+}
+
+.header ul li a.active{
+    color: #B99458 !important;
+    visibility: visible;
+    display: block;
+}
+
+.c-hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  float:right;
+  margin: 1.75rem;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+}
+
+.c-hamburger:focus {
+  outline: none;
+}
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.05rem;
+  right: 0.05rem;
+  height: 0.2rem;
+  background: #7b8e94;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #7b8e94;
+  content: "";
+}
+
+.c-hamburger span::before {
+  top: -0.5rem;
+}
+
+.c-hamburger span::after {
+  bottom: -0.5rem;
+}
+
+.c-hamburger--htx {
+  background-color: #282727;
+}
+
+.c-hamburger--htx span {
+  transition: background 0s 0.3s;
+}
+.c-hamburger--htx span,
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s, 0.3s;
+  transition-delay: 0s, 0.3s, 0s;
+}
+
+.c-hamburger--htx span::before {
+  transition-property: top, transform;
+}
+
+.c-hamburger--htx span::after {
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.c-hamburger--htx.is-active {
+  background-color: #282727;
+}
+
+.c-hamburger--htx.is-active span {
+  background: none;
+}
+
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.header ul.is-active li{
+  float:right;
+}
+
+.header ul li{
+  transition-property: display;
+}
+
+.header ul.is-active li a {
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  display: block;
+}
+
+@media screen and (min-width: 640px) {
+  .header ul{
+    float:right;
+    width:auto
+  }
+  .header ul li{
+    text-align:left;
+    width: auto;
+    float:left;
+  }
+  .header ul li a{
+    display: block;
+    visibility: visible;
+  }
+  .c-hamburger{
+    display:none;
+  }
 }

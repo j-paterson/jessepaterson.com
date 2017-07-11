@@ -613,7 +613,6 @@ const ProjectAPI = {
     { url: "this-site", title: "Personal Site", body: this_site_content, image:'/images/this_site/this_site.jpg' },
     { url: "treachery", title: "Treachery of Animation", body: treachery_content, image:'/images/treachery/animation_square.png' },
     { url: "graphics", title: "Graphics", body: graphics_content, image:'/images/pathtracer_website/images/banana_square.png' },
-
   ],
   all: function() { return this.projects},
   get: function(url) {
