@@ -27,7 +27,7 @@ export default class Header extends Component {
     return (
       <div className="header">
         <a href="/">
-          <img href="/" src="/images/logos/logo_red.png"></img>
+          <img href="/" src="/images/logos/logo_red.png" alt="Jesse Paterson's Logo"></img>
         </a>
 	      <ul className="menu">
 	        <li><NavLink exact={true} to="/" activeClassName="active" onlyActiveOnIndex>Home</NavLink></li>

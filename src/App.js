@@ -35,7 +35,7 @@ export default class App extends Component {
         <Header />
         <div className="main">
           <div className="content">
-            <Route onUpdate={() => window.scrollTo(0, 0)} render={({ location }) => (
+            <Route render={({ location }) => (
               <Switch key={location.key} location={location}>
                 <Route exact path="/"
                   render={({ match, ...rest }) => (

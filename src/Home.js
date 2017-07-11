@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AnimatedWrapper from "./AnimatedWrapper";
-import $ from "jquery";
-import jQuery from "jquery";
+// import $ from "jquery";
+// import jQuery from "jquery";
 
 class HomeComponent extends Component {
   componentDidMount() {

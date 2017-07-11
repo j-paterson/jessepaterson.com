@@ -337,7 +337,7 @@ li.project img{
   height: 10em;
 }
 .loader {
-  margin: 120px auto;
+  margin: calc(50vh - 2em - 50px - 2.5em) auto;
   font-size: 10px;
   position: relative;
   text-indent: -9999em;
@@ -381,4 +381,39 @@ li.project img{
   visibility:visible;
   opacity:1;
   transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+}
+
+/* Project Description Styling */
+.no-list-style{
+  list-style: none;
+}
+
+.no-bottom-margin{
+  margin-bottom:0;
+}
+
+.no-top-margin{
+  margin-top:0;
+}
+
+.indent{
+  display: block;
+  width:79%
+}
+
+.img-float-right{
+  float: right; display: block; margin: 2% 2%;
+}
+
+.img-center{
+  display: block;
+  margin: 0 auto;
+}
+.subheading{
+  margin-top:1.5em;
+}
+
+.invert{
+ -webkit-filter: invert(1);
+ filter: invert(1);
 }

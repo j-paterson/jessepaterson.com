@@ -9,7 +9,7 @@ import {
 
 
 ReactDOM.render((
-	<Router>
+	<Router onUpdate={() => window.scrollTo(0, 0)}>
 		<App />
 	</Router>
 ), document.getElementById('root'));
