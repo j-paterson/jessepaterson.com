@@ -160,7 +160,7 @@ li.project div.title{
 	-webkit-transition: all 1s ease;
 }
 
-li.project div.title:hover{
+li.project>div>a>div.title:hover, li.project>div>a:focus>div.title{
 	background: rgba(25, 25, 25, 0.5);
 	transition: 1s ease;
 	-webkit-transition: all 1s ease;
@@ -428,5 +428,51 @@ li.project img{
   }
   .c-hamburger{
     display:none;
+  }
+}
+
+/* Experience CSS */
+
+.experience{
+  margin:2% 2% 2% 2%;
+  padding:2%;
+  background-color:rgb(43, 42, 42);
+}
+
+.container {
+  display: flex;
+  margin:2rem;
+}
+
+.col-md-8{
+  width: 100%;
+  display:block;
+  align-items: stretch;
+}
+
+.col-md-4{
+  width: 100%;
+  float: left;
+  align-items: stretch;
+}
+
+.job-img{
+  max-width: 70%;
+  margin:2em;
+}
+
+.img-reduction{
+  max-width:60%;
+}
+
+@media screen and (min-width: 640px) {
+  .col-md-8{
+    width: 66%;
+    height:100%
+  }
+
+  .col-md-4{
+    width: 33%;
+    height:100%;
   }
 }

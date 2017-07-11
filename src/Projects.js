@@ -745,10 +745,10 @@ class Projects extends Component {
   						const style = {
   							opacity: this.state.animations[i],
   							transform: Animated.template`
-  								translate3d(0,${this.state.animations[i].interpolate({
+  								translate3d(${this.state.animations[i].interpolate({
   								inputRange: [0, 1],
   								outputRange: ["12px", "0px"]
-  							})},0)
+  							})},0,0)
   							`
   						};
   						return (

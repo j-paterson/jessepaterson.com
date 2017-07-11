@@ -3,7 +3,7 @@ import AnimatedWrapper from "./AnimatedWrapper";
 class AboutComponent extends Component {
   render() {
     return (
-      <div className="about">
+      <div className="about page">
         <p>
           I'm a developer and designer in the Bay
           Area currently pursuing a degree in Computer
