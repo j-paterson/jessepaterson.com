@@ -642,10 +642,10 @@ class Project extends Component {
 		const { project: { title, body } } = this.state;
 		const goBackStyle = {
 			transform: Animated.template`
-				translate3d(${this.state.animate.interpolate({
+				translate3d(0,${this.state.animate.interpolate({
 					inputRange: [0,1],
 					outputRange: ["-24px", "0px"]
-				})},0,0)
+				})},0)
 			`,
 			opacity: Animated.template`${this.state.animate}`
 		}
@@ -745,10 +745,10 @@ class Projects extends Component {
   						const style = {
   							opacity: this.state.animations[i],
   							transform: Animated.template`
-  								translate3d(${this.state.animations[i].interpolate({
+  								translate3d(0,${this.state.animations[i].interpolate({
   								inputRange: [0, 1],
   								outputRange: ["12px", "0px"]
-  							})},0,0)
+  							})},0)
   							`
   						};
   						return (
