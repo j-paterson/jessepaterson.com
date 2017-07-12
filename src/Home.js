@@ -22,6 +22,7 @@ class HomeComponent extends Component {
           <h1 className="centered main-title">Jesse Paterson</h1>
           <div className='social-links'>
               <a href="https://github.com/j-paterson"><i className="fa fa-github" aria-hidden="true"/></a>
+              <a href="https://medium.com/@jesse.r.pat"><<i class="fa fa-medium" aria-hidden="true"/></a>
               <a href="https://www.linkedin.com/in/jesse-paterson"><i className="fa fa-linkedin" aria-hidden="true"/></a>
               <a href="https://www.instagram.com/hilariouslyuninteresting/"><i className="fa fa-instagram" aria-hidden="true"/></a>
           </div>

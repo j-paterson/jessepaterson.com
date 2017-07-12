@@ -45,8 +45,8 @@ const isaacs_content =
 	    framework for the interface. The framework included a bounding box which
 	    the drone would stay in, the ability to set camera angle and a path through nodes that
 	    could be moved through 3d space and angled similar to a Bézier curve. As a culmination
-	    of my experience and research on this project, I wrote an <a href="https://blog.jessepaterson.com/augmented-reality-interface-design/">essay
-	    on Augmented Reality UI/UX</a>.
+	    of my experience and research on this project, I wrote an essay
+	    on Augmented Reality UI/UX.
 	  </p>
 	  <p>
 	    I later joined the Simultaneous Location and Mapping team to work on implementation
