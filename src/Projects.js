@@ -645,16 +645,16 @@ class Project extends Component {
 			transform: Animated.template`
 				translate3d(${this.state.animate.interpolate({
 				inputRange: [0, 1],
-				outputRange: ["12px", "0px"]
+				outputRange: ["2px", "0px"]
 			})},0,0)
 			`
 		};
 		const goBackStyle = {
 			transform: Animated.template`
-				translate3d(0,${this.state.animate.interpolate({
+				translate3d(${this.state.animate.interpolate({
 					inputRange: [0,1],
-					outputRange: ["-24px", "0px"]
-				})},0)
+					outputRange: ["24px", "0px"]
+				})},0,0)
 			`,
 			opacity: Animated.template`${this.state.animate}`
 		}
