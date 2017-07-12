@@ -479,5 +479,6 @@ li.project img{
   .col-md-4{
     width: 33%;
     height:100%;
+    float: none;
   }
 }
