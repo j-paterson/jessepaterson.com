@@ -640,6 +640,15 @@ class Project extends Component {
 	}
 	render() {
 		const { project: { title, body } } = this.state;
+    const style = {
+			opacity: Animated.template`${this.state.animate}`,
+			transform: Animated.template`
+				translate3d(${this.state.animate.interpolate({
+				inputRange: [0, 1],
+				outputRange: ["12px", "0px"]
+			})},0,0)
+			`
+		};
 		const goBackStyle = {
 			transform: Animated.template`
 				translate3d(0,${this.state.animate.interpolate({
@@ -659,8 +668,10 @@ class Project extends Component {
   					}}>&larr;</a>
   				</Animated.span>
         </div>
-				<h1>{title}</h1>
-				<p>{body}</p>
+        <Animated.div style={style} className="animated-project-wrapper">
+  				<h1>{title}</h1>
+  				<p>{body}</p>
+        </Animated.div>
 			</div>
 		);
 	}
