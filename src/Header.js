@@ -34,7 +34,7 @@ export default class Header extends Component {
 	        <li><NavLink to="/about" activeClassName="active">About</NavLink></li>
 	        <li><NavLink to="/projects" activeClassName="active">Projects</NavLink></li>
 	        <li><NavLink to="/experience" activeClassName="active">Experience</NavLink></li>
-          <li><a href="file://jp_resume.pdf">Resume</a></li>
+          <li><a href="/jp_resume.pdf">Resume</a></li>
 	      </ul>
         <button className="c-hamburger c-hamburger--htx">
           <span>toggle menu</span>
