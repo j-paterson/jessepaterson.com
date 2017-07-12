@@ -30,12 +30,12 @@ export default class Header extends Component {
           <img href="/" src="/images/logos/logo_red.png" alt="Jesse Paterson's Logo"></img>
         </a>
 	      <ul className="menu">
-	        <li><NavLink exact={true} to="/" activeClassName="active" onlyActiveOnIndex>Home</NavLink></li>
+	        <li><NavLink exact={true} to="/" activeClassName="active">Home</NavLink></li>
 	        <li><NavLink to="/about" activeClassName="active">About</NavLink></li>
 	        <li><NavLink to="/projects" activeClassName="active">Projects</NavLink></li>
 	        <li><NavLink to="/experience" activeClassName="active">Experience</NavLink></li>
           <li><a href="https://blog.jessepaterson.com">Blog</a></li>
-          <li><a>Resume</a></li>
+          <li><a href="jp_resume.pdf">Resume</a></li>
 	      </ul>
         <button className="c-hamburger c-hamburger--htx">
           <span>toggle menu</span>
