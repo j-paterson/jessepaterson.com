@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<script src="js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+    var counter = 0,
+    $items = $('.diy-slideshow figure'),
+    numItems = $items.length;
+
+    var showCurrent = function(){
+    var itemToShow = Math.abs(counter%numItems);
+    $items.removeClass('show');
+    $items.eq(itemToShow).addClass('show');
+    };
+
+    $('.next').on('click', function(){
+    counter++;
+    showCurrent();
+    });
+
+    $('.prev').on('click', function(){
+    counter--;
+    showCurrent();
+    });
+});
+</script>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  b{
+    border-bottom:1px solid;
+  }
+
+    .section{
+    width:100%;
+    margin:2%;
+    display:inline-block;
+    border-bottom:1px solid;
+    padding-bottom:5%
+    }
+/* borrowing slideshow css from https://themarklee.com/2013/12/26/simple-diy-responsive-slideshow-made-html5-css3-javascript/
+  */
+    .diy-slideshow{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    }
+    figure{
+    position: absolute;
+    opacity: 0;
+    transition: 1s opacity;
+    }
+    figcaption{
+    position: absolute;
+    font-family: sans-serif;
+    font-size: .8em;
+    bottom: 2em;
+    right: 4em;
+    padding: .25em;
+    color: #fff;
+    background: rgba(0,0,0, .25);
+    border-radius: 2px;
+    }
+    figcaption a{
+    color: #fff;
+    }
+    figure.show{
+    opacity: 1;
+    position: static;
+    transition: 1s opacity;
+    }
+    .next, .prev{
+    color: #fff;
+    position: absolute;
+    background: rgba(0,0,0, .6);
+    top: 50%;
+    z-index: 1;
+    font-size: 2em;
+    margin-top: -.75em;
+    opacity: .3;
+    user-select: none;
+    }
+    .next:hover, .prev:hover{
+    cursor: pointer;
+    opacity: 1;
+    }
+    .next{
+    right: 0;
+    padding: 10px 5px 15px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    }
+    .prev{
+    left: 0;
+    padding: 10px 10px 15px 5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    }
+    figure{
+    position: absolute;
+    opacity: 0;
+    transition: 1s opacity;
+    }
+    figure.show{
+    opacity: 1;
+    position: static;
+    transition: 1s opacity;
+    }
+</style>
+<title>CS 184 Mesh Editor</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2017</h1>
+<h1 align="middle">Project 3: Ray Tracing</h1>
+<h2 align="middle">Jesse Paterson, CS184-ACP</h2>
+
+<br><br>
+<!-- We recommend using the -r 480 360 command line flag to set resolution at
+480 by 360 for all your screenshots. -->
+
+<h2 align="middle">Overview</h2>
+<p>In this project, I built the framework for ray tracer, a physics based rendering system that
+calculates what a scene will look like based on rays traced from the light sources. The intersection
+of these rays with the primitives in the scene can be used to identify where shadows lie.
+Using the reflectiveness of the materials in a scene and a random falloff, it is also possible to
+cast indirect lighting, reflecting the colors of some materials onto others. This form of rendering
+can be improved upon by using a Bounding Volume Hierarchy which enables us to identify which rays
+have collided where much quicker, as well as by using Adaptive Sampling in order to only sample
+at a higher frequency in areas which would generally have more noise and be more difficult to properly
+render at lower sample rates.</p>
+
+<h3 align="middle">Project 3-1, Part 1: Ray Generation and Scene Intersection</h3>
+<div class="section">
+    <div style="width:50%; float:left;">
+    <!--
+    1) Walk through the ray generation and primitive intersection parts of the rendering pipeline.
+    2) Explain the triangle intersection algorithm you implemented in your own words.
+    3) Show the normal shading for a few small dae files.
+    -->
+        <h4>Ray Generation and Intersection</h4>
+        <p>
+            Rays are generated from a single constant point, which is the light source.
+            The rays are directed from the light source toward pixel positions on viewing
+            window. The rays are interpreted as representations of the light being
+            cast from the light source. If the rays are interpreted using Photometry, irradiance
+            (How much power is falling onto a surface) can be calculated. By checking the
+            order of objects intersected by the ray, it is also possible to cast shadows.
+        </p>
+        <h4>Triangle Intersection</h4>
+        <p>
+          In order to test if a ray intersected a triangle, I used the Möller-Trumbore algorithm.
+          This algorithm converts the intersection point on the same plane as the
+          triangle into barycentric coordinates. By setting the barycentric coordinates
+          equal to the ray's parametric equation, the equation can be rearranged to
+          a row-column vector multiplication to find the depth of the ray at the point of
+          intersection as well as two of the 3 barycentric weights.
+        </p>
+    </div>
+    <div style="height:100%; width:50%; display:block; float:right;">
+    <img src="images/p1_1.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+    <img src="images/p1_2.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+    </div>
+</div>
+
+<h3 align="middle">Part 2: Bounding Volume Hierarchy</h3>
+
+<div class="section">
+    <div style="width:50%; float:left;">
+    <p>
+        <!--
+        1) Walk through your BVH construction algorithm. Explain the heuristic you chose for picking the splitting point.
+        2) Walk through your BVH intersection algorithm.
+        3) Show the normal shading for a few large dae files that you couldn't render without the acceleration structure.
+        -->
+        This section implements a Bounding Volume Hierarchy approach in order to reduce the number
+        of intersections we have to calculate and speed up the rendering.
+    </p>
+    <p>
+        In order to create the Bounding Volume Hierarchy, we start by computing a bounding box that
+        covers the entire set of primitives. This bounding box is tied to a node. This bounding box is
+        then split at it's centroid and the primitives are divided into two sets based on whether they
+        are above or below their bounding box's centroid on the largest axis of the bouding box.
+        These sets are used to create two sub nodes of the current node. The process repeats recursively
+        with these sub nodes until a desired minimum number of primitives within the bounding box is
+        acheived.
+    </p>
+    <p>
+        The resulting heirarchy can be traversed and intersection testing can be greatly reduced
+        by checking for simple intersection with the topmost node's bounding box before traversing
+        it's children or checking for the topmost intersection with it's primitives. Checking for
+        intersection with the bounding box is done by examining how the intersection ray crosses
+        the x, y, and z axis and then finding the minimum valued 3D point across those intersections.
+    </p>
+    </div>
+    <div style="height:100%; width:50%; display:block; float:right;">
+    <img src="images/p2_1.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+    <img src="images/p2_2.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+    </div>
+</div>
+
+<h3 align="middle">Part 3: Direct Illumination</h3>
+
+<div class="section">
+    <div style="width:50%; float:left;">
+        <p>
+            <!--
+            1) Walk through your implementation of the direct lighting function.
+            2) Show some images rendered with direct illumination.
+            3) Focus on one particular scene (with at least one area light) and
+            compare the noise levels in soft shadows when rendering with 1, 4, 16,
+            and 64 light rays (the -l flag) and 1 sample per pixel (the -s flag).
+            -->
+            The estimation of direct lighting is generated through a combination
+            of the all lightsources in the scenes, each with an average of a set number of
+            random samples on the surface pixel. If the light is a delta light,
+            the averaging of samples is not necessary, and only one sample is required.
+        </p>
+        <p>
+            Shadow rays are cast away from the light intersection points. If the shadow
+            doesn't intersects the scene anywhere, the BSDF is calculated  at and accumulated
+            in a final spectrum value.
+        </p>
+        <p>
+            After all loops are completed, the final spectrum value is divided by the pdf
+            in order to acount for the probability distribution in the samples.
+        </p>
+        <p>
+          The more light rays used, the less noise is found in the shadow.<br>
+          <i>Images on the right from top to bottom:<br> Using 1, 4, 16, and 64 light rays </i>
+
+        </p>
+    </div>
+    <div style="height:100%; width:50%; display:block; float:right;">
+    <img src="images/bunny_1_1.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+    <img src="images/bunny_4_1.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+    <img src="images/bunny_16_1.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+    <img src="images/bunny_64_1.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+    </div>
+</div>
+
+<h3 align="middle">Part 4: Indirect Illumination</h3>
+
+<div class="section">
+    <div style="width:100%; display: block;">
+      <div style="width:50%; float:left;">
+          <p>
+              <!--
+              1) Walk through your implementation of the indirect lighting function.
+              2) Show some images rendered with global (direct and indirect) illumination.
+              3) Pick one scene and compare rendered views first with only direct illumination, then only indirect illumination. (You'll have to edit trace_ray in your code to generate these.)
+              4) For CBbunny.dae, compare rendered views with max_ray_depth equal to 0, 1, 2, 3, and 100 (the -m flag).
+              5) Pick one scene and compare rendered views with various sample-per-pixel rates, including at least 1, 2, 4, 8, 16, 64, and 1024. Use 4 light rays.
+
+              Note that for the above renders, you will probably want to use the instructional machines in order to not burn up your own computer for hours (since you should render with 1024 samples per pixel for high quality output).
+              For the max_ray_depth comparison, feel free to just use -s 64 and -l 32.
+              -->
+
+              In order to implement indirect lighting, I sampled the surface BSDF at the
+              intersection point and then used the reflectance of the surface as a probability
+              to generate some randomness as to the likelihood that the ray would terminate (Russian roulette
+              termination probability).
+              The lower the reflectance of the surface, the more likely it is that the ray will be terminated
+              and an empty Spectrum will be returned.
+          </p>
+          <p>
+              If the ray was not terminated, a new ray was created from the intersection point (with a small offset)
+              angled in the direction of the incoming radiance converted to world coordinates. This ray is
+              recursively traced to obtain it's approximate incoming radiance, which is then converted
+              to outgoing radiance "by scaling by the BSDF and a cosine factor and dividing by the BSDF pdf
+              and one minus the Russian roulette termination probability."
+          </p>
+          <p>
+          <i>Images on the right from top to bottom:
+             <ul>
+                <li>Spheres with global illumination, 1024 samples
+                </li>
+                <li>Spheres with only direct illumination, 1024 samples
+                </li>
+                <li>Spheres with only indirect illumination, 1024 samples
+                </li>
+                <li>Banana with global illumination, 1024 samples
+                </li>
+                <li>Building with global illumination, 1024 samples
+                </li>
+             </ul>
+          </i>
+          </p>
+          <p>
+                <b>Varying sample rates and maximum ray depths:</b>
+  <!--            borrowing slideshow from https://themarklee.com/2013/12/26/simple-diy-responsive-slideshow-made-html5-css3-javascript/-->
+            <div class="diy-slideshow">
+                <figure class="show"><img src="images/dragon_1024.png" alt="" width="100%" />
+                <figcaption>Sample-per-pixel: 1024</figcaption></figure>
+                <figure><img src="images/dragon_64.png" alt="" width="100%" />
+                <figcaption>Sample-per-pixel: 64</figcaption></figure>
+                <figure><img src="images/dragon_16.png" alt="" width="100%" />
+                <figcaption>Sample-per-pixel: 16</figcaption></figure>
+                <figure><img src="images/dragon_8.png" alt="" width="100%" />
+                <figcaption>Sample-per-pixel: 8</figcaption></figure>
+                <figure><img src="images/dragon_4.png" alt="" width="100%" />
+                <figcaption>Sample-per-pixel: 4</figcaption></figure>
+                <figure><img src="images/dragon_2.png" alt="" width="100%" />
+                <figcaption>Sample-per-pixel: 2</figcaption></figure>
+                <figure><img src="images/dragon_1.png" alt="" width="100%" />
+                <figcaption>Sample-per-pixel: 1</figcaption></figure>
+                <figure><img src="images/bunny_depth_100.png" alt="" width="100%" />
+                <figcaption>Max ray depth: 100</figcaption></figure>
+                <figure><img src="images/bunny_depth_3.png" alt="" width="100%" />
+                <figcaption>Max ray depth: 3</figcaption></figure>
+                <figure><img src="images/bunny_depth_2.png" alt="" width="100%" />
+                <figcaption>Max ray depth: 2</figcaption></figure>
+                <figure><img src="images/bunny_depth_1.png" alt="" width="100%" />
+                <figcaption>Max ray depth: 1</figcaption></figure>
+                <figure><img src="images/bunny_depth_0" alt="" width="100%" />
+                <figcaption>Max ray depth: 0</figcaption></figure>
+                <span class="prev">«</span>
+                <span class="next">»</span>
+            </div>
+          </p>
+      </div>
+      <div style="height:100%; width:50%; display:block; float:right;">
+          <img src="images/spheres.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+          <img src="images/spheres_direct.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+          <img src="images/spheres_indirect.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+          <img src="images/banana.png" style="margin-left:auto; margin-right:auto; max-width:80%; display: block;"/></img>
+          <img src="images/building.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+      </div>
+    </div>
+</div>
+
+
+<h3 align="middle">Part 5: Adaptive Sampling</h3>
+
+<div class="section">
+    <div style="width:50%; float:left;">
+    <p>
+        <!--
+        1) Walk through your implementation of the adaptive sampling.
+        2) Pick one scene and render it with the maximum number of samples per pixel at least 2048.
+        Show a good sampling rate image with clearly visible sampling rate difference over various
+        regions and pixels. Use 1 sample per light and at least 5 for max ray depth.
+        -->
+        Adaptive sampling enables us to continue to sample a pixel only
+        until it converges to a point such that its average illuminance is within
+        the mean +/- our confidence interval. If a pixel is easier to render without noise,
+        it will require less samples and vice versa.
+    </p>
+    <p>
+        To acheive 95% confidence, we set our confidence interval to be equal to 1.96*σ/√(n).
+        We group the samples into batches of a certain size and check
+        for convergence after each batch. To check for convergence, we first
+        calculate the mean and variance of all n samples so far. We use
+        these variables to check if our confidence interval is less than
+        or equal to our maxTolerance * mean.
+    </p>
+    <p>
+        If so, we can assume the pixel has converged and can stop it's sample loop, saving
+        us the time that would otherwise be spent on excessive samples.
+    </p>
+    </div>
+    <div style="height:100%; width:50%; display:block; float:right;">
+    </div>
+    <div style="height:100%; width:50%; display:block; float:right;">
+        <img src="images/bunny.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+        <img src="images/bunny_rate.png" style="margin-left:auto; margin-right:auto; max-width:80%; display:block;"/></img>
+    </div>
+</div>
+
+
+
