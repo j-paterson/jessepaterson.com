@@ -97,7 +97,7 @@ a:hover{
 /* About CSS*/
 
 .about{
-  margin:10%;
+  margin:20px;
   padding:2%;
   background-color:rgb(43, 42, 42);
 }
@@ -452,13 +452,6 @@ li.project img{
 }
 
 /* Experience CSS */
-
-.experience{
-  margin:2% 2% 2% 2%;
-  padding:2%;
-  background-color:rgb(43, 42, 42);
-}
-
 .container {
   margin:2rem;
   max-width:calc(100vw - 4rem)
