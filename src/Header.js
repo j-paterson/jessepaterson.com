@@ -33,7 +33,6 @@ export default class Header extends Component {
 	        <li><NavLink exact={true} to="/" activeClassName="active">Home</NavLink></li>
 	        <li><NavLink to="/about" activeClassName="active">About</NavLink></li>
 	        <li><NavLink to="/projects" activeClassName="active">Projects</NavLink></li>
-	        {/* <li><NavLink to="/experience" activeClassName="active">Experience</NavLink></li> */}
           <li><NavLink to="/resume" activeClassName="active">Resume</NavLink></li>
 	      </ul>
         <button className="c-hamburger c-hamburger--htx">
