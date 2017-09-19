@@ -6,7 +6,7 @@ class ResumeComponent extends Component {
     return (
       <div className="resume page">
         <div className="container">
-          <iframe src="http://docs.google.com/gview?url=/jp_resume.pdf&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>
+          <embed type='application/pdf' src="/jp_resume.pdf" width= "80%" height= "800px"></embed>
         </div>
       </div>
     )
