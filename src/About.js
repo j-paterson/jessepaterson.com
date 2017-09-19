@@ -5,19 +5,23 @@ class AboutComponent extends Component {
   render() {
     return (
       <div className="about page">
-        <p>
-          I'm a developer and designer in the Bay
-          Area currently pursuing a degree in Computer
-          Science at UC Berkeley. I like to understand
-          things deeply and work on large scale projects.
-          When I'm not wrapping my head around computer
-          vision algorithms or building websites, I enjoy <a href="http://azura.wikia.com/wiki/Azura_Wikia">
-          building worlds</a>, <a href="https://vr.berkeley.edu/">
-          sculpting reality</a> and
-          climbing really big rocks. I value persistence, integrity
-          and quality.
-        </p>
+        <div className="personal">
+          <h3 className="title">ME</h3>
+          <p>
+            I'm a developer and designer in the Bay
+            Area currently pursuing a degree in Computer
+            Science at UC Berkeley. I like to understand
+            things deeply and work on large scale projects.
+            When I'm not wrapping my head around computer
+            vision algorithms or building websites, I enjoy <a href="http://azura.wikia.com/wiki/Azura_Wikia">
+            building worlds</a>, <a href="https://vr.berkeley.edu/">
+            sculpting reality</a> and
+            climbing really big rocks. I value persistence, integrity
+            and quality.
+          </p>
+        </div>
         <div className="experience">
+          <h3 className="title"> MY WORK</h3>
           <div className="container">
             <div className='col-md-4'>
                <img className="job-img" src="/images/experience/cnr.png" alt="College of Natural Resources Logo"></img>

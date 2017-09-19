@@ -102,6 +102,23 @@ a:hover{
   background-color:rgb(43, 42, 42);
 }
 
+.personal{
+  margin: 0 30% 0 30%;
+  text-align: justify;
+}
+
+.personal .title{
+  text-align: center;
+  margin-top:3em;
+  margin-bottom:1em;
+}
+
+.experience h3.title{
+  text-align: center;
+  margin-top:3em;
+  margin-bottom:1em;
+}
+
 /* Projects CSS */
 .project-item{
   margin-top:2em;
