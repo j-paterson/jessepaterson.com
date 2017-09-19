@@ -1,0 +1,501 @@
+[33mcommit 26f45dc1244b69c67d556acf3eba607df4a77660[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Mar 8 15:23:48 2016 -0800
+
+    added new dependencies for angular
+
+[33mcommit a9e0c590e1ba801a34c5942ee942e2bd3ac3c3de[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Mar 8 15:17:13 2016 -0800
+
+    fixed up package.json
+
+[33mcommit 3f8ecb2b220c56a77c90087df9752444687a826d[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Mar 8 15:14:44 2016 -0800
+
+    Starting to transition to angular
+
+[33mcommit bc33d92cbaf1211c516c905576cabf8e417012a7[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 20:14:37 2016 -0800
+
+    fixing subheader
+
+[33mcommit 1656cb0794a9a63e609a13741c3b62d463a7576e[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 18:53:15 2016 -0800
+
+    fixing subheader
+
+[33mcommit 7354ca878b239ccc33685d706cd602c3991be373[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 18:51:48 2016 -0800
+
+    fixing subheader
+
+[33mcommit 2bb018da64a42a6cdfb3de98ba130388dfc9c810[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:58:36 2016 -0800
+
+    still working on height
+
+[33mcommit a7053200486b0e9feb86e681ec7c7b3cff58d9e1[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:57:32 2016 -0800
+
+    still working on height
+
+[33mcommit 582537625b247f114f7c3524f7d746dfbdee9605[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:56:01 2016 -0800
+
+    still working on height
+
+[33mcommit 85f7b94274e1415e2b5fed74aa334b8014cd29da[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:46:20 2016 -0800
+
+    Fixing image to be responsive - adding height responsiveness
+
+[33mcommit 665d44c358efddf6497b1b2524f3a722242bb8fd[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:43:00 2016 -0800
+
+    Fixing image to be responsive - adding height responsiveness
+
+[33mcommit 9c5bff3c0b8952a55187f15fc852890a802a41c3[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:40:02 2016 -0800
+
+    Fixing image to be responsive
+
+[33mcommit 6dabd64e099ea2d2aff17cba742990f2476b0cc4[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:31:25 2016 -0800
+
+    got rid of some buggy css
+
+[33mcommit 537c25762228275e238f18bca43b94af372f426d[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:29:59 2016 -0800
+
+    fixing slideshow size
+
+[33mcommit 9a1aec51fbba52da110d9bf2e14f08f651839777[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:26:34 2016 -0800
+
+    Lesson learned: if we set the router to projects/kickgrass, then the html file thinks it is a folder down and requires a ../assets/ as opposed to just assets/
+
+[33mcommit 9b277ff38c8badb44de473788c9b62a9174d841a[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:24:29 2016 -0800
+
+    testing css
+
+[33mcommit 49ae025b6e74a06537f5a0cfd46e3a19a719e1c6[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:23:05 2016 -0800
+
+    fixing kickgrass css
+
+[33mcommit f72551b68be68cee2ffb102bdabbbbd8e126e548[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:11:33 2016 -0800
+
+    updated server.js to include kickgrass.html
+
+[33mcommit df291c99902b50e6d818d951c540980f63c8d90c[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 16:09:53 2016 -0800
+
+    Adding some kickgrass content
+
+[33mcommit ee06167d038aabd706865fc8302984f93299ff43[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 15:17:01 2016 -0800
+
+    fixed css for bio
+
+[33mcommit 4b7731eabd0b37413aaf2becc6cfe9a481f5b9cd[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 23 15:11:25 2016 -0800
+
+    first bio
+
+[33mcommit a1c5cde86109675dc142b961a2a8d445e323da53[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Fri Feb 19 00:40:38 2016 -0800
+
+    Trying to move up logo (only a little bit please)
+
+[33mcommit b64fa8286ad9df86f81be9f89a7b3d91d7dea149[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Fri Feb 19 00:39:14 2016 -0800
+
+    Trying to move up logo (only a little bit please)
+
+[33mcommit 875ab718a2cabbd31d5fba334be6fc954b6598eb[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Fri Feb 19 00:38:06 2016 -0800
+
+    Trying to move up logo (only a little bit please)
+
+[33mcommit 6a415d31afc3e298c1245cefd0c0a4bf8dea6fcd[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Fri Feb 19 00:37:06 2016 -0800
+
+    Trying to move up logo (only a little bit please)
+
+[33mcommit 1e707fce6b004a4064d591cdb7df566cae854bba[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Fri Feb 19 00:36:05 2016 -0800
+
+    Trying to move up logo
+
+[33mcommit 0cc4a3f282dd096703d203a0a3a301da47080a71[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Fri Feb 19 00:35:23 2016 -0800
+
+    Trying to move up logo
+
+[33mcommit 0efd12114b72f66b3bacb4f4dcd840a756fbbaa5[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Fri Feb 19 00:34:32 2016 -0800
+
+    Trying to move up logo
+
+[33mcommit 501934646da3a1bfc9b8afab96d076dfc9cde98a[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Thu Feb 18 23:57:54 2016 -0800
+
+    Trying to move up logo
+
+[33mcommit 6a3031954b13b3a1c2c32583cd5d1f3b8bcfff09[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Thu Feb 18 23:54:09 2016 -0800
+
+    changed titles
+
+[33mcommit 57cac420cc148439f6a437b9a3fdbbe3269062e9[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Thu Feb 18 23:42:44 2016 -0800
+
+    changed titles
+
+[33mcommit 703da2720a4c95a5cc11fd1bfca44a2764dc6968[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Thu Feb 18 23:38:07 2016 -0800
+
+    fixed footer
+
+[33mcommit dc2c5638a7eb2030bfd172e9749e2165d5c4a236[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Thu Feb 18 23:36:25 2016 -0800
+
+    Fixed css to accomodate header
+
+[33mcommit 634f9f7d00dfec5f5352d22528ac46c62caaf6c8[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Thu Feb 18 23:31:38 2016 -0800
+
+    changing logo color/size
+
+[33mcommit 62dbaa192f1dca72c715bd13955986d758acdd34[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Thu Feb 18 23:30:45 2016 -0800
+
+    changing logo color/size
+
+[33mcommit ade0ad926675594ec783ebc8832a365408048b55[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Thu Feb 18 23:29:44 2016 -0800
+
+    changing logo color/size
+
+[33mcommit 0dd5985e7547360e7426d332bec099d6c578ced8[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Thu Feb 18 23:26:02 2016 -0800
+
+    Updated nav bar to include logo
+
+[33mcommit e9e4998c4831151450729141843477366ac61ff2[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Thu Feb 18 23:22:33 2016 -0800
+
+    fixing url path to projects page
+
+[33mcommit e272c874c3e85472d498f5d165978bcb22d12043[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Thu Feb 18 23:18:33 2016 -0800
+
+    Added projects template bootstrap theme
+
+[33mcommit 1267cb08de0cae42079835bea1848047eccfd638[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Wed Feb 10 16:20:33 2016 -0800
+
+    specified favicon folderpath
+
+[33mcommit 50b53fae6ba7d2634e2e8d9dd633f3e0c3ec06d8[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Wed Feb 10 16:17:03 2016 -0800
+
+    favicons update
+
+[33mcommit b0c1a5dc56572dd9259e36a9542908d8769780d6[m
+Merge: c5e1a56 bd0ebf5
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Wed Feb 10 17:48:07 2016 -0500
+
+    Merge branch 'master' of github.com:j-paterson/site
+    SIMPLE MERGE -- had changes that weren't pushed on both sides.
+
+[33mcommit c5e1a563688012b6d1c938829a67c44f916801a5[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Wed Feb 10 17:47:48 2016 -0500
+
+    Getting rid of old header
+
+[33mcommit bd0ebf59cac1dcb0d5466215b807bdaa389ccb1c[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Wed Feb 10 14:47:20 2016 -0800
+
+    Favicon?
+
+[33mcommit 755d3f21770d81541821eef77f76219321090071[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Wed Feb 10 14:45:00 2016 -0800
+
+    SVG mostly fixed
+
+[33mcommit 57a9d88facee110dc3bf4fbaf1e5a182d4b517c2[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Wed Feb 10 14:35:19 2016 -0800
+
+    Trying out svg again - Height adjusted
+
+[33mcommit ef2e0bbb0e9a9ec68aa1cbffcabfa647ca390920[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Wed Feb 10 14:31:22 2016 -0800
+
+    Trying out svg again
+
+[33mcommit 26dfb4ad618b9f5cbc914d5254883f6aea3d42cd[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Wed Feb 10 14:29:12 2016 -0800
+
+    Logo added. Testing out svg
+
+[33mcommit 3e84bd5205f3b614be17bb879a1fcbc5b8d81b89[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Wed Feb 10 08:41:03 2016 -0800
+
+    Added Development message
+
+[33mcommit 1387c66e60a8db324ea21845c5950471510e2031[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 20:46:00 2016 -0800
+
+    Adding a few more changes to server.js
+
+[33mcommit cfbae8dc3e612d0add5016b6a767ec63cda131af[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 20:43:27 2016 -0800
+
+    Updated some href links for the nav.. css still not working"
+
+[33mcommit c2e76bb0ee25794e703728d1b771683b8246d06b[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 20:36:09 2016 -0800
+
+    added app.use(express.static('public')); to the server.js -- Should allow it to serve up static content
+
+[33mcommit 3bee1a00fa84e8aa409409308e8f9b8db1610ee8[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 20:29:44 2016 -0800
+
+    converting a few more hrefs to /assets/..
+
+[33mcommit 6dc9ca844fdddd8d722857415b294a6931687cd4[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 20:27:21 2016 -0800
+
+    Updated stylesheet href to include assets
+
+[33mcommit bfe9b919f2c9cf1ed2dc05b64b3e64aeb96ddb55[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 23:24:06 2016 -0500
+
+    Housekeeping complete, setting up assets
+
+[33mcommit 6d82d16340699a1334d34263c81f0a49828125c2[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 19:49:56 2016 -0800
+
+    Cleaning House
+
+[33mcommit e0e8f9d2007f18524a4633847f4f1d730871ae61[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 16:33:44 2016 -0800
+
+    Moving some stuff around in aneffort to get css to work"
+
+[33mcommit 781b18557fb0b784ee9443b2be69dc82b03fe4b8[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 16:31:19 2016 -0800
+
+    Still trying to get css to work
+
+[33mcommit a92b550b6910a6d7188a4c927c1b800b7ec39629[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 16:29:18 2016 -0800
+
+    Cleaned up html and css
+
+[33mcommit 90875f58777b2a2875b27105615ea51737970d0f[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 16:20:01 2016 -0800
+
+    Tried moving css folder
+
+[33mcommit e7287e1b929beb3b5110a231d059f311c3bdf71c[m
+Merge: ac9f607 b384c2a
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 16:16:27 2016 -0800
+
+    Resetting a bit
+
+[33mcommit ac9f607c32f36de0e8b4601d02f64ced31f15225[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 16:07:44 2016 -0800
+
+    Adding in some css
+
+[33mcommit b384c2a2e9efe0465b3807d4464bf7b21e50af12[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 15:32:50 2016 -0800
+
+    test
+
+[33mcommit e75e4e723e3f694b613099baa5cffbf208b99ec6[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 15:29:34 2016 -0800
+
+    index change
+
+[33mcommit cce635e419a1a917dbe5267549d8ad3bb36d6c3b[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 15:13:43 2016 -0800
+
+    template replace
+
+[33mcommit d491f0318afb0f58e89b4de5977586c81cdaaf43[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 15:12:26 2016 -0800
+
+    template test
+
+[33mcommit 784543ea6ee2254807b4a99878ba4845eb5e9322[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 15:10:16 2016 -0800
+
+    Trying to get css working
+
+[33mcommit 9277d292ed95ae9a3c5d05610559b896b4f9dfb2[m
+Merge: 6e95a93 9184c1c
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 15:06:42 2016 -0800
+
+    Merge branch 'master' of github.com:j-paterson/site
+
+[33mcommit 6e95a939fb2b7b41dc0a4e2f9c3f9d5254319e4a[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 15:06:14 2016 -0800
+
+    added css test
+
+[33mcommit 9184c1ce2cb07efa78b678d00a9164f8b30a0752[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 18:05:40 2016 -0500
+
+    a test
+
+[33mcommit 527c8fcb360e8861a06d6b1e10dc83743227b6c6[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 15:04:33 2016 -0800
+
+    added css
+
+[33mcommit 2285ce1530fa4a4e28d68313c052c50ee66cab74[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 15:00:08 2016 -0800
+
+    adding bootstrap folder
+
+[33mcommit 33b15dd7abf02aa6fa5d8191d69fb924e496edae[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 14:57:23 2016 -0800
+
+    Fixing lack of bootstrap
+
+[33mcommit 7c3418307b7dc31de26a258abab77873b6d63f09[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Feb 9 14:51:47 2016 -0800
+
+    Updated Cover
+
+[33mcommit 9218cb64a5036d78c1fbfca0264623231b544cc8[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Sat Feb 6 19:29:36 2016 -0800
+
+    bootstrap added to root.html
+
+[33mcommit bfbb2971e86c7791070be3e367ec7733aebea7d0[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Wed Jan 27 10:35:07 2016 -0800
+
+    Fixing router
+
+[33mcommit 5b8311494c8ae50d536feabc2b169c7bbc3d1c8d[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Jan 26 21:49:33 2016 -0800
+
+    views testing
+
+[33mcommit 95f022535050595c0d856cba34ea09f8274ba66a[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Wed Jan 27 00:47:26 2016 -0500
+
+    Views folder + bootstrap
+
+[33mcommit 657942cabb18046d267d2c30db8e1afa49d1d7c9[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Jan 26 21:42:54 2016 -0800
+
+    Added router
+
+[33mcommit a752ecee59a78ed260672d0dd5e1597e0a6bdab7[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Jan 26 16:36:37 2016 -0800
+
+    for fun
+
+[33mcommit 58a6f077f2d35f6a8403a76e99de62402d3a6a29[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Jan 26 16:33:27 2016 -0800
+
+    Git test
+
+[33mcommit 34d55fa3d477bd789843a894e277968093d174fe[m
+Author: Jesse Paterson <jesse.r.pat@gmail.com>
+Date:   Tue Jan 26 19:27:16 2016 -0500
+
+    Commit test
+
+[33mcommit cce9b9804c98b2d35c98f35cab0f5eb0be5af467[m
+Author: Jesse Pat <jessep@serubin.net>
+Date:   Tue Jan 26 18:10:27 2016 -0500
+
+    initial server hello world
