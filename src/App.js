@@ -8,7 +8,7 @@ import TransitionGroup from "react-transition-group/TransitionGroup";
 
 import Home from "./Home";
 import About from "./About";
-import Experience from "./Experience";
+import Resume from "./Resume";
 import Header from "./Header";
 import Projects from "./Projects";
 import projectData from './data.json';
@@ -43,10 +43,10 @@ export default class App extends Component {
                       <Home/>
                     </TransitionGroup>
                 )}/>
-                <Route path="/experience"
+                <Route path="/resume"
                    render={({ match, ...rest }) => (
                      <TransitionGroup component={firstChild}>
-                       <Experience/>
+                       <Resume/>
                      </TransitionGroup>
                 )}/>
                 <Route path="/about"
