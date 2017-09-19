@@ -5,7 +5,7 @@ class ResumeComponent extends Component {
     return (
       <div className="resume page">
         <div className="container">
-          <embed type="application/pdf" src="jp_resume.pdf" height="600" internalinstanceid="92" width="80%" style="margin:0 10% 0 10%" title=""></embed>
+          <embed type='application/pdf' src="jp_resume.pdf" width= "100%" height= "600"></embed>
         </div>
       </div>
     )
