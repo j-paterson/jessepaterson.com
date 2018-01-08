@@ -18,8 +18,8 @@ class HomeComponent extends Component {
     return (
       <div className="home">
         <div className="intro">
-          <p className="iam">I am</p>
-          <h1 className="centered main-title">Jesse Paterson</h1>
+          {/* <p className="iam">I am</p> */}
+          <h1 className="centered title">Jesse Paterson</h1>
           <div className='social-links'>
               <a href="https://github.com/j-paterson"><i className="fa fa-github" aria-hidden="true"/></a>
               <a href="https://medium.com/@jesse.r.pat"><i className="fa fa-medium" aria-hidden="true"/></a>

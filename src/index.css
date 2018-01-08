@@ -1,27 +1,76 @@
 /* Sitewide CSS */
-img, iframe{
-  max-width:80vw;
-  height:auto;
+svg{
+  /* width: 100%; */
+  /* height: auto; */
 }
 
-svg{
-  width: 100%;
-  height: auto;
-}
+.st0{fill:#B99458;}
 
 #root, body, html{
-  font-family: "Cerebri Sans", Avenir, Helvetica, Segoe UI, sans-serif;
-	line-height: 1.15;
-  font-size: 14px;
+  /* font-family: Camphor, Open Sans, Segoe UI, sans-serif; */
+  font-family: 'Roboto', sans-serif !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	line-height: 1.6;
+  font-size: 16px;
 	max-height: 100vh;
-	background-color: #282727;
-	color: #aeaeae;
+	background-color: #181818;
+	color: #858585;
 }
 
-body {
-  margin: 0px;
-  padding: 0;
+/* Typography */
+h1, .title{
+	color: #B99458;
+  font-size: 3.375em;
+  line-height: 1.25;
+  font-weight: 300;
+  font-family: 'Oswald', sans-serif;
+  /* text-transform: uppercase; */
 }
+
+h2, .heading{
+  font-size:2.25em;
+  font-weight: 300;
+  letter-spacing: 0.0625em;
+  color: #B99458;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+}
+
+h3, .subheading{
+  text-transform: uppercase;
+  letter-spacing: 0.0425em;
+  font-family: 'Raleway', sans-serif;
+  font-size:1.5em;
+}
+
+p, .body-text{
+  font-size:1em;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.code{
+  font-variant: small-caps;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.iam{
+	color:#7b8e94;
+}
+
+.header ul li a{
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+  text-decoration-line: none;
+  color: #94ACB0;
+  display: none;
+  text-align:center;
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+/* Links */
 
 a{
 	color:#94ACB0;
@@ -31,19 +80,21 @@ a:hover{
 	color:#7b8e94;
 }
 
+/* Body */
+
 .main{
 	float:left;
 	width:100%;
 	margin-top:5em;
 }
 
-.content{
-	margin: 0 5% 0 5%;
+body {
+  margin: 0px;
+  padding: 0;
 }
 
-
-.title{
-	color: #B99458
+.content{
+	margin: 0 5% 0 5%;
 }
 
 /* Home Page CSS */
@@ -84,22 +135,12 @@ a:hover{
     float:right;
   }
 }
-
-.iam{
-	color:#7b8e94;
-}
-
-.main-title{
-	color: #B99458;
-  font-family: 'Roboto', sans-serif !important;
-}
-
 /* About CSS*/
 
 .about{
-  margin:20px;
+  margin:20px 5px 20px 5px;
   padding:2%;
-  background-color:rgb(43, 42, 42);
+  /* background-color:rgb(43, 42, 42); */
 }
 
 .personal{
@@ -109,7 +150,6 @@ a:hover{
 
 .personal .title{
   text-align: center;
-  margin-top:3em;
   margin-bottom:1em;
 }
 
@@ -120,6 +160,12 @@ a:hover{
 }
 
 /* Projects CSS */
+.section{width:100%; margin:2%; display:inline-block;}
+.section-description{width:50%; float:left;}
+.section-images{height:100%; width:50%; display:block; float:right;}
+.section-img{margin-left:auto; margin-right:auto; max-width:80%; display:block;}
+.section-img2{margin-left:auto; margin-right:auto; max-width:60%; display:block;}
+
 .project-item{
   margin-top:2em;
 }
@@ -291,13 +337,14 @@ li.project img{
 .header{
   position: fixed;
   z-index:1;
-  background-color: #282727;
+  background-color: #181818;
   opacity:0.8;
   width: 100%;
 }
 .header img{
-  max-height:1.5rem;
-  margin:1.75rem;
+  max-height:2em;
+  max-width:2em;
+  margin:1.75em;
   float:left;
 }
 .header ul{
@@ -312,15 +359,6 @@ li.project img{
   text-align:center;
   width:100%;
   transition-property: display;
-}
-.header ul li a{
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-  text-decoration-line:none;
-  color:#94ACB0;
-  display: none;
-  text-align:center;
-  margin: 1rem 2rem 1rem 2rem;
 }
 
 .header ul.is-active li a {
@@ -485,7 +523,7 @@ li.project img{
 
 .job-img{
   max-width: 70%;
-  margin:2em;
+  margin: 2.5em;
 }
 
 .img-reduction{
