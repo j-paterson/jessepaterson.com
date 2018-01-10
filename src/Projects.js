@@ -930,8 +930,8 @@ class Projects extends Component {
   							<li key={i} className="project">
   								<Animated.div style={style}>
   									<Link to={`/projects/${p.url}`}>
-                      {/* <img src={p.image}></img> */}
-                      {this.renderImage(p.image, p.tinyImage)}
+                      <img src={p.image}></img>
+                      {/* {this.renderImage(p.image, p.tinyImage)} */}
                       <div className="title heading">{p.title}</div>
                     </Link>
   								</Animated.div>
