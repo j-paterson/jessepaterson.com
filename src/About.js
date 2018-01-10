@@ -10,12 +10,12 @@ class AboutComponent extends Component {
           <p>
             I'm a developer and designer in the Bay
             Area currently pursuing a B.A. in Cognitive
-            Science and a minor in Computer Science at UC Berkeley.
+            Science and a minor in Computer Science & Electrical Engineering at UC Berkeley.
             I like to understand things deeply and work on large scale projects.
             When I'm not wrapping my head around computer
             vision algorithms or building websites, I enjoy <a href="http://azura.wikia.com/wiki/Azura_Wikia">
             building worlds</a>, <a href="https://vr.berkeley.edu/">
-            sculpting reality</a> and
+            playing with perception</a> and
             climbing really big rocks. I value persistence, integrity
             and quality.
           </p>
@@ -28,7 +28,7 @@ class AboutComponent extends Component {
             </div>
             <div className='col-md-8'>
               <h2 className="heading"> Web Developer</h2>
-              <p className="sub-title">College of Natural Resources</p>
+              <span className="subheading">College of Natural Resources</span>
               <div className='job-content'>
                 <b>Fall 2014 - Fall 2017</b>
                 <p>
@@ -42,8 +42,8 @@ class AboutComponent extends Component {
                 <img className="job-img img-reduction" src="/images/experience/ucbseal.png" alt="UC Berkeley Seal"></img>
             </div>
             <div className='col-md-8'>
-              <p className="heading">Researcher</p>
-              <p className="sub-title">Center for Augmented Cognition</p>
+              <h2 className="heading">Researcher</h2>
+              <span className="subheading">Center for Augmented Cognition</span>
               <div className='job-content'>
                 <p><b>Spring 2016 - Spring 2018</b></p>
                 <p>
