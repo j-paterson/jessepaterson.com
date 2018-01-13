@@ -20,12 +20,15 @@ class HomeComponent extends Component {
         <div className="intro">
           {/* <p className="iam">I am</p> */}
           <h1 className="centered title">Jesse Paterson</h1>
+          <h3>Developer & Designer</h3>
+          <p>Open to freelance opportunities and full time for 2018</p>
           <div className='social-links'>
               <a href="https://github.com/j-paterson"><i className="fa fa-github" aria-hidden="true"/></a>
               <a href="https://medium.com/@jesse.r.pat"><i className="fa fa-medium" aria-hidden="true"/></a>
               <a href="https://www.linkedin.com/in/jesse-paterson"><i className="fa fa-linkedin" aria-hidden="true"/></a>
               <a href="https://www.instagram.com/hilariouslyuninteresting/"><i className="fa fa-instagram" aria-hidden="true"/></a>
           </div>
+          <a href="jp_resume.pdf"><button type="button" className="btn"><h3>Resume</h3></button></a>
         </div>
         <div className="portrait">
           <svg version="1.1" width="320" height="320" viewBox="0 0 320 320" fill="none" stroke="#94ACB0" stroke-linecap="round"

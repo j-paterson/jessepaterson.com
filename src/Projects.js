@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+ import React, { Component } from "react";
 import {
   Switch,
   Route,
@@ -7,7 +7,9 @@ import {
 import TransitionGroup from "react-transition-group/TransitionGroup";
 import * as Animated from "animated/lib/targets/react-dom";
 import ProgressiveImage from "react-progressive-image-loading";
+import IronImage from "./IronImage";
 import AnimatedWrapper from "./AnimatedWrapper";
+
 
 const isaacs_content =
 <div className="project-content">
@@ -930,8 +932,8 @@ class Projects extends Component {
   							<li key={i} className="project">
   								<Animated.div style={style}>
   									<Link to={`/projects/${p.url}`}>
-                      <img src={p.image}></img>
-                      {/* {this.renderImage(p.image, p.tinyImage)} */}
+                      {/* <img src={p.image}></img> */}
+                      {this.renderImage(p.image, p.tinyImage)}
                       <div className="title heading">{p.title}</div>
                     </Link>
   								</Animated.div>

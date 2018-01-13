@@ -1,9 +1,4 @@
 /* Sitewide CSS */
-svg{
-  /* width: 100%; */
-  /* height: auto; */
-}
-
 .st0{fill:#B99458;}
 
 #root, body, html{
@@ -13,13 +8,14 @@ svg{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 	line-height: 1.6;
-  font-size: 14px;
+  font-size: 14 px;
 	max-height: 100vh;
 	background-color: #181818;
 	color: #858585;
 }
 
 /* Typography */
+
 h1, .title{
 	color: #B99458;
   font-size: 3.375em;
@@ -123,6 +119,18 @@ body {
   font-size:2em;
 }
 
+
+.btn{
+  background-color: #181818; /* Green */
+  border: solid;
+  border-color: #94ACB0;
+  color: #BF9551;
+  padding: 0.25em 5.5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
 @media screen and (min-width: 640px){
   .social-links i{
     margin:1em 1em 1em 0em;
@@ -141,6 +149,7 @@ body {
     float:right;
   }
 }
+
 /* About CSS */
 
 .about{
