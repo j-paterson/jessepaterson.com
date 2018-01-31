@@ -61,6 +61,12 @@ export default class App extends Component {
                       <Projects/>
                     </TransitionGroup>
                 )}/>
+                <Route path="/projects"
+                  render={({ match, ...rest }) => (
+                    <TransitionGroup component={firstChild}>
+                      <Projects/>
+                    </TransitionGroup>
+                )}/>
                 <Route path='*' component={NotFound} />
               </Switch>
             )}/>

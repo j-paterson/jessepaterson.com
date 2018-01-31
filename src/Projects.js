@@ -796,7 +796,7 @@ const ProjectAPI = {
     { url: "isaacs", title: "ISAACS", body: isaacs_content, image:'/images/isaacs/AR2.png', tinyImage:'/images/isaacs/tinyAR2.png' },
     { url: "mesh-reconstruction", title: "Mesh Reconstruction", body: mesh_reconstruction_content, image:'/images/vmask/hand_mesh_square.png', tinyImage:'/images/vmask/tinyhand_mesh_square.png' },
     { url: "graphics", title: "Graphics", body: graphics_content, image:'/images/pathtracer_website/images/banana_square.png', tinyImage:'/images/pathtracer_website/images/tinybanana_square.png' },
-    { url: "vxpc", title: "Virtual Experience Convention", body: vxpc_content, image:'/images/vxpc/vxpc_square.jpg', tinyImage:'/images/vxpc/tinyvxpc_square.jpg' },
+    { url: "vxpc", title: "Virtual Experience Convention", body: vxpc_content, image:'/images/vxpc/vxpc_square.png', tinyImage:'/images/vxpc/tinyvxpc_square.png' },
     { url: "nature", title: "Nature", body: nature_content, image:'/images/nature/nature_square.jpg', tinyImage:'/images/nature/tinynature_square.jpg' },
     { url: "wall-e", title: "Wall-E", body: walle_content, image:'/images/walle/walle.jpg', tinyImage:'/images/walle/tinywalle.jpg' },
     { url: "sixt33n", title: "SIXT33N", body: sixt33n_content, image:'/images/sixt33n/sixt33n.jpg', tinyImage:'/images/sixt33n/tinysixt33n.jpg' },
