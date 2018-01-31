@@ -7,7 +7,6 @@ import {
 import TransitionGroup from "react-transition-group/TransitionGroup";
 import * as Animated from "animated/lib/targets/react-dom";
 import ProgressiveImage from "react-progressive-image-loading";
-import IronImage from "./IronImage";
 import AnimatedWrapper from "./AnimatedWrapper";
 
 
@@ -797,7 +796,7 @@ const ProjectAPI = {
     { url: "isaacs", title: "ISAACS", body: isaacs_content, image:'/images/isaacs/AR2.png', tinyImage:'/images/isaacs/tinyAR2.png' },
     { url: "mesh-reconstruction", title: "Mesh Reconstruction", body: mesh_reconstruction_content, image:'/images/vmask/hand_mesh_square.png', tinyImage:'/images/vmask/tinyhand_mesh_square.png' },
     { url: "graphics", title: "Graphics", body: graphics_content, image:'/images/pathtracer_website/images/banana_square.png', tinyImage:'/images/pathtracer_website/images/tinybanana_square.png' },
-    { url: "vxpc", title: "Virtual Experience Convention", body: vxpc_content, image:'/images/vxpc/vxpc_logo.jpg', tinyImage:'/images/vxpc/tinyvxpc_logo.jpg' },
+    { url: "vxpc", title: "Virtual Experience Convention", body: vxpc_content, image:'/images/vxpc/vxpc_square.jpg', tinyImage:'/images/vxpc/tinyvxpc_square.jpg' },
     { url: "nature", title: "Nature", body: nature_content, image:'/images/nature/nature_square.jpg', tinyImage:'/images/nature/tinynature_square.jpg' },
     { url: "wall-e", title: "Wall-E", body: walle_content, image:'/images/walle/walle.jpg', tinyImage:'/images/walle/tinywalle.jpg' },
     { url: "sixt33n", title: "SIXT33N", body: sixt33n_content, image:'/images/sixt33n/sixt33n.jpg', tinyImage:'/images/sixt33n/tinysixt33n.jpg' },
@@ -932,8 +931,8 @@ class Projects extends Component {
   							<li key={i} className="project">
   								<Animated.div style={style}>
   									<Link to={`/projects/${p.url}`}>
-                      {/* <img src={p.image}></img> */}
-                      {this.renderImage(p.image, p.tinyImage)}
+                      <img src={p.image}></img>
+                      {/* {this.renderImage(p.image, p.tinyImage)} */}
                       <div className="title heading">{p.title}</div>
                     </Link>
   								</Animated.div>
