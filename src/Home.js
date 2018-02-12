@@ -4,16 +4,6 @@ import AnimatedWrapper from "./AnimatedWrapper";
 // import jQuery from "jquery";
 
 class HomeComponent extends Component {
-  componentDidMount() {
-    // $('.title').typeIt({
-    //   html: false,
-    //   strings:['A Developer','A Designer','Jesse Paterson'],
-    //   breakLines: false,
-    //   callback: function() {
-    //        alert('done!');
-    //   }
-    // })
-  }
   render() {
     return (
       <div className="home">

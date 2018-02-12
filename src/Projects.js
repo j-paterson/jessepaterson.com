@@ -66,6 +66,9 @@ const isaacs_content =
     <p>
       The project is expected to be completed in Spring 2018.
     </p>
+    <div>
+      <iframe width="480" height="270" src="https://www.youtube.com/embed/Bnr-qrI7ZN0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
     <span className="heading">News</span>
     <p>
       <a href="http://citris-uc.org/meet-the-award-recipients-of-the-first-microsoft-hololens-academic-research-grants/">Meet the Award Recipients of the first Microsoft Hololens Academic Research Grants</a>
