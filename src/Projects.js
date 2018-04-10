@@ -474,20 +474,19 @@ const vxpc_content =
 	</div>
 	<div className="project-description">
 	    <p>
-	        As the Virtual Reality at Berkeley Events Manager, I handled logistics and all web/print based design for
-          our club's first <a href="https://vxpc.io">Virtual Experience Convention</a>. I worked alongside our
-          Industrial Relations and Marketing teams to coordinate the event.
+          In 2016, I oversaw logistics and all web and print design for the <a href="https://vr.berkeley.edu/vxpc/public/">Virtual Experience Convention, Berkeley’s first AR/VR Convention</a>, attracting over 300 attendants.
+          I worked alongside our Industrial Relations and Marketing teams to coordinate the event.
+          The following year, I coordinated the entire 2017 Virtual Experience Convention, managing all teams, sponsorships, speakers and details.
 	    </p>
 	    <p>
 	        The goal of the Virtual Experience Convention was to connect industry leaders to young enthusiasts and
-          entrepreneurs. We provided attendees with an opportunity to experience the latest VR/AR products, hear
+          entrepreneurs. The event provided attendees with an opportunity to experience the latest VR/AR products, hear
           from industry leaders, and network with like-minded individuals.
 	    </p>
 	    <p>
 	        Logistics continued to change and shift right up until the morning of the event, which made keeping the schedule up to date
           quite challenging. I filled many roles throughout the day to keep the event rolling smoothly and direct
-          our volunteers. Over 200 people attended the event and we were able to obtain several sponsorships. Judging by
-          the feedback we received, it was great success!
+          our volunteers.
 	    </p>
 	</div>
 </div>
