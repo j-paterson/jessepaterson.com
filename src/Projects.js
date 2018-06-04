@@ -157,9 +157,16 @@ const mesh_reconstruction_content =
           <h4>Marching Cubes Algorithm</h4>
         </li>
         <li className="no-list-style">
-          <p>In order to extract the final mesh, we implemented the Marching Cubes Algorithm as detailed in the <a href="http://dl.acm.org/citation.cfm?id=37422">'Marching cubes: A high resolution 3D surface construction algorithm'</a> paper. Using the averaged plane indicator function that we developed, we were able to determine which points of an octree node were inside of the mesh. Each corner corresponded to a bit in an index (0 for outside, 1 for inside).</p>
-          <p>This index is then used to extract a list of connected edges from our 'triangle table' which contains 256 possible configurations (We borrowed our triangle table from Paul Bourke's article on <a href="http://paulbourke.net/geometry/polygonise/">polygonising a scalar field</a>). We calculated the midpoints of each edge and used those as the triangle vertices to be inserted into the mesh.</p>
-          <p>We started testing using a number of geometric indicator functions and later switched to the averaged plane indicator function we developed in order to approximate the mesh of more complicated objects.</p>
+          <p>In order to extract the final mesh, we implemented the Marching Cubes Algorithm as detailed in the
+          <a href="http://dl.acm.org/citation.cfm?id=37422">'Marching cubes: A high resolution 3D surface construction algorithm'</a> paper.
+          Using the averaged plane indicator function that we developed, we were able to determine which points of an octree node were inside of the mesh.
+          Each corner corresponded to a bit in an index (0 for outside, 1 for inside).</p>
+          <p>This index is then used to extract a list of connected edges from our 'triangle table' which contains 256 possible configurations
+          (We borrowed our triangle table from Paul Bourke's article on
+          <a href="http://paulbourke.net/geometry/polygonise/">polygonising a scalar field</a>).
+          We calculated the midpoints of each edge and used those as the triangle vertices to be inserted into the mesh.</p>
+          <p>We started testing using a number of geometric indicator functions and later switched to the averaged plane indicator
+          function we developed in order to approximate the mesh of more complicated objects.</p>
           <p>Displayed below are several sphere tests at varying octree depths.</p>
           <img align="middle" className="" src="/images/vmask/spheres.png" width="400px" alt="preliminary spheres"/>
         </li>
@@ -795,15 +802,15 @@ const graphics_content =
 
 const ProjectAPI = {
   projects: [
-    { url: "isaacs", title: "ISAACS", body: isaacs_content, image:'/images/isaacs/AR2.png', tinyImage:'/images/isaacs/tinyAR2.png' },
-    { url: "mesh-reconstruction", title: "Mesh Reconstruction", body: mesh_reconstruction_content, image:'/images/vmask/hand_mesh_square.png', tinyImage:'/images/vmask/tinyhand_mesh_square.png' },
+    { url: "isaacs", title: "ISAACS", body: isaacs_content, image:'/images/optimized/AR2-min.png', tinyImage:'/images/isaacs/tinyAR2.png' },
+    { url: "mesh-reconstruction", title: "Mesh Reconstruction", body: mesh_reconstruction_content, image:'/images/optimized/hand_mesh_square-min.png', tinyImage:'/images/vmask/tinyhand_mesh_square.png' },
     { url: "graphics", title: "Graphics", body: graphics_content, image:'/images/pathtracer_website/images/banana_square.png', tinyImage:'/images/pathtracer_website/images/tinybanana_square.png' },
-    { url: "vxpc", title: "Virtual Experience Convention", body: vxpc_content, image:'/images/vxpc/vxpc_square.png', tinyImage:'/images/vxpc/tinyvxpc_square.png' },
-    { url: "nature", title: "Nature", body: nature_content, image:'/images/nature/nature_square.jpg', tinyImage:'/images/nature/tinynature_square.jpg' },
-    { url: "wall-e", title: "Wall-E", body: walle_content, image:'/images/walle/walle.jpg', tinyImage:'/images/walle/tinywalle.jpg' },
-    { url: "sixt33n", title: "SIXT33N", body: sixt33n_content, image:'/images/sixt33n/sixt33n.jpg', tinyImage:'/images/sixt33n/tinysixt33n.jpg' },
-    { url: "treachery", title: "Treachery of Animation", body: treachery_content, image:'/images/treachery/animation_square.png', tinyImage:'/images/treachery/tinyanimation_square.png' },
-    { url: "this-site", title: "Personal Site", body: this_site_content, image:'/images/this_site/this_site.jpg', tinyImage:'/images/this_site/tinythis_site.jpg' },
+    { url: "vxpc", title: "Virtual Experience Convention", body: vxpc_content, image:'/images/optimized/vxpc_square.png', tinyImage:'/images/vxpc/tinyvxpc_square.png' },
+    { url: "nature", title: "Nature", body: nature_content, image:'/images/optimized/nature_square-min.jpg', tinyImage:'/images/nature/tinynature_square.jpg' },
+    { url: "wall-e", title: "Wall-E", body: walle_content, image:'/images/optimized/walle-min.jpg', tinyImage:'/images/walle/tinywalle.jpg' },
+    { url: "sixt33n", title: "SIXT33N", body: sixt33n_content, image:'/images/optimized/sixt33n-min.jpg', tinyImage:'/images/sixt33n/tinysixt33n.jpg' },
+    { url: "treachery", title: "Treachery of Animation", body: treachery_content, image:'/images/optimized/animation_square-min.png', tinyImage:'/images/treachery/tinyanimation_square.png' },
+    { url: "this-site", title: "Personal Site", body: this_site_content, image:'/images/optmized/this_site-min.jpg', tinyImage:'/images/this_site/tinythis_site.jpg' },
   ],
   all: function() { return this.projects},
   get: function(url) {
