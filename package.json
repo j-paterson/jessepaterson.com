@@ -3,17 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "animated": "^0.2.0",
-    "express": "^4.15.4",
+    "animated": "^0.2.2",
+    "express": "^4.16.3",
     "jquery": "3.0.0",
     "react": "^15.6.1",
     "react-animate": "^3.0.0",
-    "react-dom": "^15.6.1",
-    "react-progressive-image-loading": "^3.0.2",
-    "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1",
-    "react-transition-group": "^1.2.0",
-    "typeit": "^4.4.0"
+    "react-dom": "^15.6.2",
+    "react-progressive-image-loading": "^3.0.3",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-transition-group": "^1.2.1",
+    "typeit": "^4.4.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.7"
