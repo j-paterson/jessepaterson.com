@@ -8,10 +8,8 @@ import TransitionGroup from "react-transition-group/TransitionGroup";
 
 import Home from "./Home";
 import About from "./About";
-import Resume from "./Resume";
 import Header from "./Header";
 import Projects from "./Projects";
-import projectData from './data.json';
 
 const firstChild = props => {
   const childrenArray = React.Children.toArray(props.children);
@@ -23,12 +21,6 @@ const NotFound = () => (
 )
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      projects: projectData.slice(0, 9)
-    };
-  }
   render() {
     return (
       <div>
@@ -43,23 +35,11 @@ export default class App extends Component {
                       <Home/>
                     </TransitionGroup>
                 )}/>
-                <Route path="/resume"
-                   render={({ match, ...rest }) => (
-                     <TransitionGroup component={firstChild}>
-                       <Resume/>
-                     </TransitionGroup>
-                )}/>
                 <Route path="/about"
                    render={({ match, ...rest }) => (
                      <TransitionGroup component={firstChild}>
                        <About/>
                      </TransitionGroup>
-                )}/>
-                <Route path="/projects"
-                  render={({ match, ...rest }) => (
-                    <TransitionGroup component={firstChild}>
-                      <Projects/>
-                    </TransitionGroup>
                 )}/>
                 <Route path="/projects"
                   render={({ match, ...rest }) => (
