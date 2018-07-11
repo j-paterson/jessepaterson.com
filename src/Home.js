@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import AnimatedWrapper from "./AnimatedWrapper";
-// import $ from "jquery";
-// import jQuery from "jquery";
 
 class HomeComponent extends Component {
   render() {
     return (
       <div className="home">
         <div className="intro">
-          {/* <p className="iam">I am</p> */}
           <h1 className="centered title">Jesse Paterson</h1>
           <h3>Developer & Designer</h3>
           <p>Open to freelance opportunities and full time for 2018</p>
