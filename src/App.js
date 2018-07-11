@@ -46,8 +46,8 @@ export default class App extends Component {
                     <TransitionGroup component={firstChild}>
                       <Projects/>
                     </TransitionGroup>
-                )}/>
-                <Route path='*' component={NotFound} />
+                )} />
+                <Route component={NotFound} />
               </Switch>
             )}/>
           </div>
