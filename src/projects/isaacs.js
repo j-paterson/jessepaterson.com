@@ -58,10 +58,10 @@ const isaacs_content =
       In the fall I recruited several team members and continued my work, connecting the interface with ROS and establishing a system for visualizing the scanned terrain in Unity.
     </p>
     <div>
-      <iframe width="480" height="270" src="https://www.youtube.com/watch?v=oFY9slurCxY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe width="854" height="480" src="https://www.youtube.com/embed/oFY9slurCxY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
     <div>
-      <iframe width="480" height="270" src="https://www.youtube.com/watch?v=fW-AlZ9x_lE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe width="854" height="480" src="https://www.youtube.com/embed/oFY9slurCxY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
     <p>
       The project is expected to be completed in Spring 2018.
