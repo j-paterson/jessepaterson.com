@@ -1,11 +1,16 @@
-const express = require('express');
-const path = require('path');
-const app = express();
+const express = require('express')
+const path = require('path')
+const port = process.env.PORT || 8765
+const app = express()
 
-app.use(express.static(path.join(__dirname, 'build')));
+// serve static assets normally
+app.use(express.static(__dirname + '/public'))
 
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// handle every other route with index.html, which will contain
+// a script tag to your application's JavaScript file(s).
+app.get('*', function (request, response){
+  response.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+})
 
-app.listen(8765);
+app.listen(port)
+console.log("server started on port " + port)
