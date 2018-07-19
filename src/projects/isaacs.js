@@ -38,6 +38,7 @@ const isaacs_content =
       similar to a Bézier curve. We put this plan into motion and prototyped a Unity application over the
       next few months.
 	  </p>
+    <img align="middle" src="/images/isaacs/planning.jpg" width="400px" alt="planning"/><br/>
 	  <p>
 	    After completing a Minimal Viable Product for the interface, the pressure came on for our SLAM
       team, the group responsible for creating a method of mapping the terrain the drone and giving it a
@@ -46,6 +47,9 @@ const isaacs_content =
       that we use as a server for communication between the drone and a computer. This system makes it possible
       for us to use our interface for multiple drones or other robots simultaneously.
 	  </p>
+    <div>
+      <iframe width="480" height="270" src="https://www.youtube.com/embed/Bnr-qrI7ZN0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
     <p>
       As I approached my senior year, ISAACS splintered into several different research groups and I led one of these new directions for the project.
       I spearheaded the interface development for a grant the Center of Augmented Cogntion had received to create a Virtual Reality interface for
@@ -53,12 +57,15 @@ const isaacs_content =
       of UX improvements to be included in the VR interface. I worked over the summer with an intern and created a prototype for the new interface.
       In the fall I recruited several team members and continued my work, connecting the interface with ROS and establishing a system for visualizing the scanned terrain in Unity.
     </p>
+    <div>
+      <iframe width="480" height="270" src="https://www.youtube.com/watch?v=oFY9slurCxY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div>
+      <iframe width="480" height="270" src="https://www.youtube.com/watch?v=fW-AlZ9x_lE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
     <p>
       The project is expected to be completed in Spring 2018.
     </p>
-    <div>
-      <iframe width="480" height="270" src="https://www.youtube.com/embed/Bnr-qrI7ZN0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
     <span className="heading">News</span>
     <p>
       <a href="http://citris-uc.org/meet-the-award-recipients-of-the-first-microsoft-hololens-academic-research-grants/">Meet the Award Recipients of the first Microsoft Hololens Academic Research Grants</a>

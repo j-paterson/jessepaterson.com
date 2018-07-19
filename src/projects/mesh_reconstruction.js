@@ -64,10 +64,9 @@ const mesh_reconstruction_content =
         <li className="no-list-style">
           <img className="img-float-right" align="middle" src="/images/vmask/algorithm.png" width="500px" alt="poisson reconstruction algorithm"/>
           <div className="indent">
-            <p>According the Poisson Reconstruction algorithm,
-              solving for the indicator function X involves ensuring that
-              the projection of the Laplacian of X onto the space of base functions is
-              closest to the projection of the divergence of the vector field.</p>
+            <p>
+              According the Poisson Reconstruction algorithm, solving for the indicator function X involves ensuring that the projection of the Laplacian of X onto the space of base functions is closest to the projection of the divergence of the vector field.
+            </p>
             <p>We took a shortcut in the section and instead developed our own indicator function based on the point and normal averaged plane within a given node.</p>
             <p>The image on the right illustrates the algorithm that we designed and implemented for our indicator function. This function was required by Marching Cubes in order to extract the mesh from our Octree. This algorithm begins by taking the points within any given Octree leaf node and averaging their positions and normals. Once these averages are found, we can find the equation for a plane using this averaged point and normal. This plane is acts like an average though all of the points. Following this, we take the corner points of the given Octree leaf node, and project them onto the averaged plane. We then find the vector between the projected point and the current corner being worked with. Depending on the orientation of this vector compared to the plane’s normal vector, we can tell whether this corner is inside or outside the surface.</p>
             <p>This image was created using Oculus’ Medium sculpting application to visually illustrate our algorithm. The Octree leaf node’s bounding box can be seen in green and the corners are in purple with their projected points also in purple. The point cloud is illustrated in blue and the normal vectors can be seen throughout the image.</p>
@@ -116,13 +115,13 @@ const mesh_reconstruction_content =
         <li><span className="subheading">Octree Construction</span>
           <ul>
             <li>
-              <p>Originally, the Octree’s bounding boxes were not splitting correctly and it was necessary to visualize how these boxes were splitted to see which corners were being placed at the wrong location. We utilized an online 3D visualization tool to do this and inputted our Octree node’s corner points to see where things were going wrong. This allowed us to adjusted how our bounding boxes were splitting and</p>
+              <p>Originally, the Octree’s bounding boxes were not splitting correctly and it was necessary to visualize how these boxes were splitted to see which corners were being placed at the wrong location. We utilized an online 3D visualization tool to do this and inputted our Octree node’s corner points to see where things were going wrong. We adjusted the boundary box splitting accordingly.</p>
             </li>
             <li className="no-list-style">
               <img className="img-center" align="middle" src="/images/vmask/OctreeViz.png" width="40%" alt="Octree visualisation"/>
             </li>
             <li>
-              <p>Additionally, our Octree was incorrectly specifying leaf nodes sometimes not subdividing down to the desired depth. This led to our marching cubes returning triangles with a large variance in size and position. This was debugged by observing the fact of the disproportionate triangles and realizing that these triangles would only ever be returned from leaf nodes, so these nodes must be at a higher depth than desired.</p>
+              <p>Additionally, our Octree was incorrectly specifying leaf nodes sometimes not subdividing down to the desired depth. This led to our marching cubes returning triangles with a large variance in size and position. This was debugged by observing these disproportionate triangles and realizing that these triangles could only ever be returned from leaf nodes, so these nodes must be at a higher depth than desired.</p>
             </li>
             <li className="no-list-style">
               <img align="middle" src="/images/vmask/sphere_challenge.png" width="32%" alt="Sphere glitch"/>
