@@ -9,7 +9,7 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 // handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.listen(port)
