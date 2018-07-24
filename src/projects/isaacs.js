@@ -43,7 +43,7 @@ const isaacs_content = <div className="project-content">
     <p>
       This interface was also built to be an open source platform for future research, with transparent code architecture and documentation to enable large scale collaboration.
       To facilitate open source use of the platform, I rearchitected the entire platform after we had implemented a majority of the final interactions in order to create a more efficient, intuitive and well documented code base.
-      I am currently running a final round of user testing and will conclude with writing a UX Research paper comparing the immersive interface to more traditional interfaces will be published in 2018.
+      I am currently running a final round of user testing and will conclude with writing a UX Research paper comparing the immersive interface to more traditional interfaces.
     </p>
     <div className="video-responsive">
       <iframe width="480" height="270" src="https://www.youtube.com/embed/IcE4mVQXYzA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
