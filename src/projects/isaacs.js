@@ -27,7 +27,7 @@ const isaacs_content = <div className="project-content">
       After completing a Minimal Viable Product for the interface, the pressure came on for our SLAM team, the group responsible for creating a method of mapping the terrain the drone and giving it a relative location to its environment. Several graduate students joined the project and we worked closely with them to test various approaches with a motion capture system.
     </p>
     <div className="video-responsive">
-      <iframe width="480" height="270" src="https://youtu.be/embed/mhJLL2V9F9o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+      <iframe width="480" height="270" src="https://www.youtube.com/embed/mhJLL2V9F9o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
     <p>
       As I approached my senior year, ISAACS splintered into several different research groups and I led one of these new directions for the project. I spearheaded the interface development for a grant the Center of Augmented Cogntion had received to create a
