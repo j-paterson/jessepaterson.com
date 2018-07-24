@@ -20,17 +20,29 @@ import sixt33n_content from "./projects/sixt33n"
 import vxpc_content from "./projects/vxpc"
 import walle_content from "./projects/walle"
 
+import isaacs_square from './images/optimized/AR2-min.png';
+import mesh_square from './images/optimized/hand_mesh_square-min.png';
+import graphics_square from './images/optimized/banana_square.png';
+import vxpc_square from './images/optimized/vxpc_square-min.png';
+import nature_square from './images/optimized/nature_square-min.jpg';
+import walle_square from './images/optimized/walle-min.jpg';
+import sixt33n_square from './images/optimized/sixt33n-min.jpg';
+import treachery_square from './images/optimized/animation_square-min.png';
+import site_square from './images/optimized/this_site-min.jpg';
+
+console.log(isaacs_square);
+
 const ProjectAPI = {
   projects: [
-    { url: "isaacs", title: "ISAACS", body: isaacs_content, image:'/images/optimized/AR2-min.png', tinyImage:'/images/isaacs/tinyAR2.png' },
-    { url: "mesh-reconstruction", title: "Mesh Reconstruction", body: mesh_reconstruction_content, image:'/images/optimized/hand_mesh_square-min.png', tinyImage:'/images/vmask/tinyhand_mesh_square.png' },
-    { url: "graphics", title: "Graphics", body: graphics_content, image:'/images/pathtracer_website/images/banana_square.png', tinyImage:'/images/pathtracer_website/images/tinybanana_square.png' },
-    { url: "vxpc", title: "Virtual Experience Convention", body: vxpc_content, image:'/images/optimized/vxpc_square-min.png', tinyImage:'/images/vxpc/tinyvxpc_square.png' },
-    { url: "nature", title: "Nature", body: nature_content, image:'/images/optimized/nature_square-min.jpg', tinyImage:'/images/nature/tinynature_square.jpg' },
-    { url: "wall-e", title: "Wall-E", body: walle_content, image:'/images/optimized/walle-min.jpg', tinyImage:'/images/walle/tinywalle.jpg' },
-    { url: "sixt33n", title: "SIXT33N", body: sixt33n_content, image:'/images/optimized/sixt33n-min.jpg', tinyImage:'/images/sixt33n/tinysixt33n.jpg' },
-    { url: "treachery", title: "Treachery of Animation", body: treachery_content, image:'/images/optimized/animation_square-min.png', tinyImage:'/images/treachery/tinyanimation_square.png' },
-    { url: "this-site", title: "Personal Site", body: this_site_content, image:'/images/optimized/this_site-min.jpg', tinyImage:'/images/this_site/tinythis_site.jpg' },
+    { url: "isaacs", title: "ISAACS", body: isaacs_content, image:isaacs_square, tinyImage:'/images/isaacs/tinyAR2.png' },
+    { url: "mesh-reconstruction", title: "Mesh Reconstruction", body: mesh_reconstruction_content, image:mesh_square, tinyImage:'/images/vmask/tinyhand_mesh_square.png' },
+    { url: "graphics", title: "Graphics", body: graphics_content, image:graphics_square, tinyImage:'/images/pathtracer_website/images/tinybanana_square.png' },
+    { url: "vxpc", title: "Virtual Experience Convention", body: vxpc_content, image:vxpc_square, tinyImage:'/images/vxpc/tinyvxpc_square.png' },
+    { url: "nature", title: "Nature", body: nature_content, image:nature_square, tinyImage:'/images/nature/tinynature_square.jpg' },
+    { url: "wall-e", title: "Wall-E", body: walle_content, image:walle_square, tinyImage:'/images/walle/tinywalle.jpg' },
+    { url: "sixt33n", title: "SIXT33N", body: sixt33n_content, image:sixt33n_square, tinyImage:'/images/sixt33n/tinysixt33n.jpg' },
+    { url: "treachery", title: "Treachery of Animation", body: treachery_content, image:treachery_square, tinyImage:'/images/treachery/tinyanimation_square.png' },
+    { url: "this-site", title: "Personal Site", body: this_site_content, image:site_square, tinyImage:'/images/this_site/tinythis_site.jpg' },
   ],
   all: function() { return this.projects},
   get: function(url) {
