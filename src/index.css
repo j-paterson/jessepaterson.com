@@ -277,6 +277,21 @@ li.project img{
   justify-content: center;
 }
 
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
 /* Project Description Styling */
 
 .goBack{
@@ -343,6 +358,7 @@ li.project img{
 .img-center{
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
 
 /* Header CSS */
