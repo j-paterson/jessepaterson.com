@@ -278,6 +278,7 @@ li.project img{
 }
 
 .video-responsive{
+    margin: 3em 0 3em 0; 
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;

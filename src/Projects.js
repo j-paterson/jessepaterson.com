@@ -32,6 +32,8 @@ import site_square from './images/optimized/this_site-min.jpg';
 
 console.log(isaacs_square);
 
+
+
 const ProjectAPI = {
   projects: [
     { url: "isaacs", title: "ISAACS", body: isaacs_content, image:isaacs_square, tinyImage:'/images/isaacs/tinyAR2.png' },
