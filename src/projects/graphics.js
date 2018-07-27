@@ -215,7 +215,199 @@ const graphics_content =
           </div>
       </div>
     </div>
+    <div>
+      <div>
+        <title>CS 184 Mesh Editor</title>
+        <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet" />
+        <h2 align="center">Project 2: Mesh Editor</h2>
+        <div>
+          <h3 align="center">Part 1: Bezier curves with 1D de Casteljau subdivision</h3>
+          <div className="section">
+            <div style={{width: '50%', float: 'left'}}>
+              {/*<p>
+            <ul>
+                <li>Take a look at the provided <em>bzc</em> files and create your own Bezier curve with <strong>six (6)</strong> control points of your own choosing. Use this Bezier curve for your screenshots below.</li>
+                <li>Show screenshots of each step of the evaluation from the original control points down to the final evaluated point. Use the keyboard command <strong>E</strong> to step through. Toggle <strong>C</strong> to show the completed curve as well.</li>
+                <li>Move the points around and modify the value of <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-42-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>t</mi></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-279" style="width: 0.388em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.278em; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(1.762em 1000.3em 2.642em -1000.02em); top: -2.472em; left: 0em;"><span class="mrow" id="MathJax-Span-280"><span class="mi" id="MathJax-Span-281" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.477em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.065em; border-left: 0px solid; width: 0px; height: 0.822em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math></span></span> by scrolling and show us a slightly different Bezier curve.</li>
+            </ul>
+        </p>*/}
+              <p>
+                <b>de Casteljau Algorithm</b><br />
+              </p><ul>
+                <li> Add points using linear interpolation: A fractional variable t is used to create a ratio (1-t) which determines the location on each vector the point is inserted.
+                </li>
+                <li> Use “Corner cutting” recursive subdivision to create a line between each set of the previously interpolated points on lines which are connected.
+                </li>
+                <li> Repeat recursively to create a pyramid of coefficients
+                </li>
+                <li> It is common to chain together many low-order Bezier curves such as Piecewise cubic Bezier curves.
+                </li>
+              </ul>
+              {/*            borrowing slideshow from https://themarklee.com/2013/12/26/simple-diy-responsive-slideshow-made-html5-css3-javascript/*/}
+              {/* <div className="diy-slideshow">
+                <figure className="show"><img src="/images/graphics_proj2/bc1_1.png" alt width="100%" />
+                  <figcaption>First evaluation</figcaption></figure>
+                <figure><img src="/images/graphics_proj2/bc1_2.png" alt width="100%" />
+                  <figcaption>Second evaluation</figcaption></figure>
+                <figure><img src="/images/graphics_proj2/bc1_3.png" alt width="100%" />
+                  <figcaption>Third evaluation</figcaption></figure>
+                <figure><img src="/images/graphics_proj2/bc1_4.png" alt width="100%" />
+                  <figcaption>Fourth evaluation</figcaption></figure>
+                <figure><img src="/images/graphics_proj2/bc1_5.png" alt width="100%" />
+                  <figcaption>Fourth evaluation showing curve</figcaption></figure>
+                <figure><img src="/images/graphics_proj2/bc1_6.png" alt width="100%" />
+                  <figcaption>With altered t value</figcaption></figure>
+                <figure><img src="/images/graphics_proj2/bc2_1.png" alt width="100%" />
+                  <figcaption>With moved points</figcaption></figure>
+                <span className="prev">«</span>
+                <span className="next">»</span>
+              </div> */}
+              <p />
+            </div>
+            <div style={{height: '100%', width: '50%', display: 'block', float: 'right'}}>
+              <img src="/images/graphics_proj2/decasteljau1.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '80%', display: 'block'}} />
+              <img src="/images/graphics_proj2/decasteljau2.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '80%', display: 'block'}} />
+            </div>
+          </div>
+          <h3 align="center">Part 2: Bezier surfaces with separable 1D de Casteljau subdivision</h3>
+          <div className="section">
+            <div style={{width: '50%', float: 'left'}}>
+              <p>
+                <b>Bicubic Bezier Surfaces</b><br />
+              </p><ul>
+                <li> Bezier surfaces can be represented through five interpolations using de Casteljau's algorithm on a 4x4 array of control points
+                </li>
+                <li> Each line of 4 control points in the 4x4 array is interpolated to form a cubic Bezier curve
+                </li>
+                <li> Each of these curves can be parameterized by an input parameter U (0-1) which moves a point along each of the 4 curves.
+                </li>
+                <li> Those 4 moving points can be interpreted for a moving cubic Bezier curve going in the other direction, which sweeps out along the Bicubic Bezier surface
+                </li>
+                <li> This final moving Bezier curve can be sampled at each point (u, v) in order to create the surface.
+                </li>
+              </ul>
+              <p />
+            </div>
+            <div style={{height: '100%', width: '50%', display: 'block', float: 'right'}}>
+              <img src="/images/graphics_proj2/bicubicbezier.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '80%', display: 'block'}} />
+              <img src="/images/graphics_proj2/part2.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '80%', display: 'block'}} />
+            </div>
+          </div>
+          <h3 align="center">Part 3: Average normals for half-edge meshes</h3>
+          <div className="section">
+            <div style={{width: '50%', float: 'left'}}>
+              <p>
+                In order to obtain the average normal vector of the faces surrounding a particular vertex, I first
+                obtained the halfedge for the initial vertex. I took it's twin and obtained the
+                vertex at the source of that half-edge and subtracted it's position from the position
+                of the initial vertex in order to obtain my first 3D vector. I traversed to the next
+                half-edge, then took the vertex of it's twin and obtained my second 3D vector through
+                a similar process. I obtained the cross product of these 3D vectors and added it to
+                my normal vector.
+              </p>
+              <p>
+                I repeated this process until I was back at the original halfedge of the initial vertex.
+                I then divided my normal vector by the number of faces I had traversed in order to obtain
+                an average.
+              </p>
+              <p>
+                On the left you can see the difference between using the face normals (top image)
+                and a vertex normal based on the average of the surrounding face normals (bottom image).
+              </p>
+            </div>
+            <div style={{height: '100%', width: '50%', display: 'block', float: 'right'}}>
+              <img src="/images/graphics_proj2/facenormals.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '80%', display: 'block'}} />
+              <img src="/images/graphics_proj2/avgvertnormals.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '80%', display: 'block'}} />
+            </div>
+          </div>
+          <h3 align="center">Part 4: Half-edge flip</h3>
+          <div className="section">
+            <div style={{width: '50%', float: 'left'}}>
+              <p>
+                I went through a diagram of what every object involved in the flip would look like before and after the flip.
+                I grabbed all those objects and then reset their pointers to what they would be in the after stage of the diagram.
+                I had an issue with it loading forever, but that cleared up after I reduced a few unessential pointer settings.
+              </p>
+              <p>
+                The images on the left show before switching edges (top image) and after switching a couple (bottom image).
+              </p>
+            </div>
+            <div style={{height: '100%', width: '50%', display: 'block', float: 'right'}}>
+              <img src="/images/graphics_proj2/before4.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '80%', display: 'block'}} />
+              <img src="/images/graphics_proj2/after4.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '80%', display: 'block'}} />
+            </div>
+          </div>
+          <h3 align="center">Part 5: Half-edge split</h3>
+          <div className="section">
+            <div style={{width: '50%', float: 'left'}}>
+              <p>
+                I implemented this section in a similar method to how I handled the previous section on flips, working through a
+                set of before and after diagrams. I realized after I finished implementing it and ran into some errors testing that
+                I had assumed the half-edges were running clockwise instead of counter clockwise. I went back and redid the flip
+                operation and then redid the split operation.
+              </p><p>
+              </p><p>
+                The images on the left show an unaltered mesh (top), a mesh with splits (middle) and a mesh with both splits and flips (bottom).
+              </p>
+            </div>
+            <div style={{height: '100%', width: '50%', display: 'block', float: 'right'}}>
+            </div>
+            <div style={{height: '100%', width: '50%', display: 'block', float: 'right'}}>
+              <img src="/images/graphics_proj2/unaltered.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '80%', display: 'block'}} />
+              <img src="/images/graphics_proj2/splits.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '80%', display: 'block'}} />
+              <img src="/images/graphics_proj2/splitsnflips.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '80%', display: 'block'}} />
+            </div>
+          </div>
+          <h3 align="center">Part 6: Loop subdivision for mesh upsampling</h3>
+          <div className="section">
+            <div style={{width: '50%', float: 'left'}}>
+              <p>
+                I implemented the Loop subdivision step by step.
+              </p><ol>
+                <li>I started by computing new positions for all the vertices in the input mesh, using the Loop subdivision rule. I also used this step to
+                  mark each vertex as being a vertex of the original mesh.
+                </li>
+                <li>Computed the updated midpoint vertex positions associated with edges (again using the Loop subdivision rule, based on the current positions of the points), and
+                  stored this value it in Edge::newPosition.
+                </li>
+                <li>Split every edge in the mesh that was not connected to a new vertex. I used this step to insert the newPosition held in the edge into its midpoint.
+                </li>
+                <li>Flipped any new edge that connected to an old and new vertex.
+                </li>
+                <li>Finally, copied all new vertex positions into the final Vertex::position.
+                </li>
+              </ol>
+              Loop subdivision drastically softens sharp edges and corners. It is possible to slightly alleviate this effect
+              by splitting the corners of the square multiple times.<br /><br />
+              In the case of the square, due to the slant of the edges across the 6 faces, subdivision
+              will result in an assymetric, albeit smoother object. By splitting each of the edges that go
+              across the faces and balancing out this slant, it is possible to obtain a much more symmetrical subdivision.
+              <p />
+            </div>
+            <div style={{height: '100%', width: '50%', display: 'block', float: 'right'}}>
+              <img src="/images/graphics_proj2/6_1.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '50%', display: 'block'}} />
+              <img src="/images/graphics_proj2/6_2.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '50%', display: 'block'}} />
+              <img src="/images/graphics_proj2/6_3.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '50%', display: 'block'}} />
+              <img src="/images/graphics_proj2/6_4.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '50%', display: 'block'}} />
+            </div>
+          </div>
+          <h3 align="center">Part 7: Fun with shaders</h3>
+          <div className="section">
+            <div style={{width: '50%', float: 'left'}}>
+              <p>
+                Here is the model of the teacup using the custom Blinn-Phong shader I made.
+              </p>
+            </div>
+            <div style={{height: '100%', width: '50%', display: 'block', float: 'right'}}>
+              <img src="/images/graphics_proj2/phong.png" style={{marginLeft: 'auto', marginRight: 'auto', maxWidth: '80%', display: 'block'}} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
 </div>
 
 export default graphics_content;
