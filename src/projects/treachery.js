@@ -38,8 +38,10 @@ const treachery_content =
 	      the showing, the rendering servers came back online and I rushed to replace all my playblasts with r
 	      endered versions. The finished product is a bit rough, but I'm proud that we managed to complete it.
 	  </p>
-    <iframe width="854" height="480" src="https://www.youtube.com/embed/0WMlBwnX5Mc" frameborder="0" allowfullscreen></iframe>
-	</div>
+    <div className="video-responsive">
+      <iframe width="854" height="480" src="https://www.youtube.com/embed/0WMlBwnX5Mc" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
 </div>
 
 

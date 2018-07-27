@@ -10,7 +10,7 @@ const nature_content =
     <div>
       <p>
         <b className="highlight">Skills: </b>
-        HTML, CSS, Drupal
+        HTML, CSS, JS, Design Systems, Drupal
       </p>
     </div>
     <div>
@@ -23,9 +23,13 @@ const nature_content =
   </div>
   <div className="project-description">
     <p>
-      I have worked on a number of aspects of this website and many others in the
-      College of Natural Resources since I joined the CNR Web Team.
+      I worked on a number of design aspects of the College of Natural Resources flagship website, nature.berkeley.edu,
+      along with many other departmental sites such as nst.berkeley.edu and https://nature.berkeley.edu/breakthroughs/
+      during as a front-end developer for the CNR Web Team.
     </p>
+
+    <img className="img-center" src="/images/nature/nature.jpeg" width="400px" alt="planning"/><br/>
+
     <p>
       Originally, my assignments consisted of moving and redesigning massive quantities of content and users
       from an older site to this one. I gradually learned the ins and outs of the drupal system and handled
