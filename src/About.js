@@ -18,13 +18,12 @@ class AboutComponent extends Component {
         </div>
         <div className="experience">
           <h3 className="title"> MY WORK</h3>
-          //STRIVR
           <div className="container">
             <div className='col-md-4'>
                <img className="job-img" src="/images/experience/STRIVR_LOGO.png" alt="STRIVR Logo"></img>
             </div>
             <div className='col-md-8'>
-              <h2 className="heading">Virtual Reality Designer</h2>
+              <h2 className="heading">UX Prototyping Engineer</h2>
               <span className="subheading">STRIVR</span>
               <div className='job-content'>
                 <b>Fall 2018 - Present</b>
@@ -32,19 +31,18 @@ class AboutComponent extends Component {
                   My work at STRIVR is centered around designing, prototyping and testing Creator, a WPF and Unity based creative tool for building interactive VR training.
                   As part of integrating UX into an existing software Scrum cycle, I introduced a standardized method for conducting and reporting UX research. A major pain point for
                   in our training experiences was text legibility. I researched typography challenges in VR and then developed a VR research platform for testing legibility across
-                  a variety of distances, typefaces, font rendering methods and a variety of other variables. This platform recorded test results in a cloud database and was deployed through an 
+                  a variety of distances, typefaces, font rendering methods and a variety of other variables. This platform recorded test results in a cloud database and was deployed through an
                   Oculus Go alpha channel to provide easy access for internal participants.
                 </p>
               </div>
             </div>
           </div>
-          // CAC
           <div className="container">
             <div className='col-md-4'>
                 <img className="job-img img-reduction" src="/images/experience/ucbseal.png" alt="UC Berkeley Seal"></img>
             </div>
             <div className='col-md-8'>
-              <h2 className="heading">Researcher</h2>
+              <h2 className="heading">HCI Researcher</h2>
               <span className="subheading">Center for Augmented Cognition</span>
               <div className='job-content'>
                 <p><b>Spring 2016 - Spring 2018</b></p>
@@ -59,7 +57,6 @@ class AboutComponent extends Component {
               </div>
             </div>
           </div>
-          // CNR
           <div className="container">
             <div className='col-md-4'>
                <img className="job-img" src="/images/experience/cnr.png" alt="College of Natural Resources Logo"></img>
