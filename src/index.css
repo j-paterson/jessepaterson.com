@@ -278,7 +278,7 @@ li.project img{
 }
 
 .video-responsive{
-    margin: 3em 0 3em 0; 
+    margin: 3em 0 3em 0;
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
@@ -361,6 +361,88 @@ li.project img{
   margin: 0 auto;
   width: 100%;
 }
+
+/* Graphics Projects */
+
+  b{
+    border-bottom:1px solid;
+  }
+
+  .section{
+  width:100%;
+  margin:2%;
+  display:inline-block;
+  border-bottom:1px solid;
+  padding-bottom:5%
+  }
+/* borrowing slideshow css from https://themarklee.com/2013/12/26/simple-diy-responsive-slideshow-made-html5-css3-javascript/
+*/
+  .diy-slideshow{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  }
+  figure{
+  position: absolute;
+  opacity: 0;
+  transition: 1s opacity;
+  }
+  figcaption{
+  position: absolute;
+  font-family: sans-serif;
+  font-size: .8em;
+  bottom: 2em;
+  right: 4em;
+  padding: .25em;
+  color: #fff;
+  background: rgba(0,0,0, .25);
+  border-radius: 2px;
+  }
+  figcaption a{
+  color: #fff;
+  }
+  figure.show{
+  opacity: 1;
+  position: static;
+  transition: 1s opacity;
+  }
+  .next, .prev{
+  color: #fff;
+  position: absolute;
+  background: rgba(0,0,0, .6);
+  top: 50%;
+  z-index: 1;
+  font-size: 2em;
+  margin-top: -.75em;
+  opacity: .3;
+  user-select: none;
+  }
+  .next:hover, .prev:hover{
+  cursor: pointer;
+  opacity: 1;
+  }
+  .next{
+  right: 0;
+  padding: 10px 5px 15px 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  }
+  .prev{
+  left: 0;
+  padding: 10px 10px 15px 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  }
+  figure{
+  position: absolute;
+  opacity: 0;
+  transition: 1s opacity;
+  }
+  figure.show{
+  opacity: 1;
+  position: static;
+  transition: 1s opacity;
+  }
 
 /* Header CSS */
 
