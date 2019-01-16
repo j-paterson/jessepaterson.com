@@ -7,13 +7,12 @@ class HomeComponent extends Component {
       <div className="home">
         <div className="intro">
           <h1 className="centered title">Jesse Paterson</h1>
-          <h3>Developer & Designer</h3>
-          <p>Open to freelance opportunities and full time for 2018</p>
+          <h3>UX Prototyping Engineer</h3>
           <div className='social-links'>
+            <a href="https://twitter.com/jp_interfaces"><i className="fa fa-twitter" aria-hidden="true"/></a>
               <a href="https://github.com/j-paterson"><i className="fa fa-github" aria-hidden="true"/></a>
               <a href="https://medium.com/@jesse.r.pat"><i className="fa fa-medium" aria-hidden="true"/></a>
               <a href="https://www.linkedin.com/in/jesse-paterson"><i className="fa fa-linkedin" aria-hidden="true"/></a>
-              <a href="https://www.instagram.com/hilariouslyuninteresting/"><i className="fa fa-instagram" aria-hidden="true"/></a>
           </div>
           <a href='https://drive.google.com/file/d/1rfX5DpSGmaVejPpOJluc6ZosL14C8kFx/view?usp=sharing'><button type="button" className="btn"><h3>Resume</h3></button></a>
         </div>
