@@ -29,7 +29,7 @@ class AboutComponent extends Component {
                 <b>Fall 2018 - Present</b>
                 <p>
                   My work at STRIVR is centered around designing, prototyping and testing Creator, a WPF and Unity based creative tool for building interactive VR training.
-                  As part of integrating UX into an existing software Scrum cycle, I introduced a standardized method for conducting and reporting UX research. A major pain point for
+                  As part of integrating UX into an existing software Scrum cycle, I introduced a standardized method for conducting and reporting UX research. A major pain point
                   in our training experiences was text legibility. I researched typography challenges in VR and then developed a VR research platform for testing legibility across
                   a variety of distances, typefaces, font rendering methods and a variety of other variables. This platform recorded test results in a cloud database and was deployed through an
                   Oculus Go alpha channel to provide easy access for internal participants.

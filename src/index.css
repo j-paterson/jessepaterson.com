@@ -109,9 +109,7 @@ body {
 }
 
 .portrait{
-  width:60%;
-  margin-left: 20%;
-  margin-right: 20%;
+  display:none;
 }
 
 .social-links i{
@@ -145,6 +143,7 @@ body {
   }
 
   .portrait{
+    display: block;
     margin:8em 10% 0 10%;
     width:30%;
     float:right;
