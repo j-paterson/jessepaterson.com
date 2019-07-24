@@ -29,19 +29,23 @@ class AboutComponent extends Component {
                 <b>Fall 2018 - Present</b>
                 <p>
                   My work at STRIVR is centered around designing, prototyping and testing Creator, a WPF and Unity based creative tool for building interactive VR training with 360 video.
-
-                  <b>In order to integrate a UX process into the existing software Scrum cycle, I introduced a set of standardized procedures for conducting and reporting UX research.</b>
-
+                </p>
+                <p>
+                  In order to integrate a UX process into the existing software Scrum cycle, I introduced a set of standardized procedures for conducting and reporting UX research.
+                </p>
+                <p>
                   A major pain point in our training experiences was text legibility. I researched typography challenges in VR and then developed a VR research platform for testing legibility across a variety of distances, typefaces, font rendering methods and a variety of other variables. This platform recorded test results in a cloud database and was deployed through an Oculus Go alpha channel to provide easy access for internal participants.
-
-                  <b>Using the data from my research, I compiled a comprehensive typography report, recommending a transition to TextMeshPro with a Montserrat typeface across all applications.</b>
+                </p>
+                <p>
+                  Using the data from my research, I compiled a comprehensive typography report, recommending a transition to TextMeshPro with a Montserrat typeface across all applications.
 
                   Many pilot users had difficulty navigating the core flow for self-recording in our existing Soft Skills experiences. Alongside our Senior Visual Designer, I developed a prototype which updated the UI to improve the legibility and streamlined the user flow through the rearrangement of different elements and new animations. After pivoting several times to arrive at a solution which would fit the tight time constraints and need for backwards compatibility, I ran several user studies which validated that the prototype improved clarity, immersion, and consistency across the interface. I communicated the value proposition to Product and Engineering teams to gain stakeholder buy in for including this update before shipping it. Finally, I integrated the new user interface with the existing software infrastructure just in time for our next pilot.
-
-                  <b>This UX update made the experience much more intuitive, reducing the percentage of new users confused about how to start recording, or whether they were currently beig recorded from 75% to 7%.</b>
-
+                </p>
+                  This UX update made the experience much more intuitive, reducing the percentage of new users confused about how to start recording, or whether they were currently beig recorded from 75% to 7%.
+                <p>
                   I worked closely with a Product Manager to arrive on a development path for Creator which would provide the necessary local database infrastructure for much needed improvements in forgiveness and overall usability (Eliminating wait time for video upload/download, adding undo/redo, reducing the potential for lost work due to cloud syncing, and in the long-term allowing for an offline mode). I followed up by collaborating with the engineering team to create clear set of documentation on user expectations and long-term goals (such as the Undo/Redo feature). I created all wireframes necessary for transitioning to the new content saving framework, refining the user flow and eliminating several unnecessary steps (saving hours of time by removing the requirement to upload all videos before beginning the creation process).
-
+                </p>
+                <p>
                   I used the existing Unity codebase to prototype and define draggable interactions for moving overlays across the 360 videos. This resolved a major pain point for new users, removing the requirement to define spherical coordinates in order to change the location of an overlay.
                 </p>
               </div>
