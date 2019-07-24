@@ -8,8 +8,8 @@ class AboutComponent extends Component {
         <div className="personal">
           <h3 className="title">ME</h3>
           <p>
-            I was born in Austin, Texas and moved out to the Bay Area in 2014 for my undergraduate degree at UC Berkeley where I completed a B.A in Cognitive science alongside a minor in Computer Science & Electrical Engineering in 2018.
-            I'm interested in crafting compelling experiences and designing context aware systems for facilitating human-computer interactions in mixed reality.
+            I was born in Austin, Texas and moved out to the Bay Area in 2014 for my undergraduate degree at UC Berkeley. I completed a B.A in Cognitive Science alongside a minor in Electrical Engineering & Computer Science in 2018.
+            I'm passionate about crafting compelling experiences and designing context aware systems for facilitating human-computer interactions in mixed reality.
             I like to understand processes as a whole so that I can work effectively on large scale projects with high impact.
             When I'm not working on new creative tools for VR or building websites, I enjoy <a href="http://azura.wikia.com/wiki/Azura_Wikia">
             telling collaborative stories with friends</a>, brewing mead, and climbing really big rocks.
