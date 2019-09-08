@@ -25,8 +25,7 @@ export default class Header extends Component {
   }
   render() {
     return (
-      <HEAD>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+      <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85719032-1"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -35,7 +34,7 @@ export default class Header extends Component {
 
           gtag('config', 'UA-85719032-1');
         </script>
-      </HEAD>
+      </head>
       <div className="header">
         <a href="/">
           <img href="/" src="/images/logos/logo_gold.svg" alt="Jesse Paterson's Logo"></img>
