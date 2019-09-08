@@ -10,6 +10,7 @@ import Home from "./Home";
 import About from "./About";
 import Header from "./Header";
 import Projects from "./Projects";
+import ReactGA from 'react-ga';
 
 const firstChild = props => {
   const childrenArray = React.Children.toArray(props.children);
@@ -21,9 +22,17 @@ const NotFound = () => (
 )
 
 export default class App extends Component {
+  initializeReactGA() {
+    ReactGA.initialize('UA-85719032-1');
+    ReactGA.pageview('/homepage');
+  }
+
   render() {
     return (
       <div>
+        <head>
+          {this.initializeReactGA()}
+        </head>
         <Header />
         <div className="main">
           <div className="content">
