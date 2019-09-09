@@ -5,25 +5,38 @@
   "dependencies": {
     "animated": "^0.2.2",
     "express": "^4.17.1",
-    "jquery": "3.0.0",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
     "pm2": "^3.5.1",
-    "react": "^15.6.1",
+    "react": "^16.9.0",
     "react-animate": "^3.0.0",
-    "react-dom": "^15.6.2",
+    "react-dom": "^16.9.0",
     "react-ga": "^2.6.0",
     "react-progressive-image-loading": "^3.0.3",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-transition-group": "^1.2.1",
-    "typeit": "^4.4.1"
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-transition-group": "^4.3.0",
+    "typeit": "^6.0.3"
   },
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "react-scripts": "^3.1.1"
   },
   "scripts": {
     "start": "PORT=8765 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
