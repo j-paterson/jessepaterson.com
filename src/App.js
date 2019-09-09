@@ -17,18 +17,15 @@ import { createBrowserHistory } from 'history';
 
 const history = createBrowserHistory();
 
+// Google Analytics
+const trackingId = "UA-85719032-1";
+ReactGA.initialize(trackingId);
+
 // Initialize google analytics page view tracking
 history.listen(location => {
   ReactGA.set({ page: location.pathname }); // Update the user's current page
   ReactGA.pageview(location.pathname); // Record a pageview for the given page
 });
-
-// Google Analytics
-const trackingId = "UA-85719032-1";
-ReactGA.initialize(trackingId);
-ReactGA.set({
-  userId: auth.currentUserId(),
-})
 
 const firstChild = props => {
   const childrenArray = React.Children.toArray(props.children);
@@ -42,41 +39,30 @@ const NotFound = () => (
 export default class App extends Component {
   render() {
     return (
-      <Router history={history}>
-        <div>
-          <head>
-            {this.initializeReactGA()}
-          </head>
-          <Header />
-          <div className="main">
-            <div className="content">
-              <Route render={({ location }) => (
-                <Switch key={location.key} location={location}>
-                  <Route exact path="/"
-                    render={({ match, ...rest }) => (
-                      <TransitionGroup component={firstChild}>
-                        <Home/>
-                      </TransitionGroup>
-                  )}/>
-                  <Route path="/about"
-                     render={({ match, ...rest }) => (
-                       <TransitionGroup component={firstChild}>
-                         <About/>
-                       </TransitionGroup>
-                  )}/>
-                  <Route path="/projects"
-                    render={({ match, ...rest }) => (
-                      <TransitionGroup component={firstChild}>
-                        <Projects/>
-                      </TransitionGroup>
-                  )} />
-                  <Route component={NotFound} />
-                </Switch>
-              )}/>
-            </div>
+      <div>
+        <Header />
+        <div className="main">
+          <div className="content">
+            <Route render={({ location }) => (
+              <Switch key={location.key} location={location}>
+                <Route exact path="/"
+                  render={({ match, ...rest }) => (
+                    <Home/>
+                )}/>
+                <Route path="/about"
+                   render={({ match, ...rest }) => (
+                     <About/>
+                )}/>
+                <Route path="/projects"
+                  render={({ match, ...rest }) => (
+                    <Projects/>
+                )} />
+                <Route component={NotFound} />
+              </Switch>
+            )}/>
           </div>
         </div>
-      </Router>
+      </div>
     )
   }
 }
