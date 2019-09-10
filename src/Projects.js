@@ -192,5 +192,5 @@ const ProjectsRouter = () => (
   </Switch>
 )
 
-const ProjectsPage = AnimatedWrapper(ProjectsRouter);
+const ProjectsPage = ProjectsRouter;
 export default ProjectsPage;

@@ -91,5 +91,5 @@ class AboutComponent extends Component {
     )
   }
 }
-const About = AnimatedWrapper(AboutComponent);
+const About = AboutComponent;
 export default About;

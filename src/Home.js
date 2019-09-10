@@ -88,5 +88,5 @@ class HomeComponent extends Component {
   }
 }
 
-const Home = AnimatedWrapper(HomeComponent);
+const Home = HomeComponent;
 export default Home;
