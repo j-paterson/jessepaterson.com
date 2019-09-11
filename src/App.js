@@ -19,7 +19,13 @@ const history = createBrowserHistory();
 
 // Google Analytics
 const trackingId = "UA-85719032-1";
-ReactGA.initialize(trackingId);
+ReactGA.initialize(trackingId, {
+  debug: true,
+  gaOptions: {
+    siteSpeedSampleRate: 100
+  }
+});
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 // Initialize google analytics page view tracking
 history.listen(location => {
